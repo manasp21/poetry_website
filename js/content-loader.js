@@ -80,7 +80,7 @@ async function fetchAllPoems() {
 
     for (const filePath of poemFilePaths) {
         try {
-            const response = await fetch(filePath);
+            const response = await fetch(`/poetry_website/${filePath}`);
             if (!response.ok) {
                 console.error(`Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
                 continue;
