@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Archive - PoetryScape</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+<script defer src="js/content-loader.js"></script>
+    <script defer src="js/archive.js"></script> 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">PoetryScape</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="archive.html" class="active">Archive</a></li>
+                <li><a href="index.html#discover">Discover</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" aria-label="Toggle light and dark mode">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM12 9c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3zm0-7c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1s1-.45 1-1V3c0-.55-.45-1-1-1zm0 18c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1zm-8-9H2c-.55 0-1 .45-1 1s.45 1 1 1h2c.55 0 1-.45 1-1s-.45-1-1-1zm18 0h-2c-.55 0-1 .45-1 1s.45 1 1 1h2c.55 0 1-.45 1-1s-.45-1-1-1zM5.64 5.64c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l1.41 1.41c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L5.64 5.64zm12.72 12.72c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l1.41 1.41c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-1.41-1.41zM4.22 18.36l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0zm12.72-12.72l1.41-1.41c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0l-1.41 1.41c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0z"/></svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.62-.14 2.37-.38-.3-.48-.5-.98-.5-1.62 0-1.93 1.57-3.5 3.5-3.5.64 0 1.14.2 1.62.5.24-.75.38-1.54.38-2.37 0-4.97-4.03-9-9-9zm-1 13.5c-2.48 0-4.5-2.02-4.5-4.5s2.02-4.5 4.5-4.5 4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5z"/></svg>
+        </button>
+    </header>
+
+    <main class="archive-main">
+        <section class="filtering-sorting-bar">
+            <h1 class="archive-title">Poetry Archive</h1>
+            <div class="filters-toolbar">
+                <div class="filter-group">
+                    <label for="filter-poet">Poet:</label>
+                    <select id="filter-poet" name="poet">
+                        <option value="">All Poets</option>
+                        <option value="Elara Sands">Elara Sands</option>
+                        <option value="Marcus Thorne">Marcus Thorne</option>
+                        <option value="Seraphina Moon">Seraphina Moon</option>
+                        <option value="Orion Sky">Orion Sky</option>
+                        <!-- More poets to be added dynamically -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-language">Language:</label>
+                    <select id="filter-language" name="language">
+                        <option value="">All Languages</option>
+                        <option value="en">English</option>
+                        <option value="hi">Hindi</option>
+                        <!-- More languages -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-form">Form:</label>
+                    <select id="filter-form" name="form">
+                        <option value="">All Forms</option>
+                        <option value="free_verse">Free Verse</option>
+                        <option value="sonnet">Sonnet</option>
+                        <!-- More forms -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-length">Length:</label>
+                    <select id="filter-length" name="length">
+                        <option value="">All Lengths</option>
+                        <option value="short">Short</option>
+                        <option value="standard">Standard</option>
+                        <!-- More lengths -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-by">Sort By:</label>
+                    <select id="sort-by" name="sort">
+                        <option value="title_asc">Title (A-Z)</option>
+                        <option value="title_desc">Title (Z-A)</option>
+                        <option value="poet_asc">Poet (A-Z)</option>
+                        <option value="poet_desc">Poet (Z-A)</option>
+                        <!-- <option value="date_new">Date (Newest)</option> -->
+                        <!-- <option value="date_old">Date (Oldest)</option> -->
+                    </select>
+                </div>
+                <div class="view-toggle">
+                    <button id="grid-view-btn" class="view-btn active" aria-label="Grid View">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M3 3h8v8H3V3zm0 10h8v8H3v-8zM13 3h8v8h-8V3zm0 10h8v8h-8v-8z"/></svg>
+                    </button>
+                    <button id="list-view-btn" class="view-btn" aria-label="List View">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="archive-content-area" class="poem-grid" aria-live="polite">
+            <!-- Poem cards (grid view) or list items (list view) will be dynamically inserted here -->
+            <!-- Example Grid Card (same as homepage) -->
+            <article class="poem-card">
+                <a href="poem.html?id=1" class="poem-card-link">
+                    <div class="poem-card-image-placeholder" style="background-color: #e0e0e0;"></div>
+                    <div class="poem-card-content">
+                        <h2 class="poem-card-title">Whispers of the Wind</h2>
+                        <p class="poem-card-author">Elara Sands</p>
+                        <p class="poem-card-excerpt">A gentle breeze through ancient trees...</p>
+                    </div>
+                </a>
+            </article>
+            <!-- Example List Item (to be styled) -->
+            <!-- 
+            <article class="poem-list-item">
+                <div class="poem-list-item-image-placeholder" style="background-color: #e0e0e0;"></div>
+                <div class="poem-list-item-details">
+                    <h2 class="poem-list-item-title"><a href="poem.html?id=1">Whispers of the Wind</a></h2>
+                    <p class="poem-list-item-author">Elara Sands</p>
+                    <p class="poem-list-item-meta">Language: English, Form: Free Verse</p>
+                </div>
+            </article> 
+            -->
+             <article class="poem-card">
+                <a href="poem.html?id=2" class="poem-card-link">
+                    <div class="poem-card-image-placeholder" style="background-color: #d0d0d0;"></div>
+                    <div class="poem-card-content">
+                        <h2 class="poem-card-title">City of Echoes</h2>
+                        <p class="poem-card-author">Marcus Thorne</p>
+                         <p class="poem-card-excerpt">Neon lights reflect in rain-slicked streets...</p>
+                    </div>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> PoetryScape. All rights reserved.</p>
+        <p><a href="#about">About</a> | <a href="#contact">Contact</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,982 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;700&family=Lora:wght@400;700&display=swap');
+
+/* Global Resets and Base Styles */
+:root {
+    /* Color Palette */
+    --primary-text-color-light: #222222; /* Dark Grey */
+    --secondary-text-color-light: #777777; /* Medium Grey */
+    --background-color-light: #F8F8F8; /* Off-white for softness */
+    --bg-color-rgb: 248, 248, 248; /* RGB for background-color-light */
+    --card-background-light: #ffffff; /* Pure white cards for contrast */
+    --accent-color-light: #00F5D4; /* Vibrant Teal */
+    --accent-color-light-rgb: 0, 245, 212; /* RGB for Vibrant Teal */
+    --secondary-accent-color-light: #FFC857; /* Warm Amber */
+    --border-color-light: #dee2e6; /* Lighter border */
+
+    --primary-text-color-dark: #E0E0E0; /* Light Grey */
+    --secondary-text-color-dark: #888888; /* Mid-Dark Grey */
+    --background-color-dark: #1A1A1A; /* Very Dark Grey/Charcoal */
+    --bg-color-rgb-dark: 26, 26, 26; /* RGB for background-color-dark */
+    --card-background-dark: #1e1e1e; /* Slightly lighter cards in dark mode */
+    --accent-color-dark: #00F5D4; /* Vibrant Teal */
+    --accent-color-dark-rgb: 0, 245, 212; /* RGB for Vibrant Teal */
+    --secondary-accent-color-dark: #FFC857; /* Warm Amber */
+    --border-color-dark: #343a40; /* Darker, subtle border */
+
+    /* Typography */
+    --font-family-heading: 'Playfair Display', serif;
+    --font-family-body: 'Inter', 'Lora', serif;
+    --font-family-ui: 'Inter', sans-serif;
+
+    --font-size-base: 1rem; /* 16px */
+    --font-size-h1: 3.5rem; /* 56px */
+    --font-size-h2: 2.5rem; /* 40px */
+    --font-size-h3: 1.75rem; /* 28px */
+    --font-size-h4: 1.25rem; /* 20px */
+    --font-size-small: 0.875rem; /* 14px */
+
+    --line-height-body: 1.7;
+    --line-height-heading: 1.2;
+
+    --font-primary: var(--font-family-body); /* Updated to use new typography variables */
+    --font-headings: var(--font-family-heading); /* Updated to use new typography variables */
+
+    --text-color: var(--primary-text-color-light);
+    --bg-color: var(--background-color-light);
+    --card-bg: var(--card-background-light);
+    --accent-color: var(--accent-color-light);
+    --border-color: var(--border-color-light);
+    --secondary-text-color: var(--secondary-text-color-light);
+
+    --header-height: 75px; /* Slightly taller header */
+    --footer-height: 65px; /* Slightly taller footer */
+    --global-border-radius: 12px; /* Consistent border radius */
+    --transition-speed-fast: 0.2s;
+    --transition-speed-medium: 0.3s;
+    --transition-speed-slow: 0.5s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    --text-color: var(--primary-text-color-dark);
+    --bg-color: var(--background-color-dark);
+    --card-bg: var(--card-background-dark);
+    --accent-color: var(--accent-color-dark);
+    --border-color: var(--border-color-dark);
+    --secondary-text-color: var(--secondary-text-color-dark);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: var(--line-height-body); /* Use new variable */
+    transition: background-color var(--transition-speed-medium) ease, color var(--transition-speed-medium) ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: var(--font-size-base); /* Use new variable */
+    -webkit-font-smoothing: antialiased; /* Smoother fonts */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-speed-fast) ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header Styles */
+header {
+    /* Use calculated RGB values for background-color to support rgba */
+    background-color: rgba(var(--bg-color-rgb, 248, 248, 248), 0.85); /* Semi-transparent for glassmorphism */
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    color: var(--text-color);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color var(--transition-speed-medium) ease, border-color var(--transition-speed-medium) ease, box-shadow var(--transition-speed-medium) ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Slightly more defined shadow for glass effect */
+}
+
+body.dark-mode header {
+    background-color: rgba(var(--bg-color-rgb-dark, 26, 26, 26), 0.75); /* Dark mode glassmorphism */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+header .logo a {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-h3); /* Use new variable */
+    font-weight: 700; /* Bolder logo */
+    color: var(--text-color);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    font-size: 1.1rem; /* Slightly larger nav links */
+    font-weight: 500;
+    color: var(--secondary-text-color);
+    letter-spacing: 0.3px;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+#theme-toggle {
+    background-color: transparent;
+    border: 1px solid transparent; /* Prepare for focus */
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.6rem; /* Slightly more padding */
+    border-radius: var(--global-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-speed-fast) ease, border-color var(--transition-speed-fast) ease;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(var(--accent-color-rgb, 0, 245, 212), 0.1); /* Use accent color for hover */
+}
+
+#theme-toggle:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+#theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.sun-icon { display: block; }
+.moon-icon { display: none; }
+
+body.dark-mode .sun-icon { display: none; }
+body.dark-mode .moon-icon { display: block; }
+
+
+/* Main Content Styles */
+main {
+    flex-grow: 1;
+    padding: 2.5rem 2rem; /* Increased top/bottom padding */
+    width: 100%;
+    max-width: 1400px; /* Increased max-width for more expansive layouts */
+    margin: 0 auto; /* Center content */
+}
+
+.homepage-main {
+    padding-top: 1rem; /* Adjust if header is fixed and overlaps */
+}
+
+/* Poem Grid Styles (Homepage & Archive) */
+.poem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Flexible grid columns */
+    gap: 2.5rem; /* Increased gap */
+    padding-bottom: 2.5rem;
+    align-items: start; /* Align items to the start for varied heights */
+}
+
+.poem-card {
+    background-color: var(--card-bg);
+    border-radius: var(--global-border-radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color); /* Add subtle border to cards */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Refined shadow */
+    transition: transform var(--transition-speed-medium) ease, box-shadow var(--transition-speed-medium) ease, background-color var(--transition-speed-medium) ease;
+    display: flex;
+    flex-direction: column;
+    /* Broken grid elements - example for specific cards */
+    /* For example, you might target .poem-card:nth-child(3n+1) { grid-column: span 2; } in a more specific layout */
+}
+
+.poem-card:hover {
+    transform: translateY(-10px) scale(1.02); /* More pronounced lift and slight scale */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Stronger, more defined shadow */
+}
+
+
+.poem-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.poem-card-image-placeholder {
+    width: 100%;
+    height: 220px; /* Increased placeholder height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: var(--secondary-text-color); /* Use secondary text color for placeholder text */
+    background: linear-gradient(45deg, var(--accent-color-light), var(--secondary-accent-color-light)); /* Dynamic gradient for placeholder */
+    background-size: 200% 200%; /* For animation */
+    animation: gradientShift 10s ease infinite; /* Subtle animation */
+    transition: background-color var(--transition-speed-medium) ease;
+    overflow: hidden; /* Ensure zoomed image doesn't overflow placeholder */
+    position: relative; /* For potential pseudo-elements or overlays */
+}
+body.dark-mode .poem-card-image-placeholder {
+    background: linear-gradient(45deg, var(--accent-color-dark), var(--secondary-accent-color-dark));
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+}
+
+
+
+body.dark-mode .poem-card-image-placeholder {
+    background-color: #3a3a3a;
+    color: #aaa;
+}
+
+.poem-card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.poem-card-title {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-h4); /* Use new variable */
+    font-weight: 700; /* Bolder card title */
+    margin-bottom: 0.75rem; /* Increased margin */
+    color: var(--text-color);
+    line-height: var(--line-height-heading);
+}
+
+.poem-card-author {
+    font-size: 0.95rem; /* Slightly larger author text */
+    color: var(--secondary-text-color);
+    margin-bottom: 1.25rem; /* Increased margin */
+}
+
+.poem-card-excerpt {
+    font-size: 1rem; /* Slightly larger excerpt text */
+    color: var(--secondary-text-color);
+    line-height: 1.6; /* Improved line height for excerpt */
+    /* For multi-line ellipsis if desired:
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: var(--bg-color);
+    color: var(--secondary-text-color);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--border-color);
+    height: auto; /* Adjust based on content */
+    transition: background-color var(--transition-speed-medium) ease, border-color var(--transition-speed-medium) ease, color var(--transition-speed-medium) ease;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--secondary-text-color);
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive Adjustments */
+
+/* Poem Display Page Specific Styles */
+.poem-display-main {
+    padding-top: 1rem; /* Adjust if header is fixed and overlaps */
+}
+
+.poem-full-view {
+    display: flex;
+    flex-direction: row; /* Default for wider screens */
+    gap: 4rem; /* Increased gap for more breathing room */
+    margin-bottom: 4rem; /* Increased bottom margin */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.poem-image-section {
+    flex: 1 1 40%; /* Takes up 40% of the space, can shrink/grow */
+    max-width: 450px; /* Max width for the image container */
+    position: sticky; /* Make image sticky on scroll */
+    top: calc(var(--header-height) + 2rem); /* Position below header + padding */
+    height: calc(100vh - var(--header-height) - 4rem); /* Attempt to make it viewport height responsive */
+    overflow: hidden; /* In case image is larger */
+}
+
+.poem-main-image-placeholder {
+    width: 100%;
+    height: 100%; /* Fill the sticky container */
+    min-height: 300px; /* Minimum height */
+    background-color: #ccc; /* Placeholder color */
+    border-radius: var(--global-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #666;
+    background: linear-gradient(60deg, var(--accent-color-light), var(--secondary-accent-color-light)); /* Dynamic gradient */
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    transition: background-color var(--transition-speed-medium) ease, transform var(--transition-speed-slow) ease;
+}
+body.dark-mode .poem-main-image-placeholder {
+    background: linear-gradient(60deg, var(--accent-color-dark), var(--secondary-accent-color-dark));
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    color: #aaa; /* Ensure text color is still set if any text is in placeholder */
+}
+
+.poem-text-section {
+    flex: 1 1 60%; /* Takes up 60% of the space */
+    padding-left: 1rem; /* Spacing from image */
+}
+
+.poem-title-full {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-h1); /* Use new variable */
+    font-weight: 700;
+    margin-bottom: 0.75rem; /* Increased margin */
+    line-height: var(--line-height-heading); /* Adjusted line height for large font */
+    color: var(--text-color);
+    letter-spacing: -0.5px; /* Subtle letter spacing for headings */
+}
+
+.poem-author-full {
+    font-size: 1.2rem; /* Slightly larger author */
+    color: var(--secondary-text-color);
+    margin-bottom: 2.5rem; /* Increased margin */
+}
+
+.poem-content-full .stanza {
+    font-family: var(--font-family-body); /* Ensure body font is applied */
+    font-size: 1.15rem; /* Slightly larger stanza text */
+    line-height: var(--line-height-body); /* More generous line height for poem */
+    margin-bottom: 2rem; /* Increased stanza spacing */
+    color: var(--text-color);
+    padding: 0.6rem 0.85rem; /* Slightly more padding */
+    border-radius: 6px; /* Slightly more rounded corners for background effect */
+    transition: background-color var(--transition-speed-fast) ease, transform var(--transition-speed-fast) ease;
+}
+
+.poem-content-full .stanza:first-of-type::first-letter {
+    font-family: var(--font-family-heading);
+    font-size: 4.5rem; /* Large initial cap size */
+    line-height: 1;
+    float: left;
+    margin-right: 0.15em;
+    color: var(--accent-color);
+    font-weight: 700;
+    /* Optional: text-shadow for subtle depth */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.poem-content-full .stanza:hover {
+    background-color: rgba(128, 128, 128, 0.08); /* Slightly more visible hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+body.dark-mode .poem-content-full .stanza:hover {
+    background-color: rgba(200, 200, 200, 0.1); /* Slightly more visible hover for dark mode */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+
+.poem-controls-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.control-button {
+    background-color: transparent;
+    border: 1px solid transparent; /* For focus */
+    color: var(--secondary-text-color);
+    cursor: pointer;
+    padding: 0.6rem;
+    border-radius: var(--global-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color var(--transition-speed-fast) ease, transform var(--transition-speed-fast) ease, background-color var(--transition-speed-fast) ease;
+}
+
+.control-button:hover {
+    color: var(--accent-color);
+    background-color: rgba(var(--accent-color-rgb, 0, 245, 212), 0.15); /* More visible hover */
+    transform: translateY(-2px) scale(1.02); /* Subtle lift and scale */
+}
+.control-button:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: rgba(var(--accent-color-rgb, 0, 245, 212), 0.1);
+}
+
+/* Removed duplicate hover style, it's combined above */
+/* Extraneous closing brace removed from here */
+
+.control-button svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor; /* For single-color SVGs */
+    stroke: currentColor; /* For SVGs using stroke */
+}
+
+#favorite-poem.favorited svg {
+    fill: var(--accent-color); /* Or a specific favorite color e.g. red */
+    stroke: var(--accent-color);
+}
+
+
+.audio-progress-placeholder {
+    flex-grow: 1;
+    height: 8px;
+    background-color: var(--border-color);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+/* Placeholder for actual progress */
+.audio-progress-placeholder::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 30%; /* Example progress */
+    background-color: var(--accent-color);
+}
+
+
+.social-sharing-placeholder {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.share-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Keyframe animation for gradient shift */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Related Poems Section */
+.related-poems-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-h2); /* Use new variable */
+    font-weight: 600;
+    margin-bottom: 2rem; /* Increased margin */
+    color: var(--text-color);
+}
+
+.related-poems-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Slightly larger small cards */
+    gap: 2rem; /* Consistent gap */
+}
+
+.poem-card-small .poem-card-image-placeholder {
+    height: 150px;
+}
+
+.poem-card-small .poem-card-title {
+    font-size: 1.3rem; /* Larger title for small cards */
+    font-weight: 600;
+}
+
+.poem-card-small .poem-card-content {
+    padding: 1rem;
+}
+
+
+/* Archive Page Specific Styles */
+.archive-main {
+    padding-top: 1rem;
+}
+
+.archive-title {
+    font-family: var(--font-headings);
+    font-size: 2.8rem; /* Larger archive title */
+    font-weight: 700;
+    margin-bottom: 2rem; /* Increased margin */
+    text-align: center;
+    color: var(--text-color);
+}
+
+.filtering-sorting-bar {
+    background-color: rgba(var(--card-bg-rgb, 255, 255, 255), 0.8); /* Semi-transparent for glassmorphism */
+    backdrop-filter: blur(8px) saturate(150%);
+    -webkit-backdrop-filter: blur(8px) saturate(150%);
+    padding: 2rem; /* More padding in filter bar */
+    border-radius: var(--global-border-radius);
+    margin-bottom: 2.5rem; /* Increased margin */
+    border: 1px solid var(--border-color); /* Add subtle border */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06); /* Refined shadow for glass */
+    transition: background-color var(--transition-speed-medium) ease, box-shadow var(--transition-speed-medium) ease;
+}
+
+body.dark-mode .filtering-sorting-bar {
+    background-color: rgba(var(--card-bg-rgb-dark, 30, 30, 30), 0.7); /* Dark mode glassmorphism */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12); /* Refined dark mode shadow */
+}
+body.dark-mode .filtering-sorting-bar {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Refined dark mode shadow */
+}
+
+
+.filters-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Gap between all items */
+    align-items: flex-end; /* Align items to bottom for mixed heights */
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Gap between label and select */
+    flex-grow: 1; /* Allow groups to grow */
+    min-width: 150px; /* Minimum width for filter groups */
+}
+
+.filter-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--secondary-text-color);
+}
+
+.filter-group select {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    transition: border-color var(--transition-speed-fast) ease, background-color var(--transition-speed-medium) ease, box-shadow var(--transition-speed-fast) ease;
+    width: 100%; /* Make select take full width of its group */
+    appearance: none; /* Remove default system appearance */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23495057'%3E%3Cpath fill-rule='evenodd' d='M8 11.646l-4.854-4.853.708-.708L8 10.232l4.146-4.147.708.708L8 11.646z'/%3E%3C/svg%3E"); /* Default arrow for light mode */
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    padding-right: 2.5rem; /* Make space for custom arrow */
+}
+
+body.dark-mode .filter-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23adb5bd'%3E%3Cpath fill-rule='evenodd' d='M8 11.646l-4.854-4.853.708-.708L8 10.232l4.146-4.147.708.708L8 11.646z'/%3E%3C/svg%3E"); /* Arrow for dark mode */
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Standard blue focus ring, adjust as needed */
+}
+
+body.dark-mode .filter-group select:focus {
+    border-color: var(--accent-color-dark);
+    box-shadow: 0 0 0 2px rgba(107, 183, 255, 0.25); /* Lighter blue focus ring for dark mode */
+}
+
+
+.view-toggle {
+    display: flex;
+    align-items: center; /* Align with bottom of select boxes */
+    margin-left: auto; /* Pushes it to the right if space allows */
+    padding-top: 1.4rem; /* Align with selects that have labels */
+}
+
+.view-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--secondary-text-color);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-btn:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: none;
+}
+
+.view-btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.view-btn.active {
+    background-color: var(--accent-color);
+    color: var(--background-color-light); /* Text color on active button */
+    border-color: var(--accent-color);
+}
+body.dark-mode .view-btn.active {
+    color: var(--background-color-dark);
+}
+
+
+.view-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* List View Styles */
+.poem-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.poem-list-item {
+    display: flex;
+    gap: 1.5rem;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+body.dark-mode .poem-list-item {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+
+.poem-list-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+body.dark-mode .poem-list-item:hover {
+     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.poem-list-item-image-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    flex-shrink: 0; /* Prevent shrinking */
+    transition: background-color 0.3s ease;
+}
+body.dark-mode .poem-list-item-image-placeholder {
+    background-color: #3a3a3a;
+}
+
+
+.poem-list-item-details {
+    flex-grow: 1;
+}
+
+.poem-list-item-title {
+    font-family: var(--font-headings);
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+.poem-list-item-title a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+.poem-list-item-title a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.poem-list-item-author {
+    font-size: 0.95rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.5rem;
+}
+
+.poem-list-item-meta {
+    font-size: 0.85rem;
+    color: var(--secondary-text-color);
+    opacity: 0.8;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--secondary-text-color);
+    padding: 2rem;
+}
+
+
+@media (max-width: 992px) { /* Medium devices (tablets, less than 992px) */
+    .filters-toolbar {
+        gap: 1rem; /* Reduce gap for medium screens */
+    }
+    .filter-group {
+        min-width: 120px; /* Adjust min-width */
+    }
+    .archive-title {
+        font-size: 2.2rem;
+    }
+
+    .poem-full-view {
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center items when stacked */
+    }
+
+    .poem-image-section {
+        position: static; /* Remove sticky positioning */
+        height: auto; /* Let content define height */
+        max-width: 100%; /* Allow full width */
+        width:100%;
+        margin-bottom: 2rem;
+    }
+    .poem-main-image-placeholder{
+        max-height: 400px; /* Max height for image on smaller screens */
+    }
+
+    .poem-text-section {
+        padding-left: 0; /* Remove padding when stacked */
+        width: 100%;
+    }
+
+    .poem-title-full {
+        font-size: 2.2rem;
+    }
+}
+
+
+@media (max-width: 768px) { /* Small devices (landscape phones, 768px and down) */
+    .filtering-sorting-bar {
+        padding: 1rem;
+    }
+    .filters-toolbar {
+        flex-direction: column; /* Stack filters vertically */
+        align-items: stretch; /* Make filter groups full width */
+        gap: 1rem;
+    }
+    .filter-group {
+        width: 100%; /* Full width for stacked filter groups */
+    }
+    .view-toggle {
+        margin-left: 0; /* Reset margin */
+        align-self: flex-end; /* Align to the right of the stacked column */
+        padding-top: 0.5rem; /* Adjust padding */
+    }
+    .archive-title {
+        font-size: 2rem;
+    }
+    .poem-list-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .poem-list-item-image-placeholder {
+        width: 120px; /* Adjust size for stacked layout */
+        height: 120px;
+        margin-bottom: 1rem;
+    }
+
+
+    header {
+        padding: 0 1rem;
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    header .logo {
+        margin-bottom: 0.5rem;
+        padding-top: 0.5rem;
+    }
+
+    header nav ul {
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    #theme-toggle {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .poem-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+    .related-poems-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+
+    .poem-card-content {
+        padding: 1rem;
+    }
+
+    .poem-card-title {
+        font-size: 1.3rem;
+    }
+
+    .poem-title-full {
+        font-size: 2rem;
+    }
+    .poem-author-full {
+        font-size: 1rem;
+    }
+    .poem-content-full .stanza {
+        font-size: 1rem;
+    }
+    .poem-controls-bar {
+        gap: 0.5rem;
+        flex-wrap: wrap; /* Allow controls to wrap */
+    }
+    .control-button svg {
+        width: 20px;
+        height: 20px;
+    }
+    .share-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) { /* Extra small devices (phones, 480px and down) */
+    .poem-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    .related-poems-grid {
+        grid-template-columns: 1fr;
+    }
+
+     header nav ul li a {
+        font-size: 0.9rem;
+    }
+    header .logo a {
+        font-size: 1.5rem;
+    }
+
+    .poem-title-full {
+        font-size: 1.8rem;
+    }
+    .poem-controls-bar {
+        padding: 0.75rem 0;
+    }
+    .audio-progress-placeholder {
+        margin: 0.5rem 0; /* Add some space if it wraps */
+    }
+}
+
+/* Accessibility */
+.sr-only { /* Screen-reader only */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus visible styling for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--bg-color), 0 0 0 6px var(--accent-color);
+}
+
+/* Remove default outline for non-keyboard focus if desired, but ensure focus-visible is robust */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Import fonts (example using Google Fonts - ensure self-hosting for production if preferred) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Clash+Display:wght@400;500;600;700&display=swap');
+
+/*
+  Clash Display might need to be self-hosted or sourced differently.
+  This @import is a placeholder. For production, download and serve fonts locally.
+  Example for Clash Display (if available via a CDN or self-hosted):
+  @font-face {
+    font-family: 'Clash Display';
+    src: url('/fonts/ClashDisplay-Variable.woff2') format('woff2-variations');
+    font-weight: 200 700;
+    font-style: normal;
+  }
+*/
