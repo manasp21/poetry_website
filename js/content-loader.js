@@ -121,3 +121,5 @@ async function fetchAllPoems() {
 // Or for simple script include:
 window.fetchAllPoems = fetchAllPoems;
 window.parsePoemFileContent = parsePoemFileContent; // also expose for potential reuse
+
+// Added a comment to trigger a new GitHub Pages deployment.
