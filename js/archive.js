@@ -25,6 +25,51 @@ document.addEventListener('DOMContentLoaded', async () => {
         return excerpt + '...';
     }
     
+    // Helper function to get poem image path
+    function getPoemImagePath(poem) {
+        // Create a title-to-image mapping for the poems that have images
+        const titleImageMap = {
+            'Love the Ordinary': 'love-the-ordinary.png',
+            'The Real Tragedy': 'the-real-tragedy.png',
+            'Back to Poetry': 'back-to-poetry.png',
+            'Maybe I should Quit Poetry': 'maybe-i-should-quit-poetry.png',
+            'Burden of your skin': 'burden-of-your-skin.png',
+            'Beauty if not free': 'beauty-if-not-free.png',
+            'Dark side of my moon': 'dark-side-of-my-moon.png',
+            'First Try at an Hindi Poem': 'first-try-at-an-hindi-poem.png',
+            'Mistaken Midnight Poetry': 'mistaken-midnight-poetry.png',
+            'Universe Glimpses in you': 'universe-glimpses-in-you.png',
+            'Run': 'run.png',
+            'A Sonnet too late': 'a-sonnet-too-late.png',
+            'A Void of You': 'a-void-of-you.png',
+            'Haikus': 'haikus.png',
+            'Escape': 'escape.png',
+            'Emotional Fool': 'emotional-fool.png',
+            'Ode to a true love of mine': 'ode-to-a-true-love-of-mine.png',
+            'If ___ only if ___': 'if-only-if.png',
+            '2 winged heart': '2-winged-heart.png',
+            'Timing\'s a bitch': 'timings-a-bitch.png',
+            'SECRET OLD DIARY': 'secret-old-diary.png',
+            'People are Books': 'people-are-books.png',
+            'Bittersweet Romance: Mocha Kisses': 'bittersweet-romance-mocha-kisses.png',
+            'I Say You Say': 'i-say-you-say.png',
+            'Coffee': 'coffee.png',
+            'Listen to me': 'listen-to-me.png',
+            'Restless Heart': 'restless-heart.png',
+            'Social Sieves': 'social-sieves.png',
+            'Skies and Flowers': 'skies-and-flowers.png',
+            'Lost Poet': 'lost-poet.png',
+            'Hmm. Bland': 'hmm-bland.png',
+            'Not gonna Rhyme, but waste time.': 'not-gonna-rhyme-but-waste-time.png',
+            'HEY YOU!!': 'hey-you.png',
+            'Where eyes take you': 'where-eyes-take-you.png',
+            'Sparkle': 'sparkle.png'
+        };
+        
+        const imageName = titleImageMap[poem.title];
+        return imageName ? `assets/images/poems/${imageName}` : 'assets/images/placeholder.png';
+    }
+    
     function populateFilterOptions(poems) {
         const poets = new Set();
         const languages = new Set();
@@ -77,7 +122,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         poemsToRender.forEach(poem => {
             const poemElement = document.createElement('article');
             const poemLink = `poem.html?id=${poem.id}`;
-            const imageSrc = 'assets/images/placeholder.png'; // Generic placeholder
+            const imageSrc = getPoemImagePath(poem);
             const imageAlt = `Placeholder for ${poem.title || 'poem'}`;
 
             if (currentView === 'grid') {
@@ -85,7 +130,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 poemElement.innerHTML = `
                     <a href="${poemLink}" class="poem-card-link">
                         <div class="poem-card-image-placeholder">
-                           <img src="${imageSrc}" alt="${imageAlt}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';">
+                           <img src="${imageSrc}" alt="${imageAlt}" onerror="this.src='assets/images/placeholder.png';">
                         </div>
                         <div class="poem-card-content">
                             <h2 class="poem-card-title">${poem.title || 'Untitled Poem'}</h2>
@@ -97,7 +142,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 poemElement.className = 'poem-list-item';
                 poemElement.innerHTML = `
                     <div class="poem-list-item-image-placeholder">
-                        <img src="${imageSrc}" alt="${imageAlt}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';">
+                        <img src="${imageSrc}" alt="${imageAlt}" onerror="this.src='assets/images/placeholder.png';">
                     </div>
                     <div class="poem-list-item-details">
                         <h2 class="poem-list-item-title"><a href="${poemLink}">${poem.title || 'Untitled Poem'}</a></h2>

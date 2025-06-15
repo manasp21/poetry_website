@@ -3,7 +3,12 @@
     "allow": [
       "Bash(find:*)",
       "Bash(ls:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "WebFetch(domain:www.themanaspandey.com)",
+      "Bash(mkdir:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(mv:*)"
     ],
     "deny": []
   }
