@@ -8,7 +8,8 @@
       "Bash(mkdir:*)",
       "Bash(curl:*)",
       "Bash(wget:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }

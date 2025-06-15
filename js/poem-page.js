@@ -12,8 +12,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Helper function to get poem image path
     function getPoemImagePath(poem) {
-        // Create a title-to-image mapping for the poems that have images
+        // Create a title-to-image mapping for all poems that have images
         const titleImageMap = {
+            // Long poems from main poetry section
             'Love the Ordinary': 'love-the-ordinary.png',
             'The Real Tragedy': 'the-real-tragedy.png',
             'Back to Poetry': 'back-to-poetry.png',
@@ -48,11 +49,49 @@ document.addEventListener('DOMContentLoaded', async () => {
             'Not gonna Rhyme, but waste time.': 'not-gonna-rhyme-but-waste-time.png',
             'HEY YOU!!': 'hey-you.png',
             'Where eyes take you': 'where-eyes-take-you.png',
-            'Sparkle': 'sparkle.png'
+            'Sparkle': 'sparkle.png',
+            // Short poems
+            'Years of Stories': 'years-of-stories.png',
+            'Kogarashi': 'kogarashi.png',
+            'Why Pretend': 'why-pretend.png',
+            'Cold Hallways': 'cold-hallways.png',
+            'Purple Hyacinth': 'purple-hyacinth.png',
+            'White Hyacinths': 'white-hyacinths.png',
+            'White in a Garden of Purple': 'white-in-a-garden-of-purple.png',
+            'Red Clouds, Like Bloody Hell': 'red-clouds-like-bloody-hell.png',
+            'I Love Winters': 'i-love-winters.png',
+            'Red Spirals Odd': 'red-spirals-odd.png',
+            'Yellow Flowers on Asphalt': 'yellow-flowers-on-asphalt.png',
+            'Through Tunnels of Tricks': 'through-tunnels-of-tricks.png',
+            'To White Flowers of Old': 'to-white-flowers-of-old.png',
+            'To Flowers\' Glamour': 'to-flowers-glamour.png',
+            'Bridges You Wait Upon': 'bridges-you-wait-upon.png',
+            'Magnificent Aren\'t They': 'magnificent-arent-they.png',
+            'Your Rhythm and Muse': 'your-rhythm-and-muse.png',
+            'A Light that Never Goes Out': 'a-light-that-never-goes-out.png',
+            'Colours in Sky': 'colours-in-sky.png',
+            'Plants After Rain': 'plants-after-rain.png',
+            'Redness like Blood': 'redness-like-blood.png',
+            'Windows of Dew': 'windows-of-dew.png',
+            'Drops of Jupiter': 'drops-of-jupiter.png',
+            'See Through Your Heart': 'see-through-your-heart.png',
+            'Shades of Grey': 'shades-of-grey.png',
+            'Moon\'s Alluring Scars': 'moons-alluring-scars.png',
+            'Flowers Under Streetlight': 'flowers-under-streetlight.png',
+            'A Part of the Crowd': 'a-part-of-the-crowd.png',
+            'Mornings with No Clouds': 'mornings-with-no-clouds.png',
+            'If You Go Deep in Thought': 'if-you-go-deep-in-thought.png',
+            'Before the Break of Day': 'before-the-break-of-day.png',
+            'To Flowers of Crimson Pink': 'to-flowers-of-crimson-pink.png',
+            'Gayish Bubbles': 'gayish-bubbles.png',
+            'What is Red': 'what-is-red.png',
+            'Moon Through Sky\'s Circular Frame': 'moon-through-skys-circular-frame.png',
+            'It\'s the Last Day of Earth': 'its-the-last-day-of-earth.png'
         };
         
         const imageName = titleImageMap[poem.title];
-        return imageName ? `assets/images/poems/${imageName}` : 'assets/images/placeholder.png';
+        const basePath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '' : '/poetry_website';
+        return imageName ? `${basePath}/assets/images/poems/${imageName}` : `${basePath}/assets/images/placeholder.png`;
     }
 
     function displayPoemNotFound() {
@@ -117,8 +156,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const img = poemImagePlaceholder.querySelector('img') || document.createElement('img');
                     img.src = getPoemImagePath(poem);
                     img.alt = `Image for ${poem.title || 'poem'}`;
-                    img.onerror = () => { img.src = 'assets/images/placeholder.png'; };
-                     if (!poemImagePlaceholder.contains(img)) {
+                    img.loading = 'lazy';
+                    img.style.opacity = '0';
+                    img.style.transition = 'opacity 0.3s ease-in-out';
+                    
+                    img.onload = () => {
+                        img.style.opacity = '1';
+                    };
+                    
+                    img.onerror = () => { 
+                        const basePath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '' : '/poetry_website';
+                        img.src = `${basePath}/assets/images/placeholder.png`; 
+                        img.style.opacity = '1';
+                    };
+                    
+                    if (!poemImagePlaceholder.contains(img)) {
                         poemImagePlaceholder.innerHTML = ''; // Clear previous content
                         poemImagePlaceholder.appendChild(img);
                     }
