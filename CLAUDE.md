@@ -37,7 +37,7 @@ This is a static site with no build process. To develop:
 
 ## File Path Conventions
 
-When modifying poem paths in `content-loader.js`, use relative paths from the repository root (no `/poetry_website/` prefix needed).
+When modifying poem paths in `content-loader.js`, ensure paths start with `/poetry_website/` for GitHub Pages compatibility.
 
 ## Design Philosophy
 
@@ -51,6 +51,6 @@ The site follows "ultra-modern, minimalist sophistication" principles as outline
 ## Important Notes
 
 - All poem files must be manually added to the `poemFilePaths` array in `content-loader.js`
-- The site is configured for GitHub Pages deployment using relative paths from repository root
+- The site is configured for GitHub Pages deployment with `/poetry_website/` path prefix and includes `.nojekyll` file to ensure all files are served
 - Placeholder images are referenced but may need path corrections
 - The project includes comprehensive design documentation in `design_document.md` and enhancement plans in `project_enhancement_plan.md`
