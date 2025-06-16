@@ -11,8 +11,8 @@ A modern, minimalist poetry website showcasing a curated collection of poems wit
 - **Individual Poem Pages**: Dedicated pages with enhanced reading experience
 - **Image Integration**: Each poem paired with corresponding visual artwork
 - **Fast Loading**: Optimized performance with lazy loading and efficient caching
-- **Admin Interface**: Complete content management system for adding, editing, and deleting poems
-- **Dynamic Discovery**: Automatic poem detection without manual file updates
+- **Simple Poem Management**: Easy file-based system for adding and editing poems
+- **Dynamic Discovery**: Automatic poem detection - just add files and they appear
 
 ## 🚀 Live Demo
 
