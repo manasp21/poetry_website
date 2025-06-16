@@ -12,12 +12,19 @@ function parsePoemFileContent(markdownContent) {
         const frontMatterString = match[1];
         poemText = markdownContent.substring(match[0].length).trim();
         
-        // Basic YAML parsing (can be made more robust if needed)
+        // Basic YAML parsing with quoted string handling
         frontMatterString.split('\n').forEach(line => {
             const parts = line.split(':');
             if (parts.length >= 2) {
                 const key = parts[0].trim();
-                const value = parts.slice(1).join(':').trim();
+                let value = parts.slice(1).join(':').trim();
+                
+                // Remove surrounding quotes if present
+                if ((value.startsWith('"') && value.endsWith('"')) || 
+                    (value.startsWith("'") && value.endsWith("'"))) {
+                    value = value.slice(1, -1);
+                }
+                
                 frontMatter[key] = value;
             }
         });
