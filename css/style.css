@@ -602,13 +602,34 @@ body.dark-mode .poem-content-full .stanza:hover {
     padding-top: 1rem;
 }
 
+/* Archive header with stats */
+.archive-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
 .archive-title {
     font-family: var(--font-headings);
-    font-size: 2.8rem; /* Larger archive title */
+    font-size: 2.8rem;
     font-weight: 700;
-    margin-bottom: 2rem; /* Increased margin */
-    text-align: center;
     color: var(--text-color);
+    margin: 0;
+}
+
+.archive-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+}
+
+.filtered-count {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    margin-left: 0.5rem;
 }
 
 .filtering-sorting-bar {
@@ -805,11 +826,401 @@ body.dark-mode .poem-list-item-image-placeholder {
     opacity: 0.8;
 }
 
-.no-results {
-    text-align: center;
-    font-size: 1.1rem;
+/* Enhanced Search and Filter Controls */
+.search-section {
+    margin-bottom: 1rem;
+}
+
+.search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    padding-right: 2.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(var(--accent-color-light-rgb), 0.1);
+}
+
+.search-clear {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
     color: var(--secondary-text-color);
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 50%;
+    display: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.search-clear:hover {
+    color: var(--text-color);
+    background-color: var(--border-color);
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.toggle-btn:hover,
+.toggle-btn.active {
+    border-color: var(--accent-color);
+    background-color: rgba(var(--accent-color-light-rgb), 0.05);
+}
+
+.filter-badge {
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.clear-filters-btn {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 6px;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.clear-filters-btn:hover {
+    background-color: var(--secondary-text-color);
+    color: var(--card-bg);
+}
+
+.filters-panel {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.filters-panel.open {
+    max-height: 500px;
+    opacity: 1;
+    padding: 1.5rem;
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    align-items: end;
+}
+
+.view-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.view-controls .view-toggle {
+    padding-top: 0;
+    margin-left: 0;
+}
+
+.view-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--secondary-text-color);
+    padding: 0.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+
+.view-btn:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: none;
+}
+
+.view-btn:nth-child(2) {
+    border-right: none;
+}
+
+.view-btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.view-btn.active {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+/* Results Info and Actions */
+.results-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(var(--accent-color-light-rgb), 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.results-summary {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.quick-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.75rem;
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    color: var(--accent-color);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Enhanced No Results */
+.no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
     padding: 2rem;
+}
+
+.no-results-content {
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+.no-results-content svg {
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.no-results-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.no-results-content p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Enhanced Poem Cards with Meta */
+.poem-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+}
+
+.meta-item {
+    background-color: rgba(var(--accent-color-light-rgb), 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+}
+
+.meta-separator {
+    color: var(--border-color);
+}
+
+/* Enhanced List View */
+.poem-list-item-meta {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.meta-tag {
+    background-color: rgba(var(--accent-color-light-rgb), 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    color: var(--text-color);
+}
+
+.poem-list-item-excerpt {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+}
+
+/* Compact View Styles */
+.poem-compact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.poem-compact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.poem-compact-item:hover {
+    border-color: var(--accent-color);
+    transform: translateX(4px);
+}
+
+.poem-compact-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.poem-compact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.poem-compact-content {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.poem-compact-title {
+    font-size: 1.1rem;
+    margin: 0 0 0.25rem 0;
+    font-family: var(--font-headings);
+}
+
+.poem-compact-title a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.poem-compact-title a:hover {
+    color: var(--accent-color);
+}
+
+.poem-compact-author {
+    font-size: 0.85rem;
+    color: var(--secondary-text-color);
+    margin: 0 0 0.25rem 0;
+}
+
+.poem-compact-excerpt {
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.poem-compact-meta {
+    flex-shrink: 0;
+}
+
+.compact-form {
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    background-color: rgba(var(--accent-color-light-rgb), 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border-color);
+    border-top: 3px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 
@@ -822,6 +1233,34 @@ body.dark-mode .poem-list-item-image-placeholder {
     }
     .archive-title {
         font-size: 2.2rem;
+    }
+    
+    .archive-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .filters-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+    
+    .results-info {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .poem-compact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .poem-compact-image {
+        width: 80px;
+        height: 80px;
     }
 
     .poem-full-view {
@@ -870,6 +1309,38 @@ body.dark-mode .poem-list-item-image-placeholder {
     }
     .archive-title {
         font-size: 2rem;
+    }
+    
+    .search-container {
+        max-width: 100%;
+    }
+    
+    .filter-controls {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    
+    .filters-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .view-controls .view-toggle {
+        justify-content: center;
+    }
+    
+    .results-info {
+        padding: 0.75rem;
+    }
+    
+    .quick-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .action-btn {
+        justify-content: center;
     }
     .poem-list-item {
         flex-direction: column;

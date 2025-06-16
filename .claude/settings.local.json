@@ -11,7 +11,9 @@
       "Bash(mv:*)",
       "Bash(grep:*)",
       "Bash(python:*)",
-      "Bash(git restore:*)"
+      "Bash(git restore:*)",
+      "Bash(rg:*)",
+      "Bash(pkill:*)"
     ],
     "deny": []
   }

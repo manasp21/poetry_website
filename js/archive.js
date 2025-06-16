@@ -1,16 +1,42 @@
 document.addEventListener('DOMContentLoaded', async () => {
 
+    // Filter and control elements
     const filterPoetSelect = document.getElementById('filter-poet');
     const filterLanguageSelect = document.getElementById('filter-language');
     const filterFormSelect = document.getElementById('filter-form');
     const filterLengthSelect = document.getElementById('filter-length');
     const sortBySelect = document.getElementById('sort-by');
+    
+    // View control elements
     const gridViewBtn = document.getElementById('grid-view-btn');
     const listViewBtn = document.getElementById('list-view-btn');
+    const compactViewBtn = document.getElementById('compact-view-btn');
     const contentArea = document.getElementById('archive-content-area');
+    
+    // Search elements
+    const searchInput = document.getElementById('search-input');
+    const searchClear = document.getElementById('search-clear');
+    
+    // Filter panel elements
+    const toggleFiltersBtn = document.getElementById('toggle-filters');
+    const filtersPanel = document.getElementById('filters-panel');
+    const clearAllFiltersBtn = document.getElementById('clear-all-filters');
+    const activeFiltersCount = document.getElementById('active-filters-count');
+    
+    // Stats and info elements
+    const poemsCount = document.getElementById('poems-count');
+    const filteredCount = document.getElementById('filtered-count');
+    const showingCount = document.getElementById('showing-count');
+    
+    // Action buttons
+    const shuffleBtn = document.getElementById('shuffle-btn');
+    const selectRandomBtn = document.getElementById('select-random');
 
     let allPoemsData = [];
-    let currentView = 'grid'; // 'grid' or 'list'
+    let filteredPoemsData = [];
+    let currentView = 'grid'; // 'grid', 'list', or 'compact'
+    let isFiltersOpen = false;
+    let searchQuery = '';
 
     // Helper function to generate excerpt
     function generateExcerpt(text, maxLength = 100) {
@@ -18,10 +44,83 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (text.length <= maxLength) return text;
         let excerpt = text.substring(0, maxLength);
         const lastSpace = excerpt.lastIndexOf(' ');
-        if (lastSpace > 0 && lastSpace > maxLength - 20) { // Ensure lastSpace is meaningful
+        if (lastSpace > 0 && lastSpace > maxLength - 20) {
             excerpt = excerpt.substring(0, lastSpace);
         }
         return excerpt + '...';
+    }
+    
+    // Search function with fuzzy matching
+    function searchPoems(poems, query) {
+        if (!query || query.trim() === '') return poems;
+        
+        const searchTerm = query.toLowerCase().trim();
+        const words = searchTerm.split(/\s+/);
+        
+        return poems.filter(poem => {
+            const searchableText = [
+                poem.title || '',
+                poem.author || '',
+                poem.content || '',
+                poem.form || '',
+                poem.language || ''
+            ].join(' ').toLowerCase();
+            
+            // Match if all words are found in the searchable text
+            return words.every(word => searchableText.includes(word));
+        });
+    }
+    
+    // Update filter badge and clear button visibility
+    function updateFilterIndicators() {
+        const activeFilters = [
+            filterPoetSelect?.value,
+            filterLanguageSelect?.value,
+            filterFormSelect?.value,
+            filterLengthSelect?.value
+        ].filter(val => val && val.trim() !== '').length;
+        
+        const hasSearch = searchQuery.trim() !== '';
+        const totalActive = activeFilters + (hasSearch ? 1 : 0);
+        
+        if (activeFiltersCount) {
+            activeFiltersCount.textContent = totalActive;
+            activeFiltersCount.style.display = totalActive > 0 ? 'inline' : 'none';
+        }
+        
+        if (clearAllFiltersBtn) {
+            clearAllFiltersBtn.style.display = totalActive > 0 ? 'inline-block' : 'none';
+        }
+    }
+    
+    // Update stats display
+    function updateStats() {
+        if (poemsCount) {
+            poemsCount.textContent = `${allPoemsData.length} poems total`;
+        }
+        
+        if (showingCount) {
+            const showing = filteredPoemsData.length;
+            const total = allPoemsData.length;
+            
+            if (showing === total) {
+                showingCount.textContent = `Showing all ${total} poems`;
+            } else {
+                showingCount.textContent = `Showing ${showing} of ${total} poems`;
+            }
+        }
+        
+        if (filteredCount) {
+            const showing = filteredPoemsData.length;
+            const total = allPoemsData.length;
+            
+            if (showing < total) {
+                filteredCount.textContent = `(${showing} filtered)`;
+                filteredCount.style.display = 'inline';
+            } else {
+                filteredCount.style.display = 'none';
+            }
+        }
     }
     
     // Helper function to get poem image path - much simpler approach
@@ -60,7 +159,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             Array.from(optionsSet).sort().forEach(optionValue => {
                 const option = document.createElement('option');
                 option.value = optionValue;
-                option.textContent = optionValue.charAt(0).toUpperCase() + optionValue.slice(1).replace(/_/g, ' ');
+                // Format the display text nicely
+                let displayText = optionValue;
+                if (typeof optionValue === 'string') {
+                    displayText = optionValue
+                        .charAt(0).toUpperCase() + 
+                        optionValue.slice(1)
+                        .replace(/_/g, ' ')
+                        .replace(/\b\w/g, l => l.toUpperCase());
+                }
+                option.textContent = displayText;
                 selectElement.appendChild(option);
             });
             if (currentVal) selectElement.value = currentVal;
@@ -78,11 +186,29 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error("Content area not found for rendering poems.");
             return;
         }
-        contentArea.innerHTML = ''; // Clear existing content
-        contentArea.className = currentView === 'grid' ? 'poem-grid' : 'poem-list';
+        
+        contentArea.innerHTML = '';
+        
+        // Set appropriate class based on view
+        let containerClass = 'poem-grid';
+        if (currentView === 'list') containerClass = 'poem-list';
+        if (currentView === 'compact') containerClass = 'poem-compact';
+        contentArea.className = containerClass;
 
         if (!poemsToRender || poemsToRender.length === 0) {
-            contentArea.innerHTML = '<p class="no-results">No poems match your criteria.</p>';
+            const noResults = document.createElement('div');
+            noResults.className = 'no-results';
+            noResults.innerHTML = `
+                <div class="no-results-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48px" height="48px">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                    <h3>No poems found</h3>
+                    <p>Try adjusting your search terms or filters</p>
+                    <button onclick="document.getElementById('clear-all-filters').click()" class="clear-filters-btn">Clear all filters</button>
+                </div>
+            `;
+            contentArea.appendChild(noResults);
             return;
         }
 
@@ -90,7 +216,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             const poemElement = document.createElement('article');
             const poemLink = `poem.html?id=${poem.id}`;
             const imageSrc = getPoemImagePath(poem);
-            const imageAlt = `Placeholder for ${poem.title || 'poem'}`;
+            const imageAlt = `Image for ${poem.title || 'poem'}`;
+            const title = poem.title || 'Untitled Poem';
+            const author = poem.author || 'Unknown Author';
+            const excerpt = generateExcerpt(poem.content, currentView === 'compact' ? 60 : 100);
 
             if (currentView === 'grid') {
                 poemElement.className = 'poem-card';
@@ -100,25 +229,45 @@ document.addEventListener('DOMContentLoaded', async () => {
                            <img src="${imageSrc}" alt="${imageAlt}" loading="lazy" style="opacity: 0; transition: opacity 0.3s ease-in-out;" onload="this.style.opacity='1';" onerror="const basePath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '' : '/poetry_website'; this.src = basePath + '/assets/images/placeholder.png'; this.style.opacity='1';">
                         </div>
                         <div class="poem-card-content">
-                            <h2 class="poem-card-title">${poem.title || 'Untitled Poem'}</h2>
-                            <p class="poem-card-author">${poem.author || 'Unknown Author'}</p>
-                            <p class="poem-card-excerpt">${generateExcerpt(poem.content, 80)}</p>
+                            <h2 class="poem-card-title">${title}</h2>
+                            <p class="poem-card-author">${author}</p>
+                            <p class="poem-card-excerpt">${excerpt}</p>
+                            <div class="poem-card-meta">
+                                <span class="meta-item">${poem.form || 'N/A'}</span>
+                                <span class="meta-separator">•</span>
+                                <span class="meta-item">${poem.length || 'N/A'}</span>
+                            </div>
                         </div>
                     </a>`;
-            } else { // List view
+            } else if (currentView === 'list') {
                 poemElement.className = 'poem-list-item';
                 poemElement.innerHTML = `
                     <div class="poem-list-item-image-placeholder">
                         <img src="${imageSrc}" alt="${imageAlt}" loading="lazy" style="opacity: 0; transition: opacity 0.3s ease-in-out;" onload="this.style.opacity='1';" onerror="const basePath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '' : '/poetry_website'; this.src = basePath + '/assets/images/placeholder.png'; this.style.opacity='1';">
                     </div>
                     <div class="poem-list-item-details">
-                        <h2 class="poem-list-item-title"><a href="${poemLink}">${poem.title || 'Untitled Poem'}</a></h2>
-                        <p class="poem-list-item-author">${poem.author || 'Unknown Author'}</p>
-                        <p class="poem-list-item-meta">
-                            Language: ${poem.language || 'N/A'},
-                            Form: ${poem.form || 'N/A'},
-                            Length: ${poem.length || 'N/A'}
-                        </p>
+                        <h2 class="poem-list-item-title"><a href="${poemLink}">${title}</a></h2>
+                        <p class="poem-list-item-author">${author}</p>
+                        <p class="poem-list-item-excerpt">${excerpt}</p>
+                        <div class="poem-list-item-meta">
+                            <span class="meta-tag">Language: ${poem.language || 'N/A'}</span>
+                            <span class="meta-tag">Form: ${poem.form || 'N/A'}</span>
+                            <span class="meta-tag">Length: ${poem.length || 'N/A'}</span>
+                        </div>
+                    </div>`;
+            } else { // Compact view
+                poemElement.className = 'poem-compact-item';
+                poemElement.innerHTML = `
+                    <div class="poem-compact-image">
+                        <img src="${imageSrc}" alt="${imageAlt}" loading="lazy" style="opacity: 0; transition: opacity 0.3s ease-in-out;" onload="this.style.opacity='1';" onerror="const basePath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '' : '/poetry_website'; this.src = basePath + '/assets/images/placeholder.png'; this.style.opacity='1';">
+                    </div>
+                    <div class="poem-compact-content">
+                        <h3 class="poem-compact-title"><a href="${poemLink}">${title}</a></h3>
+                        <p class="poem-compact-author">${author}</p>
+                        <p class="poem-compact-excerpt">${excerpt}</p>
+                    </div>
+                    <div class="poem-compact-meta">
+                        <span class="compact-form">${poem.form || 'N/A'}</span>
                     </div>`;
             }
             contentArea.appendChild(poemElement);
@@ -128,6 +277,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     function applyFiltersAndSort() {
         let filteredPoems = [...allPoemsData];
 
+        // Apply search first
+        if (searchQuery && searchQuery.trim() !== '') {
+            filteredPoems = searchPoems(filteredPoems, searchQuery);
+        }
+
+        // Apply filters
         const poetFilter = filterPoetSelect ? filterPoetSelect.value : '';
         const langFilter = filterLanguageSelect ? filterLanguageSelect.value : '';
         const formFilter = filterFormSelect ? filterFormSelect.value : '';
@@ -146,6 +301,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             filteredPoems = filteredPoems.filter(p => p.length === lengthFilter);
         }
 
+        // Apply sorting
         const sortValue = sortBySelect ? sortBySelect.value : 'title_asc';
         switch (sortValue) {
             case 'title_asc':
@@ -154,59 +310,136 @@ document.addEventListener('DOMContentLoaded', async () => {
             case 'title_desc':
                 filteredPoems.sort((a, b) => (b.title || '').localeCompare(a.title || ''));
                 break;
-            case 'poet_asc':
+            case 'author_asc':
                 filteredPoems.sort((a, b) => (a.author || '').localeCompare(b.author || ''));
                 break;
-            case 'poet_desc':
+            case 'author_desc':
                 filteredPoems.sort((a, b) => (b.author || '').localeCompare(a.author || ''));
                 break;
+            case 'form_asc':
+                filteredPoems.sort((a, b) => (a.form || '').localeCompare(b.form || ''));
+                break;
+            case 'random':
+                // Fisher-Yates shuffle
+                for (let i = filteredPoems.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [filteredPoems[i], filteredPoems[j]] = [filteredPoems[j], filteredPoems[i]];
+                }
+                break;
         }
+        
+        filteredPoemsData = filteredPoems;
+        updateFilterIndicators();
+        updateStats();
         renderPoems(filteredPoems);
     }
 
     async function initializeArchive() {
         if (typeof window.fetchAllPoems !== 'function') {
             console.error('fetchAllPoems function not found. Make sure content-loader.js is loaded.');
-            if(contentArea) contentArea.innerHTML = '<p class="error-message">Error loading poem data. Content loader might be missing.</p>';
+            if(contentArea) contentArea.innerHTML = '<div class="error-message"><h3>Error loading poems</h3><p>Content loader might be missing.</p></div>';
             return;
         }
+        
         try {
             allPoemsData = await window.fetchAllPoems();
             if (!Array.isArray(allPoemsData)) {
                  console.error('fetchAllPoems did not return an array:', allPoemsData);
-                 allPoemsData = []; // Ensure it's an array to prevent further errors
+                 allPoemsData = [];
             }
         } catch (error) {
             console.error("Failed to fetch poems:", error);
-            if(contentArea) contentArea.innerHTML = '<p class="error-message">Could not load poems. Please try again later.</p>';
-            allPoemsData = []; // Ensure it's an array
+            if(contentArea) contentArea.innerHTML = '<div class="error-message"><h3>Could not load poems</h3><p>Please try again later.</p></div>';
+            allPoemsData = [];
         }
         
         populateFilterOptions(allPoemsData);
-        applyFiltersAndSort(); // Initial render with fetched data
+        applyFiltersAndSort();
 
-        // Event Listeners for filters and sorters
+        // Search functionality
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                applyFiltersAndSort();
+                
+                // Show/hide clear button
+                if (searchClear) {
+                    searchClear.style.display = searchQuery.trim() !== '' ? 'block' : 'none';
+                }
+            });
+        }
+        
+        if (searchClear) {
+            searchClear.addEventListener('click', () => {
+                searchQuery = '';
+                if (searchInput) searchInput.value = '';
+                searchClear.style.display = 'none';
+                applyFiltersAndSort();
+            });
+        }
+
+        // Filter panel toggle
+        if (toggleFiltersBtn && filtersPanel) {
+            toggleFiltersBtn.addEventListener('click', () => {
+                isFiltersOpen = !isFiltersOpen;
+                filtersPanel.classList.toggle('open', isFiltersOpen);
+                toggleFiltersBtn.classList.toggle('active', isFiltersOpen);
+            });
+        }
+        
+        // Clear all filters
+        if (clearAllFiltersBtn) {
+            clearAllFiltersBtn.addEventListener('click', () => {
+                searchQuery = '';
+                if (searchInput) searchInput.value = '';
+                if (searchClear) searchClear.style.display = 'none';
+                
+                [filterPoetSelect, filterLanguageSelect, filterFormSelect, filterLengthSelect].forEach(select => {
+                    if (select) select.value = '';
+                });
+                
+                applyFiltersAndSort();
+            });
+        }
+
+        // Filter change listeners
         [filterPoetSelect, filterLanguageSelect, filterFormSelect, filterLengthSelect, sortBySelect].forEach(select => {
             if (select) select.addEventListener('change', applyFiltersAndSort);
         });
 
-        // View Toggle Logic
-        if (gridViewBtn && listViewBtn && contentArea) {
-            gridViewBtn.addEventListener('click', () => {
-                if (currentView !== 'grid') {
-                    currentView = 'grid';
-                    gridViewBtn.classList.add('active');
-                    listViewBtn.classList.remove('active');
+        // View toggle logic
+        const viewButtons = [gridViewBtn, listViewBtn, compactViewBtn];
+        const views = ['grid', 'list', 'compact'];
+        
+        viewButtons.forEach((btn, index) => {
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    const newView = views[index];
+                    if (currentView !== newView) {
+                        currentView = newView;
+                        viewButtons.forEach(b => b && b.classList.remove('active'));
+                        btn.classList.add('active');
+                        applyFiltersAndSort();
+                    }
+                });
+            }
+        });
+        
+        // Action buttons
+        if (shuffleBtn) {
+            shuffleBtn.addEventListener('click', () => {
+                if (sortBySelect) {
+                    sortBySelect.value = 'random';
                     applyFiltersAndSort();
                 }
             });
-
-            listViewBtn.addEventListener('click', () => {
-                if (currentView !== 'list') {
-                    currentView = 'list';
-                    listViewBtn.classList.add('active');
-                    gridViewBtn.classList.remove('active');
-                    applyFiltersAndSort();
+        }
+        
+        if (selectRandomBtn) {
+            selectRandomBtn.addEventListener('click', () => {
+                if (filteredPoemsData.length > 0) {
+                    const randomPoem = filteredPoemsData[Math.floor(Math.random() * filteredPoemsData.length)];
+                    window.location.href = `poem.html?id=${randomPoem.id}`;
                 }
             });
         }
@@ -214,6 +447,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     initializeArchive().catch(error => {
         console.error("Error initializing archive page:", error);
-        if(contentArea) contentArea.innerHTML = '<p class="error-message">An unexpected error occurred while loading the archive.</p>';
+        if(contentArea) contentArea.innerHTML = '<div class="error-message"><h3>An unexpected error occurred</h3><p>Please refresh the page to try again.</p></div>';
     });
 });

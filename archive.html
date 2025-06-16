@@ -33,102 +33,126 @@
 
     <main class="archive-main">
         <section class="filtering-sorting-bar">
-            <h1 class="archive-title">Poetry Archive</h1>
-            <div class="filters-toolbar">
-                <div class="filter-group">
-                    <label for="filter-poet">Poet:</label>
-                    <select id="filter-poet" name="poet">
-                        <option value="">All Poets</option>
-                        <option value="Elara Sands">Elara Sands</option>
-                        <option value="Marcus Thorne">Marcus Thorne</option>
-                        <option value="Seraphina Moon">Seraphina Moon</option>
-                        <option value="Orion Sky">Orion Sky</option>
-                        <!-- More poets to be added dynamically -->
-                    </select>
+            <div class="archive-header">
+                <h1 class="archive-title">Poetry Archive</h1>
+                <div class="archive-stats">
+                    <span id="poems-count">Loading...</span>
+                    <span id="filtered-count" class="filtered-count"></span>
                 </div>
-                <div class="filter-group">
-                    <label for="filter-language">Language:</label>
-                    <select id="filter-language" name="language">
-                        <option value="">All Languages</option>
-                        <option value="en">English</option>
-                        <option value="hi">Hindi</option>
-                        <!-- More languages -->
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="filter-form">Form:</label>
-                    <select id="filter-form" name="form">
-                        <option value="">All Forms</option>
-                        <option value="free_verse">Free Verse</option>
-                        <option value="sonnet">Sonnet</option>
-                        <!-- More forms -->
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="filter-length">Length:</label>
-                    <select id="filter-length" name="length">
-                        <option value="">All Lengths</option>
-                        <option value="short">Short</option>
-                        <option value="standard">Standard</option>
-                        <!-- More lengths -->
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="sort-by">Sort By:</label>
-                    <select id="sort-by" name="sort">
-                        <option value="title_asc">Title (A-Z)</option>
-                        <option value="title_desc">Title (Z-A)</option>
-                        <option value="poet_asc">Poet (A-Z)</option>
-                        <option value="poet_desc">Poet (Z-A)</option>
-                        <!-- <option value="date_new">Date (Newest)</option> -->
-                        <!-- <option value="date_old">Date (Oldest)</option> -->
-                    </select>
-                </div>
-                <div class="view-toggle">
-                    <button id="grid-view-btn" class="view-btn active" aria-label="Grid View">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M3 3h8v8H3V3zm0 10h8v8H3v-8zM13 3h8v8h-8V3zm0 10h8v8h-8v-8z"/></svg>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search poems by title, author, or content..." aria-label="Search poems">
+                    <button id="search-clear" class="search-clear" aria-label="Clear search">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20px" height="20px">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        </svg>
                     </button>
-                    <button id="list-view-btn" class="view-btn" aria-label="List View">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                    </button>
+                </div>
+            </div>
+            
+            <!-- Filter Toggles -->
+            <div class="filter-controls">
+                <button id="toggle-filters" class="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20px" height="20px">
+                        <path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/>
+                    </svg>
+                    <span>Filters</span>
+                    <span id="active-filters-count" class="filter-badge">0</span>
+                </button>
+                <button id="clear-all-filters" class="clear-filters-btn" style="display: none;">Clear All</button>
+            </div>
+            
+            <!-- Collapsible Filter Panel -->
+            <div id="filters-panel" class="filters-panel">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="filter-poet">Author:</label>
+                        <select id="filter-poet" name="poet">
+                            <option value="">All Authors</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-language">Language:</label>
+                        <select id="filter-language" name="language">
+                            <option value="">All Languages</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-form">Form:</label>
+                        <select id="filter-form" name="form">
+                            <option value="">All Forms</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-length">Length:</label>
+                        <select id="filter-length" name="length">
+                            <option value="">All Lengths</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-by">Sort By:</label>
+                        <select id="sort-by" name="sort">
+                            <option value="title_asc">Title (A-Z)</option>
+                            <option value="title_desc">Title (Z-A)</option>
+                            <option value="author_asc">Author (A-Z)</option>
+                            <option value="author_desc">Author (Z-A)</option>
+                            <option value="form_asc">Form (A-Z)</option>
+                            <option value="random">Random Order</option>
+                        </select>
+                    </div>
+                    <div class="filter-group view-controls">
+                        <label>View:</label>
+                        <div class="view-toggle">
+                            <button id="grid-view-btn" class="view-btn active" aria-label="Grid View" title="Grid View">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px">
+                                    <path d="M3 3h8v8H3V3zm0 10h8v8H3v-8zM13 3h8v8h-8V3zm0 10h8v8h-8v-8z"/>
+                                </svg>
+                            </button>
+                            <button id="list-view-btn" class="view-btn" aria-label="List View" title="List View">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px">
+                                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                                </svg>
+                            </button>
+                            <button id="compact-view-btn" class="view-btn" aria-label="Compact View" title="Compact View">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px">
+                                    <path d="M3 15h18v-2H3v2zm0-4h18V9H3v2zm0-4h18V5H3v2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Results Section -->
+        <div class="results-info">
+            <div class="results-summary">
+                <span id="showing-count">Showing all poems</span>
+            </div>
+            <div class="quick-actions">
+                <button id="shuffle-btn" class="action-btn" title="Shuffle poems">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16px" height="16px">
+                        <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+                    </svg>
+                    Shuffle
+                </button>
+                <button id="select-random" class="action-btn" title="Select random poem">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16px" height="16px">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Random
+                </button>
+            </div>
+        </div>
+        
         <section id="archive-content-area" class="poem-grid" aria-live="polite">
-            <!-- Poem cards (grid view) or list items (list view) will be dynamically inserted here -->
-            <!-- Example Grid Card (same as homepage) -->
-            <article class="poem-card">
-                <a href="poem.html?id=1" class="poem-card-link">
-                    <div class="poem-card-image-placeholder" style="background-color: #e0e0e0;"></div>
-                    <div class="poem-card-content">
-                        <h2 class="poem-card-title">Whispers of the Wind</h2>
-                        <p class="poem-card-author">Elara Sands</p>
-                        <p class="poem-card-excerpt">A gentle breeze through ancient trees...</p>
-                    </div>
-                </a>
-            </article>
-            <!-- Example List Item (to be styled) -->
-            <!-- 
-            <article class="poem-list-item">
-                <div class="poem-list-item-image-placeholder" style="background-color: #e0e0e0;"></div>
-                <div class="poem-list-item-details">
-                    <h2 class="poem-list-item-title"><a href="poem.html?id=1">Whispers of the Wind</a></h2>
-                    <p class="poem-list-item-author">Elara Sands</p>
-                    <p class="poem-list-item-meta">Language: English, Form: Free Verse</p>
-                </div>
-            </article> 
-            -->
-             <article class="poem-card">
-                <a href="poem.html?id=2" class="poem-card-link">
-                    <div class="poem-card-image-placeholder" style="background-color: #d0d0d0;"></div>
-                    <div class="poem-card-content">
-                        <h2 class="poem-card-title">City of Echoes</h2>
-                        <p class="poem-card-author">Marcus Thorne</p>
-                         <p class="poem-card-excerpt">Neon lights reflect in rain-slicked streets...</p>
-                    </div>
-                </a>
-            </article>
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading poems...</p>
+            </div>
         </section>
     </main>
 
