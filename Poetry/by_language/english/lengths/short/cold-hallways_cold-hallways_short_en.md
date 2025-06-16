@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_4.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "cold-hallways.png"
 ---
 Cold hallways,
 Frosted Days,

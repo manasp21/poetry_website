@@ -25,88 +25,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         return excerpt + '...';
     }
     
-    // Helper function to get poem image path
+    // Helper function to get poem image path - much simpler approach
     function getPoemImagePath(poem) {
-        // Create a title-to-image mapping for all poems that have images
-        const titleImageMap = {
-            // Long poems from main poetry section
-            'Love the Ordinary': 'love-the-ordinary.png',
-            'The Real Tragedy': 'the-real-tragedy.png',
-            'Back to Poetry': 'back-to-poetry.png',
-            'Maybe I should Quit Poetry': 'maybe-i-should-quit-poetry.png',
-            'Burden of your skin': 'burden-of-your-skin.png',
-            'Beauty if not free': 'beauty-if-not-free.png',
-            'Dark side of my moon': 'dark-side-of-my-moon.png',
-            'First Try at an Hindi Poem': 'first-try-at-an-hindi-poem.png',
-            'Mistaken Midnight Poetry': 'mistaken-midnight-poetry.png',
-            'Universe Glimpses in you': 'universe-glimpses-in-you.png',
-            'Run': 'run.png',
-            'A Sonnet too late': 'a-sonnet-too-late.png',
-            'A Void of You': 'a-void-of-you.png',
-            'Haikus': 'haikus.png',
-            'Escape': 'escape.png',
-            'Emotional Fool': 'emotional-fool.png',
-            'Ode to a true love of mine': 'ode-to-a-true-love-of-mine.png',
-            'If ___ only if ___': 'if-only-if.png',
-            '2 winged heart': '2-winged-heart.png',
-            'Timing\'s a bitch': 'timings-a-bitch.png',
-            'SECRET OLD DIARY': 'secret-old-diary.png',
-            'People are Books': 'people-are-books.png',
-            'Bittersweet Romance: Mocha Kisses': 'bittersweet-romance-mocha-kisses.png',
-            'I Say You Say': 'i-say-you-say.png',
-            'Coffee': 'coffee.png',
-            'Listen to me': 'listen-to-me.png',
-            'Restless Heart': 'restless-heart.png',
-            'Social Sieves': 'social-sieves.png',
-            'Skies and Flowers': 'skies-and-flowers.png',
-            'Lost Poet': 'lost-poet.png',
-            'Hmm. Bland': 'hmm-bland.png',
-            'Not gonna Rhyme, but waste time.': 'not-gonna-rhyme-but-waste-time.png',
-            'HEY YOU!!': 'hey-you.png',
-            'Where eyes take you': 'where-eyes-take-you.png',
-            'Sparkle': 'sparkle.png',
-            // Short poems
-            'Years of Stories': 'years-of-stories.png',
-            'Kogarashi': 'kogarashi.png',
-            'Why Pretend': 'why-pretend.png',
-            'Cold Hallways': 'cold-hallways.png',
-            'Purple Hyacinth': 'purple-hyacinth.png',
-            'White Hyacinths': 'white-hyacinths.png',
-            'White in a Garden of Purple': 'white-in-a-garden-of-purple.png',
-            'Red Clouds, Like Bloody Hell': 'red-clouds-like-bloody-hell.png',
-            'I Love Winters': 'i-love-winters.png',
-            'Red Spirals Odd': 'red-spirals-odd.png',
-            'Yellow Flowers on Asphalt': 'yellow-flowers-on-asphalt.png',
-            'Through Tunnels of Tricks': 'through-tunnels-of-tricks.png',
-            'To White Flowers of Old': 'to-white-flowers-of-old.png',
-            'To Flowers\' Glamour': 'to-flowers-glamour.png',
-            'Bridges You Wait Upon': 'bridges-you-wait-upon.png',
-            'Magnificent Aren\'t They': 'magnificent-arent-they.png',
-            'Your Rhythm and Muse': 'your-rhythm-and-muse.png',
-            'A Light that Never Goes Out': 'a-light-that-never-goes-out.png',
-            'Colours in Sky': 'colours-in-sky.png',
-            'Plants After Rain': 'plants-after-rain.png',
-            'Redness like Blood': 'redness-like-blood.png',
-            'Windows of Dew': 'windows-of-dew.png',
-            'Drops of Jupiter': 'drops-of-jupiter.png',
-            'See Through Your Heart': 'see-through-your-heart.png',
-            'Shades of Grey': 'shades-of-grey.png',
-            'Moon\'s Alluring Scars': 'moons-alluring-scars.png',
-            'Flowers Under Streetlight': 'flowers-under-streetlight.png',
-            'A Part of the Crowd': 'a-part-of-the-crowd.png',
-            'Mornings with No Clouds': 'mornings-with-no-clouds.png',
-            'If You Go Deep in Thought': 'if-you-go-deep-in-thought.png',
-            'Before the Break of Day': 'before-the-break-of-day.png',
-            'To Flowers of Crimson Pink': 'to-flowers-of-crimson-pink.png',
-            'Gayish Bubbles': 'gayish-bubbles.png',
-            'What is Red': 'what-is-red.png',
-            'Moon Through Sky\'s Circular Frame': 'moon-through-skys-circular-frame.png',
-            'It\'s the Last Day of Earth': 'its-the-last-day-of-earth.png'
-        };
-        
-        const imageName = titleImageMap[poem.title];
         const basePath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '' : '/poetry_website';
-        return imageName ? `${basePath}/assets/images/poems/${imageName}` : `${basePath}/assets/images/placeholder.png`;
+        
+        // Use the image field directly from poem data
+        if (poem.image && poem.image.trim() !== '') {
+            return `${basePath}/assets/images/poems/${poem.image}`;
+        }
+        
+        // Fallback to placeholder
+        return `${basePath}/assets/images/placeholder.png`;
     }
     
     function populateFilterOptions(poems) {

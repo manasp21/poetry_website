@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_1.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "years-of-stories.png"
 ---
 Written in these lines,
 

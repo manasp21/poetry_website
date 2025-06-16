@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_9.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "sirius-in-the-sky.png"
 ---
 Sirius in the sky,
 You try to click it,

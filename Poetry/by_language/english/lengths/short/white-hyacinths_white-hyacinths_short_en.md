@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_5b.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "white-hyacinths.png"
 ---
 (2/3)
 

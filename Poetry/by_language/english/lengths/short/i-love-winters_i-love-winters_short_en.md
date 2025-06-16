@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_7.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "i-love-winters.png"
 ---
 I love winters,
 My skin shivers,

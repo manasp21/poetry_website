@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_18.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "red-spirals-odd.png"
 ---
 Red Spirals Odd,
 Like life sometimes,

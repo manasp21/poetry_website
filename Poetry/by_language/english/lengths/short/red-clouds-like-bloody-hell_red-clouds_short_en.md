@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_6.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "red-clouds-like-bloody-hell.png"
 ---
 Red Clouds,
 Like Bloody hell,

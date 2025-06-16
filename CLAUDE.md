@@ -54,3 +54,42 @@ The site follows "ultra-modern, minimalist sophistication" principles as outline
 - The site is configured for GitHub Pages deployment with `/poetry_website/` path prefix and includes `.nojekyll` file to ensure all files are served
 - Placeholder images are referenced but may need path corrections
 - The project includes comprehensive design documentation in `design_document.md` and enhancement plans in `project_enhancement_plan.md`
+
+## Current Work in Progress - Image System Redesign
+
+**Status:** PARTIALLY COMPLETE - Image system has been redesigned but needs completion
+
+### What's Been Done:
+1. ✅ **Simplified JavaScript Image Loading**: Replaced complex title-to-image mapping with direct `poem.image` field usage in all JS files
+2. ✅ **Updated Some Poem Files**: Added image filenames to YAML frontmatter for first 8-10 short poems
+3. ✅ **Fixed Image Naming**: Corrected remaining misnamed images in `/assets/images/poems/`
+4. ✅ **Added Debug Logging**: Console logs now show which images are being loaded/missing
+
+### What Still Needs to Be Done:
+
+#### HIGH PRIORITY:
+1. **Complete Poem Image Mapping**: Update ALL remaining poem files in `/Poetry/by_language/english/lengths/short/` to include proper `image: "filename.png"` in their YAML frontmatter
+   - Currently only ~8 poems have images assigned
+   - Need to map remaining ~35 poems to their corresponding image files
+   - Match poem titles to actual image filenames in `/assets/images/poems/`
+
+2. **Test Image Display**: 
+   - Serve the site locally and verify images now display correctly
+   - Check browser console for debug logs and error messages
+   - Ensure fallback to placeholder works for poems without images
+
+#### MEDIUM PRIORITY:
+3. **Image Path Validation**: Create a script or manual process to verify all `image` fields reference actual files
+4. **Add Long Poems**: If there are other poem collections beyond short poems, add their image references too
+5. **Performance Optimization**: Consider image lazy loading and compression if needed
+
+### Next Steps for Continuation:
+1. **Start with image mapping**: Go through each poem file and add the correct image filename
+2. **Test locally**: Run `python -m http.server 8000` and verify images load
+3. **Debug any issues**: Use browser dev tools to check for 404 errors on images
+4. **Clean up**: Remove debug logging once everything works
+
+### Image Naming Pattern:
+- Image files use kebab-case: `poem-title-words.png`
+- Poem titles in YAML use proper case: `"Poem Title Words"`
+- Match by converting poem titles to kebab-case for image lookup

@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_5c.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "white-in-a-garden-of-purple.png"
 ---
 (3/3)
 White in a garden of Purple

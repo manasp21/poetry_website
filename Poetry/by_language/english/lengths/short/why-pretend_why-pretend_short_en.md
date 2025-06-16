@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_3.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "why-pretend.png"
 ---
 Why pretend,
 Why not end.
