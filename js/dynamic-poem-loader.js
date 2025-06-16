@@ -1,50 +1,63 @@
-// js/content-loader.js
+// js/dynamic-poem-loader.js
+// Dynamic poem discovery system that automatically finds and loads poems
 
-// Function to parse YAML front matter and content from a .md file
-function parsePoemFileContent(markdownContent) {
-    const frontMatterRegex = /^---\s*([\s\S]*?)\s*---/;
-    const match = frontMatterRegex.exec(markdownContent);
-
-    let frontMatter = {};
-    let poemText = markdownContent.trim();
-
-    if (match) {
-        const frontMatterString = match[1];
-        poemText = markdownContent.substring(match[0].length).trim();
-        
-        // Basic YAML parsing with quoted string handling
-        frontMatterString.split('\n').forEach(line => {
-            const parts = line.split(':');
-            if (parts.length >= 2) {
-                const key = parts[0].trim();
-                let value = parts.slice(1).join(':').trim();
+// Function to discover all poem files dynamically
+async function discoverAllPoems() {
+    const poems = [];
+    
+    // Define the directory structure to scan
+    const directoriesToScan = [
+        'Poetry/by_language/english/lengths/short/',
+        'Poetry/by_language/english/forms/free_verse/',
+        'Poetry/by_language/english/forms/sonnet/',
+        'Poetry/by_language/hindi/lengths/standard/'
+    ];
+    
+    // GitHub API to get repository contents
+    const repoOwner = 'manasp21';
+    const repoName = 'poetry_website';
+    const branch = 'main';
+    
+    try {
+        for (const directory of directoriesToScan) {
+            try {
+                const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${directory}?ref=${branch}`;
+                const response = await fetch(apiUrl);
                 
-                // Remove surrounding quotes if present
-                if ((value.startsWith('"') && value.endsWith('"')) || 
-                    (value.startsWith("'") && value.endsWith("'"))) {
-                    value = value.slice(1, -1);
+                if (response.ok) {
+                    const files = await response.json();
+                    
+                    // Filter for markdown files
+                    const markdownFiles = files.filter(file => 
+                        file.name.endsWith('.md') && file.type === 'file'
+                    );
+                    
+                    // Add file paths to poems array
+                    markdownFiles.forEach(file => {
+                        poems.push({
+                            path: `${directory}${file.name}`,
+                            name: file.name,
+                            directory: directory
+                        });
+                    });
                 }
-                
-                frontMatter[key] = value;
+            } catch (error) {
+                console.warn(`Could not scan directory ${directory}:`, error);
+                // Continue with other directories
             }
-        });
-    }
-    return { frontMatter, poemText };
-}
-
-// Function to fetch and parse poems progressively
-async function fetchAllPoems(limit = null) {
-    // Try to use enhanced dynamic loader if available, otherwise fallback to static
-    if (typeof window.fetchAllPoemsEnhanced === 'function') {
-        try {
-            return await window.fetchAllPoemsEnhanced(limit);
-        } catch (error) {
-            console.warn('Enhanced loader failed, using fallback:', error);
         }
+    } catch (error) {
+        console.error('Error discovering poems via GitHub API:', error);
+        // Fallback to static list if API fails
+        return getFallbackPoemPaths();
     }
     
-    // Fallback to static poem list
-    const poemFilePaths = [
+    return poems;
+}
+
+// Fallback function with current static paths
+function getFallbackPoemPaths() {
+    const staticPaths = [
         "Poetry/by_language/english/lengths/short/a-leaf-in-a-sea-of-green_a-leaf-in-a-sea-of_short_en.md",
         "Poetry/by_language/english/lengths/short/a-light-that-never-goes-out_there-is-a-light-that_short_en.md",
         "Poetry/by_language/english/lengths/short/a-part-of-the-crowd_a-part-of-the-crowd_short_en.md",
@@ -92,11 +105,32 @@ async function fetchAllPoems(limit = null) {
         "Poetry/by_language/english/lengths/short/yellow-flowers-on-asphalt_yellow-flowers-on-asphalt_short_en.md",
         "Poetry/by_language/english/lengths/short/your-rhythm-and-muse_your-rhythm-and-muse_short_en.md"
     ];
+    
+    return staticPaths.map(path => ({
+        path: path,
+        name: path.split('/').pop(),
+        directory: path.substring(0, path.lastIndexOf('/') + 1)
+    }));
+}
 
+// Enhanced poem fetching with dynamic discovery
+async function fetchAllPoemsEnhanced(limit = null) {
+    let poemPaths;
+    
+    // Try dynamic discovery first, fallback to static if needed
+    try {
+        const discoveredPoems = await discoverAllPoems();
+        poemPaths = discoveredPoems.map(poem => poem.path);
+    } catch (error) {
+        console.warn('Dynamic discovery failed, using fallback:', error);
+        const fallbackPoems = getFallbackPoemPaths();
+        poemPaths = fallbackPoems.map(poem => poem.path);
+    }
+    
     const poemsData = [];
     
     // Apply limit for progressive loading
-    const pathsToProcess = limit ? poemFilePaths.slice(0, limit) : poemFilePaths;
+    const pathsToProcess = limit ? poemPaths.slice(0, limit) : poemPaths;
 
     for (const filePath of pathsToProcess) {
         try {
@@ -120,7 +154,8 @@ async function fetchAllPoems(limit = null) {
                 language: frontMatter.language || 'unknown',
                 form: frontMatter.form || 'unknown',
                 length: frontMatter.length || 'unknown',
-                image: frontMatter.image || '', // Add image field
+                image: frontMatter.image || '',
+                filePath: filePath // Store original file path for admin operations
             };
             poemsData.push(poemEntry);
 
@@ -128,18 +163,23 @@ async function fetchAllPoems(limit = null) {
             console.error(`Catastrophic error processing ${filePath}:`, error);
         }
     }
-    // console.log('fetchAllPoems finished. Final poemsData count:', poemsData.length);
-    // if (poemsData.length < poemFilePaths.length) {
-    //     console.warn(`Expected ${poemFilePaths.length} poems, but only parsed ${poemsData.length}. Check for fetch/parse errors above.`);
-    // }
-    // console.log('Final poemsData object:', poemsData);
+    
+    console.log(`Loaded ${poemsData.length} poems from ${pathsToProcess.length} files`);
     return poemsData;
 }
 
-// Expose the function if using modules, or make it global
-// export { fetchAllPoems }; // For ES modules
-// Or for simple script include:
-window.fetchAllPoems = fetchAllPoems;
-window.parsePoemFileContent = parsePoemFileContent; // also expose for potential reuse
+// Function to get total poem count for pagination
+async function getTotalPoemCount() {
+    try {
+        const discoveredPoems = await discoverAllPoems();
+        return discoveredPoems.length;
+    } catch (error) {
+        console.warn('Could not get dynamic count, using fallback');
+        return getFallbackPoemPaths().length;
+    }
+}
 
-// Added a comment to trigger a new GitHub Pages deployment. (Attempt 3)
+// Export functions for use in other scripts
+window.fetchAllPoemsEnhanced = fetchAllPoemsEnhanced;
+window.getTotalPoemCount = getTotalPoemCount;
+window.discoverAllPoems = discoverAllPoems;

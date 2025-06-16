@@ -3,10 +3,160 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
+  <meta name="robots" content="noindex">
+  <title>PoetryScape Admin - Poem Management</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  
+  <!-- Custom admin styles -->
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    /* Custom CMS styling */
+    .nc-app-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    }
+    
+    .nc-app-header h1 {
+      color: white !important;
+    }
+    
+    /* Loading screen customization */
+    .nc-app-loading {
+      background: #f8f9fa;
+    }
+    
+    /* Hide unnecessary elements for focused experience */
+    .nc-workflow-list {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <!-- Include the Decap CMS script -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Loading screen -->
+  <div id="loading" style="
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    font-size: 1.2em;
+    z-index: 9999;
+  ">
+    <div style="text-align: center;">
+      <h2>PoetryScape Admin</h2>
+      <p>Loading poem management interface...</p>
+      <div style="margin-top: 20px;">
+        <div style="
+          width: 40px; 
+          height: 40px; 
+          border: 3px solid rgba(255,255,255,0.3); 
+          border-top: 3px solid white; 
+          border-radius: 50%; 
+          animation: spin 1s linear infinite;
+          margin: 0 auto;
+        "></div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
+  <!-- Include the latest Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  
+  <!-- Custom admin configuration -->
+  <script>
+    // Hide loading screen once CMS loads
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const loading = document.getElementById('loading');
+        if (loading) {
+          loading.style.display = 'none';
+        }
+      }, 2000);
+    });
+
+    // Custom CMS configuration
+    CMS.registerPreviewStyle("/poetry_website/css/style.css");
+    
+    // Custom preview templates for poems
+    CMS.registerPreviewTemplate("short_poems", ({ entry, widgetFor, widgetsFor }) => {
+      const title = entry.getIn(['data', 'title']);
+      const author = entry.getIn(['data', 'author']);
+      const body = widgetFor('body');
+      
+      return React.createElement('div', {
+        style: {
+          padding: '20px',
+          maxWidth: '600px',
+          margin: '0 auto',
+          fontFamily: 'Georgia, serif',
+          lineHeight: '1.6'
+        }
+      }, [
+        React.createElement('h1', { 
+          key: 'title',
+          style: { 
+            textAlign: 'center', 
+            marginBottom: '10px',
+            color: '#2c3e50'
+          } 
+        }, title),
+        React.createElement('p', { 
+          key: 'author',
+          style: { 
+            textAlign: 'center', 
+            fontStyle: 'italic',
+            marginBottom: '30px',
+            color: '#7f8c8d'
+          } 
+        }, `By ${author}`),
+        React.createElement('div', { 
+          key: 'content',
+          style: { 
+            textAlign: 'center',
+            fontSize: '1.1em',
+            whiteSpace: 'pre-line'
+          } 
+        }, body)
+      ]);
+    });
+
+    // Apply preview template to all collections
+    CMS.registerPreviewTemplate("free_verse_poems", CMS.getPreviewTemplate("short_poems"));
+    CMS.registerPreviewTemplate("sonnets", CMS.getPreviewTemplate("short_poems"));
+    CMS.registerPreviewTemplate("hindi_poems", CMS.getPreviewTemplate("short_poems"));
+
+    // Custom validation
+    CMS.registerEventListener({
+      name: 'preSave',
+      handler: ({ entry }) => {
+        const title = entry.getIn(['data', 'title']);
+        const body = entry.getIn(['data', 'body']);
+        
+        if (!title || title.trim().length < 2) {
+          throw new Error('Poem title must be at least 2 characters long');
+        }
+        
+        if (!body || body.trim().length < 10) {
+          throw new Error('Poem content must be at least 10 characters long');
+        }
+        
+        return entry;
+      }
+    });
+  </script>
 </body>
 </html>

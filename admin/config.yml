@@ -1,23 +1,84 @@
 backend:
   name: github
   repo: manasp21/poetry_website
-  branch: main # Replace with your default branch if not main
+  branch: main
+  auth_endpoint: https://auth.netlify.com/callback
 
-media_folder: "assets/images/poems" # Folder where uploaded media will be stored
-public_folder: "/assets/images/poems" # Folder where media will be served from
+media_folder: "assets/images/poems"
+public_folder: "/poetry_website/assets/images/poems"
+
+# Site configuration
+site_url: https://manasp21.github.io/poetry_website
+display_url: https://manasp21.github.io/poetry_website
+
+# Editorial workflow for content review (optional)
+publish_mode: editorial_workflow
 
 collections:
-  - name: "poems" # A friendly name for the collection
-    label: "Poems" # The label displayed in the UI
-    folder: "Poetry/by_language/english/lengths/short" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., "my-new-poem.md"
-    fields: # The fields for each document, corresponding to the front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+  # Short Poems Collection
+  - name: "short_poems"
+    label: "Short Poems"
+    folder: "Poetry/by_language/english/lengths/short"
+    create: true
+    delete: true
+    slug: "{{slug}}_{{first_line}}_short_{{language}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Author", name: "author", widget: "string", default: "Manas Pandey", required: true}
+      - {label: "Original Path", name: "original_path", widget: "string", required: false, hint: "Original file path reference"}
+      - {label: "Language", name: "language", widget: "select", options: ["en", "hi"], default: "en", required: true}
+      - {label: "Form", name: "form", widget: "select", options: ["short", "haiku", "tanka"], default: "short", required: true}
+      - {label: "Length", name: "length", widget: "hidden", default: "short"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false, hint: "Upload an image or leave blank for placeholder"}
+      - {label: "Poem Content", name: "body", widget: "markdown", required: true, hint: "Write your poem here"}
+
+  # Free Verse Poems Collection  
+  - name: "free_verse_poems"
+    label: "Free Verse Poems"
+    folder: "Poetry/by_language/english/forms/free_verse"
+    create: true
+    delete: true
+    slug: "{{slug}}_{{first_line}}_standard_{{language}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Author", name: "author", widget: "string", default: "Manas Pandey", required: true}
+      - {label: "Original Path", name: "original_path", widget: "string", required: false}
+      - {label: "Language", name: "language", widget: "select", options: ["en", "hi"], default: "en", required: true}
+      - {label: "Form", name: "form", widget: "hidden", default: "free_verse"}
+      - {label: "Length", name: "length", widget: "select", options: ["standard", "long"], default: "standard", required: true}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Language", name: "language", widget: "string", default: "english"}
-      - {label: "Form", name: "form", widget: "string", default: "short"}
-      - {label: "Length", name: "length", widget: "string", default: "short"}
+      - {label: "Poem Content", name: "body", widget: "markdown", required: true}
+
+  # Sonnet Collection
+  - name: "sonnets"
+    label: "Sonnets"  
+    folder: "Poetry/by_language/english/forms/sonnet"
+    create: true
+    delete: true
+    slug: "{{slug}}_{{first_line}}_sonnet_{{language}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Author", name: "author", widget: "string", default: "Manas Pandey", required: true}
+      - {label: "Original Path", name: "original_path", widget: "string", required: false}
+      - {label: "Language", name: "language", widget: "select", options: ["en", "hi"], default: "en", required: true}
+      - {label: "Form", name: "form", widget: "hidden", default: "sonnet"}
+      - {label: "Length", name: "length", widget: "hidden", default: "standard"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Poem Content", name: "body", widget: "markdown", required: true, hint: "Traditional sonnet: 14 lines with specific rhyme scheme"}
+
+  # Hindi Poems Collection
+  - name: "hindi_poems"
+    label: "Hindi Poems"
+    folder: "Poetry/by_language/hindi/lengths/standard" 
+    create: true
+    delete: true
+    slug: "{{slug}}_{{first_line}}_standard_{{language}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Author", name: "author", widget: "string", default: "Manas Pandey", required: true}
+      - {label: "Original Path", name: "original_path", widget: "string", required: false}
+      - {label: "Language", name: "language", widget: "hidden", default: "hi"}
+      - {label: "Form", name: "form", widget: "select", options: ["ghazal", "doha", "free_verse"], default: "free_verse", required: true}
+      - {label: "Length", name: "length", widget: "select", options: ["short", "standard", "long"], default: "standard", required: true}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Poem Content", name: "body", widget: "markdown", required: true}

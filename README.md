@@ -11,6 +11,8 @@ A modern, minimalist poetry website showcasing a curated collection of poems wit
 - **Individual Poem Pages**: Dedicated pages with enhanced reading experience
 - **Image Integration**: Each poem paired with corresponding visual artwork
 - **Fast Loading**: Optimized performance with lazy loading and efficient caching
+- **Admin Interface**: Complete content management system for adding, editing, and deleting poems
+- **Dynamic Discovery**: Automatic poem detection without manual file updates
 
 ## 🚀 Live Demo
 
@@ -23,9 +25,13 @@ poetry_website/
 ├── index.html              # Homepage with featured poems
 ├── poem.html               # Individual poem display page
 ├── archive.html             # Browse/filter all poems
+├── admin/
+│   ├── index.html          # Admin interface (Netlify CMS)
+│   └── config.yml          # CMS configuration
 ├── css/
 │   └── style.css           # Main stylesheet with theme support
 ├── js/
+│   ├── dynamic-poem-loader.js  # Dynamic poem discovery system
 │   ├── content-loader.js   # Poem loading and parsing system
 │   ├── main.js             # Homepage functionality
 │   ├── poem-page.js        # Individual poem page logic
@@ -88,18 +94,38 @@ npx serve .
 ```
 
 ### Adding New Poems
+
+#### Via Admin Interface (Recommended)
+1. Visit `https://manasp21.github.io/poetry_website/admin/`
+2. Login with GitHub authentication
+3. Choose poem collection (Short, Free Verse, Sonnet, Hindi)
+4. Fill in title, content, and optional image
+5. Publish - poem appears automatically on website
+
+See [ADMIN_SETUP.md](ADMIN_SETUP.md) for detailed setup instructions.
+
+#### Manual Method
 1. Create a new markdown file in the appropriate directory
 2. Include proper YAML frontmatter with metadata
-3. Add the file path to `poemFilePaths` array in `js/content-loader.js`
+3. File will be auto-discovered by the dynamic loading system
 4. (Optional) Add corresponding image to `assets/images/poems/`
 
 ## 🎯 Architecture
 
 ### Content Loading System
-- **Dynamic Loading**: Poems are fetched from markdown files at runtime
+- **Dynamic Discovery**: Automatically finds poems using GitHub API
 - **YAML Parsing**: Custom parser extracts metadata and content
+- **Progressive Loading**: Initial 12 poems, then load more on demand
 - **GitHub Pages Compatible**: Paths configured for deployment
 - **Error Handling**: Graceful fallbacks for missing content
+
+### Admin System
+- **Netlify CMS**: Web-based content management interface
+- **GitHub Authentication**: Secure access control via GitHub OAuth
+- **Real-time Preview**: See poems as they'll appear on the website
+- **Multi-collection Support**: Different poem types (short, free verse, sonnets, Hindi)
+- **Image Upload**: Drag-and-drop image management
+- **Auto-organization**: Files saved to correct directories automatically
 
 ### Image System
 - **Direct Reference**: Images linked via `image` field in poem frontmatter

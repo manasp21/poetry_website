@@ -191,6 +191,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Helper function to get total poem count safely
+    async function getTotalPoemCountSafe() {
+        if (typeof window.getTotalPoemCount === 'function') {
+            try {
+                return await window.getTotalPoemCount();
+            } catch (error) {
+                console.warn('Could not get dynamic poem count:', error);
+            }
+        }
+        return 46; // Fallback count
+    }
+
     // Load More Poems Functionality
     let currentlyLoadedCount = 12;
     const loadMoreBtn = document.getElementById('load-more-poems');
@@ -264,8 +276,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     currentlyLoadedCount += newPoems.length;
                     
-                    // Hide button if all poems loaded
-                    if (currentlyLoadedCount >= 46) { // Total poems count
+                    // Hide button if all poems loaded - use dynamic count
+                    const totalCount = await getTotalPoemCountSafe();
+                    if (currentlyLoadedCount >= totalCount) {
                         loadMoreBtn.style.display = 'none';
                     } else {
                         loadMoreBtn.textContent = 'Load More Poems';
@@ -281,9 +294,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         // Show load more button if there are more poems to load
-        if (currentlyLoadedCount < 46) {
-            loadMoreBtn.style.display = 'block';
-        }
+        getTotalPoemCountSafe().then(totalCount => {
+            if (currentlyLoadedCount < totalCount) {
+                loadMoreBtn.style.display = 'block';
+            }
+        });
     }
 
     // Load and display content
