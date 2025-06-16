@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_13.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "white-canvas-empty-like-void.png"
 ---
 White Canvas,
 Empty like void,

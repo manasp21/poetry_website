@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_42.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "what-is-red.png"
 ---
 What is red?
 Is it the color of the dead? Blood?

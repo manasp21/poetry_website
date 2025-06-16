@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log("Archive Page JS Loaded.");
 
     const filterPoetSelect = document.getElementById('filter-poet');
     const filterLanguageSelect = document.getElementById('filter-language');

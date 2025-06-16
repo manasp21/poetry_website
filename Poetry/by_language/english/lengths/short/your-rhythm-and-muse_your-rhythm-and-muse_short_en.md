@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_25.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "your-rhythm-and-muse.png"
 ---
 Your Rhythm and Muse,
 Only I can deduce,

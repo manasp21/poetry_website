@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_40.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "to-flowers-of-crimson-pink.png"
 ---
 To Flowers of crimson pink,
 I due my bow and wink,

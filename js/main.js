@@ -73,12 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Use the image field directly from poem data
         if (poem.image && poem.image.trim() !== '') {
             const imagePath = `${basePath}/assets/images/poems/${poem.image}`;
-            console.log(`[DEBUG] Image path for "${poem.title}": ${imagePath}`);
             return imagePath;
         }
         
         // Fallback to placeholder
-        console.log(`[DEBUG] No image for "${poem.title}", using placeholder`);
         return `${basePath}/assets/images/placeholder.png`;
     }
 
@@ -101,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         poemGrid.innerHTML = '<div class="loading-message"><p>Loading poems...</p></div>';
 
         if (!poems || poems.length === 0) {
-            console.warn('[main.js] No poems data to display or poems array is empty.');
             poemGrid.innerHTML = '<div class="loading-message"><p>No poems found to display.</p><p>Please check back later.</p></div>'; // Fallback message
             return;
         }
@@ -197,5 +194,4 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Error loading homepage content:", error);
     });
 
-    console.log("Interactive Poetry Website JS Loaded and homepage content initiated.");
 });

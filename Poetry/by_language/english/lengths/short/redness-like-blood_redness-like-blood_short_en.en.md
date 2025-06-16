@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_29.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "redness-like-blood.png"
 ---
 Redness like Blood,
 Piercing eyes as Lasers,

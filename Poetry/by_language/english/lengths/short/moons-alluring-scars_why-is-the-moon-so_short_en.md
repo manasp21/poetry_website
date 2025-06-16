@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_34.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "moons-alluring-scars.png"
 ---
 Why is the moon so alluring?
 Is it cause of it's moonlight,

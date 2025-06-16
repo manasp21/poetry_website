@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_38.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "if-you-go-deep-in-thought.png"
 ---
 If you go deep in thought,
 And stare at black for too long,

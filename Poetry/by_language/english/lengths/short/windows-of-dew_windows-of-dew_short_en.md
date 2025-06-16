@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_30.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "windows-of-dew.png"
 ---
 Windows of dew,
 Like people few,

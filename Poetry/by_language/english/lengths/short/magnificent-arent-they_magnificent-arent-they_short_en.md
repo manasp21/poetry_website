@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_24.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "magnificent-arent-they.png"
 ---
 Magnificent aren't they,
 look them when I see up,

@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_8.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "redness-like-blood.png"
 ---
 Redness glowing like fate,
 Like demons inside on every date,

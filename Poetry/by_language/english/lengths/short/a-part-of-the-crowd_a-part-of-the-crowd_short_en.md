@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_36.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "a-part-of-the-crowd.png"
 ---
 A part of the crowd,
 You are still proud.

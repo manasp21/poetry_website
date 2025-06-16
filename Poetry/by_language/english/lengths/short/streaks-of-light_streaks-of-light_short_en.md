@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_12.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "streaks-of-light.png"
 ---
 Streaks of light,
 Like a blinding sight.

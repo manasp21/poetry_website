@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_37.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "mornings-with-no-clouds.png"
 ---
 Mornings with no clouds,
 Sleeps with no dreams,

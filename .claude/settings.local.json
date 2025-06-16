@@ -9,7 +9,8 @@
       "Bash(curl:*)",
       "Bash(wget:*)",
       "Bash(mv:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(python:*)"
     ],
     "deny": []
   }

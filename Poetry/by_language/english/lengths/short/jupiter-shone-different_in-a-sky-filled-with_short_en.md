@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_15.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "jupiter-shone-different.png"
 ---
 In a Sky filled with stars,
 Jupiter Shone different than Mars,

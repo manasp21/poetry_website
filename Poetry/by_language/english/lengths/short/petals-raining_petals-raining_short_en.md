@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_17.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "petals-raining.png"
 ---
 Petals raining,
 Drops of pink,

@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_20.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "through-tunnels-of-tricks.png"
 ---
 Through tunnels of tricks,
 I see the world with mists,

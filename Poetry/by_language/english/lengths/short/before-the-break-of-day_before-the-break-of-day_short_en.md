@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_39.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "before-the-break-of-day.png"
 ---
 Before the break of day,
 Clouds washing the sky sway,

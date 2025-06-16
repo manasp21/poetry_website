@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_32.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "see-through-your-heart.png"
 ---
 See through your heart,
 The things your eyes disguise,

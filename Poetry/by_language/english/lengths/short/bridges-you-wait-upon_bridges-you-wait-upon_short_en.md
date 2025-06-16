@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_23.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "bridges-you-wait-upon.png"
 ---
 Bridges you wait upon,
 For the dawn to sweep,

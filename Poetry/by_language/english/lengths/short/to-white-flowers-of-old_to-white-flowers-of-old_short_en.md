@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_21.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "to-white-flowers-of-old.png"
 ---
 To white flowers of old,
 Your petals sparkle like gold,

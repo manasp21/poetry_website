@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_16.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "a-leaf-in-a-sea-of-green.png"
 ---
 A leaf in a sea of green,
 Being odd of all,

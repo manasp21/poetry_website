@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_35.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "flowers-under-streetlight.png"
 ---
 Flowers under streetlight,
 Reflecting their colours with delight,

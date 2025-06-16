@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_44.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "its-the-last-day-of-earth.png"
 ---
 It's the last day of earth,
 Skies blazing with fiery wrath,

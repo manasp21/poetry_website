@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_31.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "drops-of-jupiter.png"
 ---
 I don't know why, how,
 But Jupiter has always been my favourite planet,

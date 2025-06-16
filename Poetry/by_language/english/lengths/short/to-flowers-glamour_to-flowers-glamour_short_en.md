@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_22.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "to-flowers-glamour.png"
 ---
 To Flowers' glamour,
 To the grandeur the show,

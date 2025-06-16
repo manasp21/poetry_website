@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_27.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "colours-in-sky.png"
 ---
 Colours in Sky,
 Maybe Refracted by clouds,

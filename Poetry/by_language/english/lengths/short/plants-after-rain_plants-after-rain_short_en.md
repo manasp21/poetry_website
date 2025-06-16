@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_28.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "plants-after-rain.png"
 ---
 Plants after rain,
 Dust sliding like grain,

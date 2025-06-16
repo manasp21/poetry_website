@@ -5,7 +5,7 @@ original_path: "Poetry/Short_Poems/poem_43.txt"
 language: "en"
 form: "short"
 length: "short"
-image: ""
+image: "moon-through-skys-circular-frame.png"
 ---
 Moon through sky's circular frame,
 Like a lens of flirt's play.
