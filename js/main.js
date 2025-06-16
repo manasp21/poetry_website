@@ -87,7 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const poems = await window.fetchAllPoems();
+        // Load only first 12 poems initially for faster loading
+        const poems = await window.fetchAllPoems(12);
         const poemGrid = document.querySelector('.poem-grid');
 
         if (!poemGrid) {
@@ -120,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             img.src = getPoemImagePath(poem);
             img.alt = `Image for ${poem.title || 'poem'}`;
             img.loading = 'lazy'; // Add lazy loading for better performance
+            img.decoding = 'async'; // Non-blocking image decoding
             img.style.opacity = '0';
             img.style.transition = 'opacity 0.3s ease-in-out';
             
@@ -187,6 +189,101 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+    }
+
+    // Load More Poems Functionality
+    let currentlyLoadedCount = 12;
+    const loadMoreBtn = document.getElementById('load-more-poems');
+    
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', async () => {
+            loadMoreBtn.textContent = 'Loading...';
+            loadMoreBtn.disabled = true;
+            
+            try {
+                const nextBatch = await window.fetchAllPoems(currentlyLoadedCount + 12);
+                const newPoems = nextBatch.slice(currentlyLoadedCount);
+                
+                if (newPoems.length > 0) {
+                    const poemGrid = document.querySelector('.poem-grid');
+                    
+                    newPoems.forEach(poem => {
+                        const card = document.createElement('article');
+                        card.classList.add('poem-card');
+
+                        const link = document.createElement('a');
+                        link.classList.add('poem-card-link');
+                        link.href = `poem.html?id=${poem.id}`;
+
+                        const imagePlaceholder = document.createElement('div');
+                        imagePlaceholder.classList.add('poem-card-image-placeholder');
+                        const img = document.createElement('img');
+                        img.src = getPoemImagePath(poem);
+                        img.alt = `Image for ${poem.title || 'poem'}`;
+                        img.loading = 'lazy';
+                        img.decoding = 'async';
+                        img.style.opacity = '0';
+                        img.style.transition = 'opacity 0.3s ease-in-out';
+                        
+                        img.onload = () => {
+                            img.style.opacity = '1';
+                        };
+                        
+                        img.onerror = () => { 
+                            const basePath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '' : '/poetry_website';
+                            img.src = `${basePath}/assets/images/placeholder.png`;
+                            img.style.opacity = '1';
+                        };
+                        
+                        imagePlaceholder.appendChild(img);
+
+                        const contentDiv = document.createElement('div');
+                        contentDiv.classList.add('poem-card-content');
+
+                        const titleElem = document.createElement('h2');
+                        titleElem.classList.add('poem-card-title');
+                        titleElem.textContent = poem.title || 'Untitled Poem';
+
+                        const authorElem = document.createElement('p');
+                        authorElem.classList.add('poem-card-author');
+                        authorElem.textContent = poem.author || 'Unknown Author';
+
+                        const excerptElem = document.createElement('p');
+                        excerptElem.classList.add('poem-card-excerpt');
+                        excerptElem.textContent = generateExcerpt(poem.content, 120);
+
+                        contentDiv.appendChild(titleElem);
+                        contentDiv.appendChild(authorElem);
+                        contentDiv.appendChild(excerptElem);
+
+                        link.appendChild(imagePlaceholder);
+                        link.appendChild(contentDiv);
+                        card.appendChild(link);
+                        poemGrid.appendChild(card);
+                    });
+                    
+                    currentlyLoadedCount += newPoems.length;
+                    
+                    // Hide button if all poems loaded
+                    if (currentlyLoadedCount >= 46) { // Total poems count
+                        loadMoreBtn.style.display = 'none';
+                    } else {
+                        loadMoreBtn.textContent = 'Load More Poems';
+                        loadMoreBtn.disabled = false;
+                    }
+                } else {
+                    loadMoreBtn.style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Error loading more poems:', error);
+                loadMoreBtn.textContent = 'Error Loading';
+            }
+        });
+        
+        // Show load more button if there are more poems to load
+        if (currentlyLoadedCount < 46) {
+            loadMoreBtn.style.display = 'block';
+        }
     }
 
     // Load and display content

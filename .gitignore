@@ -1,0 +1,39 @@
+# Development files
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Node.js (if ever needed)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary optimization scripts
+optimize-*.py
+cleanup-*.py
+find-*.py
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?

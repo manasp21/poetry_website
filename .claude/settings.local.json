@@ -10,7 +10,8 @@
       "Bash(wget:*)",
       "Bash(mv:*)",
       "Bash(grep:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(git restore:*)"
     ],
     "deny": []
   }

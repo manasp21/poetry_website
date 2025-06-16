@@ -13,7 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>PoetryScape - Home</title>
     <link rel="stylesheet" href="css/style.css">
-<script defer src="js/content-loader.js"></script>
+    <link rel="preload" href="js/content-loader.js" as="script">
+    <link rel="preload" href="js/main.js" as="script">
+    <script defer src="js/content-loader.js"></script>
     <script defer src="js/main.js"></script>
 </head>
 <body>
@@ -35,52 +37,18 @@
 
     <main class="homepage-main">
         <section class="poem-grid" aria-label="Featured Poems">
-            <!-- Poem cards will be dynamically inserted here or statically defined -->
-            <article class="poem-card">
-                <a href="poem.html?id=1" class="poem-card-link">
-                    <div class="poem-card-image-placeholder" style="background-color: #e0e0e0;">
-                        <!-- Placeholder for image or abstract pattern -->
-                    </div>
-                    <div class="poem-card-content">
-                        <h2 class="poem-card-title">Whispers of the Wind</h2>
-                        <p class="poem-card-author">Elara Sands</p>
-                        <p class="poem-card-excerpt">A gentle breeze through ancient trees, carrying tales untold...</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="poem-card">
-                <a href="poem.html?id=2" class="poem-card-link">
-                    <div class="poem-card-image-placeholder" style="background-color: #d0d0d0;"></div>
-                    <div class="poem-card-content">
-                        <h2 class="poem-card-title">City of Echoes</h2>
-                        <p class="poem-card-author">Marcus Thorne</p>
-                         <p class="poem-card-excerpt">Neon lights reflect in rain-slicked streets, a symphony of solitude...</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="poem-card">
-                <a href="poem.html?id=3" class="poem-card-link">
-                    <div class="poem-card-image-placeholder" style="background-color: #f0f0f0;"></div>
-                    <div class="poem-card-content">
-                        <h2 class="poem-card-title">Ocean's Heartbeat</h2>
-                        <p class="poem-card-author">Seraphina Moon</p>
-                         <p class="poem-card-excerpt">Deep beneath the waves, a rhythmic pulse, life's eternal song...</p>
-                    </div>
-                </a>
-            </article>
-             <article class="poem-card">
-                <a href="poem.html?id=4" class="poem-card-link">
-                    <div class="poem-card-image-placeholder" style="background-color: #c0c0c0;"></div>
-                    <div class="poem-card-content">
-                        <h2 class="poem-card-title">Starlight Canvas</h2>
-                        <p class="poem-card-author">Orion Sky</p>
-                        <p class="poem-card-excerpt">Upon the velvet night, a painter's dream, galaxies ignite...</p>
-                    </div>
-                </a>
-            </article>
+            <!-- Poems will be dynamically loaded here -->
+            <div class="loading-message">
+                <p>Loading poems...</p>
+            </div>
         </section>
+        
+        <!-- Load More Button -->
+        <div class="load-more-container" style="text-align: center; margin: 2rem 0;">
+            <button id="load-more-poems" class="load-more-btn" style="display: none; padding: 0.75rem 1.5rem; font-size: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 25px; cursor: pointer; transition: all 0.3s ease;">
+                Load More Poems
+            </button>
+        </div>
     </main>
 
     <footer>

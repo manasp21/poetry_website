@@ -32,8 +32,8 @@ function parsePoemFileContent(markdownContent) {
     return { frontMatter, poemText };
 }
 
-// Function to fetch and parse all poems
-async function fetchAllPoems() {
+// Function to fetch and parse poems progressively
+async function fetchAllPoems(limit = null) {
     const poemFilePaths = [
         "Poetry/by_language/english/lengths/short/a-leaf-in-a-sea-of-green_a-leaf-in-a-sea-of_short_en.md",
         "Poetry/by_language/english/lengths/short/a-light-that-never-goes-out_there-is-a-light-that_short_en.md",
@@ -84,8 +84,11 @@ async function fetchAllPoems() {
     ];
 
     const poemsData = [];
+    
+    // Apply limit for progressive loading
+    const pathsToProcess = limit ? poemFilePaths.slice(0, limit) : poemFilePaths;
 
-    for (const filePath of poemFilePaths) {
+    for (const filePath of pathsToProcess) {
         try {
             const response = await fetch(`/poetry_website/${filePath}`);
             if (!response.ok) {
