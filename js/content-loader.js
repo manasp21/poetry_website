@@ -33,6 +33,15 @@ function parsePoemFileContent(markdownContent) {
 }
 
 // Function to fetch and parse poems progressively
+
+    // Automatic image detection for folder structure
+    function getImagePathForPoem(poemPath) {
+        // Convert Poetry/X/poem.md to Poetry/X/image.png
+        const folderPath = poemPath.substring(0, poemPath.lastIndexOf('/'));
+        return folderPath + '/image.png';
+    }
+
+// Function to fetch and parse poems progressively
 async function fetchAllPoems(limit = null) {
     // Try to use enhanced dynamic loader if available, otherwise fallback to static
     if (typeof window.fetchAllPoemsEnhanced === 'function') {
@@ -45,52 +54,80 @@ async function fetchAllPoems(limit = null) {
     
     // Fallback to static poem list
     const poemFilePaths = [
-        "Poetry/by_language/english/lengths/short/a-leaf-in-a-sea-of-green_a-leaf-in-a-sea-of_short_en.md",
-        "Poetry/by_language/english/lengths/short/a-light-that-never-goes-out_there-is-a-light-that_short_en.md",
-        "Poetry/by_language/english/lengths/short/a-part-of-the-crowd_a-part-of-the-crowd_short_en.md",
-        "Poetry/by_language/english/lengths/short/before-the-break-of-day_before-the-break-of-day_short_en.md",
-        "Poetry/by_language/english/lengths/short/bridges-you-wait-upon_bridges-you-wait-upon_short_en.md",
-        "Poetry/by_language/english/lengths/short/cold-hallways_cold-hallways_short_en.md",
-        "Poetry/by_language/english/lengths/short/colours-in-sky_colours-in-sky_short_en.md",
-        "Poetry/by_language/english/lengths/short/distant-lights-i-stare_distant-lights-i-stare_short_en.md",
-        "Poetry/by_language/english/lengths/short/drops-of-jupiter_i-dont-know-why-how_short_en.md",
-        "Poetry/by_language/english/lengths/short/flowers-under-streetlight_flowers-under-streetlight_short_en.md",
-        "Poetry/by_language/english/lengths/short/gayish-bubbles_gayish-bubbles_short_en.md",
-        "Poetry/by_language/english/lengths/short/i-love-winters_i-love-winters_short_en.md",
-        "Poetry/by_language/english/lengths/short/if-you-go-deep-in-thought_if-you-go-deep-in-thought_short_en.md",
-        "Poetry/by_language/english/lengths/short/its-the-last-day-of-earth_its-the-last-day-of-earth_short_en.md",
-        "Poetry/by_language/english/lengths/short/jupiter-shone-different_in-a-sky-filled-with_short_en.md",
-        "Poetry/by_language/english/lengths/short/kogarashi_kogarashi_short_en.md",
-        "Poetry/by_language/english/lengths/short/light-streaks-at-night_lights-streaks-at-night_short_en.md",
-        "Poetry/by_language/english/lengths/short/lights-in-a-lecture-hall_lights-in-a-lecture-hall_short_en.md",
-        "Poetry/by_language/english/lengths/short/magnificent-arent-they_magnificent-arent-they_short_en.md",
-        "Poetry/by_language/english/lengths/short/moon-through-skys-circular-frame_moon-through-skys-circular-frame_short_en.md",
-        "Poetry/by_language/english/lengths/short/moons-alluring-scars_why-is-the-moon-so_short_en.md",
-        "Poetry/by_language/english/lengths/short/mornings-with-no-clouds_mornings-with-no-clouds_short_en.md",
-        "Poetry/by_language/english/lengths/short/petals-raining_petals-raining_short_en.md",
-        "Poetry/by_language/english/lengths/short/plants-after-rain_plants-after-rain_short_en.md",
-        "Poetry/by_language/english/lengths/short/purple-hyacinth_purple-hyacinth_short_en.md",
-        "Poetry/by_language/english/lengths/short/red-clouds-like-bloody-hell_red-clouds_short_en.md",
-        "Poetry/by_language/english/lengths/short/red-spirals-odd_red-spirals-odd_short_en.md",
-        "Poetry/by_language/english/lengths/short/redness-glowing-like-fate_redness-glowing-like-fate_short_en.md",
-        "Poetry/by_language/english/lengths/short/redness-like-blood_redness-like-blood_short_en.en.md",
-        "Poetry/by_language/english/lengths/short/see-through-your-heart_see-through-your-heart_short_en.md",
-        "Poetry/by_language/english/lengths/short/shades-of-grey_shades-of-grey_short_en.md",
-        "Poetry/by_language/english/lengths/short/sirius-in-the-sky_sirius-in-the-sky_short_en.md",
-        "Poetry/by_language/english/lengths/short/streaks-of-light_streaks-of-light_short_en.md",
-        "Poetry/by_language/english/lengths/short/through-tunnels-of-tricks_through-tunnels-of-tricks_short_en.md",
-        "Poetry/by_language/english/lengths/short/to-flowers-glamour_to-flowers-glamour_short_en.md",
-        "Poetry/by_language/english/lengths/short/to-flowers-of-crimson-pink_to-flowers-of-crimson-pink_short_en.md",
-        "Poetry/by_language/english/lengths/short/to-white-flowers-of-old_to-white-flowers-of-old_short_en.md",
-        "Poetry/by_language/english/lengths/short/what-is-red_what-is-red_short_en.md",
-        "Poetry/by_language/english/lengths/short/white-canvas-empty-like-void_white-canvas_short_en.md",
-        "Poetry/by_language/english/lengths/short/white-hyacinths_white-hyacinths_short_en.md",
-        "Poetry/by_language/english/lengths/short/white-in-a-garden-of-purple_white-in-a-garden-of-purple_short_en.md",
-        "Poetry/by_language/english/lengths/short/why-pretend_why-pretend_short_en.md",
-        "Poetry/by_language/english/lengths/short/windows-of-dew_windows-of-dew_short_en.md",
-        "Poetry/by_language/english/lengths/short/years-of-stories_written-in-these-lines_short_en.md",
-        "Poetry/by_language/english/lengths/short/yellow-flowers-on-asphalt_yellow-flowers-on-asphalt_short_en.md",
-        "Poetry/by_language/english/lengths/short/your-rhythm-and-muse_your-rhythm-and-muse_short_en.md"
+        "Poetry/1/poem.md",
+        "Poetry/2/poem.md",
+        "Poetry/3/poem.md",
+        "Poetry/4/poem.md",
+        "Poetry/5/poem.md",
+        "Poetry/6/poem.md",
+        "Poetry/7/poem.md",
+        "Poetry/8/poem.md",
+        "Poetry/9/poem.md",
+        "Poetry/10/poem.md",
+        "Poetry/11/poem.md",
+        "Poetry/12/poem.md",
+        "Poetry/13/poem.md",
+        "Poetry/14/poem.md",
+        "Poetry/15/poem.md",
+        "Poetry/16/poem.md",
+        "Poetry/17/poem.md",
+        "Poetry/18/poem.md",
+        "Poetry/19/poem.md",
+        "Poetry/20/poem.md",
+        "Poetry/21/poem.md",
+        "Poetry/22/poem.md",
+        "Poetry/23/poem.md",
+        "Poetry/24/poem.md",
+        "Poetry/25/poem.md",
+        "Poetry/26/poem.md",
+        "Poetry/27/poem.md",
+        "Poetry/28/poem.md",
+        "Poetry/29/poem.md",
+        "Poetry/30/poem.md",
+        "Poetry/31/poem.md",
+        "Poetry/32/poem.md",
+        "Poetry/33/poem.md",
+        "Poetry/34/poem.md",
+        "Poetry/35/poem.md",
+        "Poetry/36/poem.md",
+        "Poetry/37/poem.md",
+        "Poetry/38/poem.md",
+        "Poetry/39/poem.md",
+        "Poetry/40/poem.md",
+        "Poetry/41/poem.md",
+        "Poetry/42/poem.md",
+        "Poetry/43/poem.md",
+        "Poetry/44/poem.md",
+        "Poetry/45/poem.md",
+        "Poetry/46/poem.md",
+        "Poetry/47/poem.md",
+        "Poetry/48/poem.md",
+        "Poetry/49/poem.md",
+        "Poetry/50/poem.md",
+        "Poetry/51/poem.md",
+        "Poetry/52/poem.md",
+        "Poetry/53/poem.md",
+        "Poetry/54/poem.md",
+        "Poetry/55/poem.md",
+        "Poetry/56/poem.md",
+        "Poetry/57/poem.md",
+        "Poetry/58/poem.md",
+        "Poetry/59/poem.md",
+        "Poetry/60/poem.md",
+        "Poetry/61/poem.md",
+        "Poetry/62/poem.md",
+        "Poetry/63/poem.md",
+        "Poetry/64/poem.md",
+        "Poetry/65/poem.md",
+        "Poetry/66/poem.md",
+        "Poetry/67/poem.md",
+        "Poetry/68/poem.md",
+        "Poetry/69/poem.md",
+        "Poetry/70/poem.md",
+        "Poetry/71/poem.md",
+        "Poetry/72/poem.md",
+        "Poetry/73/poem.md",
+        "Poetry/74/poem.md"
     ];
 
     const poemsData = [];
@@ -120,7 +157,7 @@ async function fetchAllPoems(limit = null) {
                 language: frontMatter.language || 'unknown',
                 form: frontMatter.form || 'unknown',
                 length: frontMatter.length || 'unknown',
-                image: frontMatter.image || '', // Add image field
+                image: getImagePathForPoem(filePath).replace('/poetry_website/', '').replace('Poetry/', ''), // Add image field
             };
             poemsData.push(poemEntry);
 

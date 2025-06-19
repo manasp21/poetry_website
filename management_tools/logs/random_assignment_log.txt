@@ -1,0 +1,273 @@
+Random Image Assignment Log
+========================================
+Date: 2025-06-19T11:01:36.775813
+Total assignments: 67
+
+Poem 47: Moon Through Sky's Circular Frame
+  ← people-are-books.png
+  Source: assets/images/poems/47.png
+
+Poem 29: A Light That Never Goes Out
+  ← white-in-a-garden-of-purple.png
+  Source: assets/images/poems/74.png
+
+Poem 25: Timings a bitch
+  ← maybe-i-should-quit-poetry.png
+  Source: assets/images/poems/40.png
+
+Poem 31: Before the Break of Day
+  ← back-to-poetry.png
+  Source: assets/images/poems/7.png
+
+Poem 34: Colours in Sky
+  ← i-love-winters.png
+  Source: assets/images/poems/27.png
+
+Poem 15: Lost Poet
+  ← 2-winged-heart.png
+  Source: assets/images/poems/1.png
+
+Poem 73: Your Rhythm and Muse
+  ← streaks-of-light.png
+  Source: assets/images/poems/62.png
+
+Poem 61: Through Tunnels of Tricks
+  ← moon-through-skys-circular-frame.png
+  Source: assets/images/poems/42.png
+
+Poem 9: Escape
+  ← white-canvas-empty-like-void.png
+  Source: assets/images/poems/72.png
+
+Poem 67: White Hyacinths
+  ← sparkle.png
+  Source: assets/images/poems/61.png
+
+Poem 48: Moon's Alluring Scars
+  ← mistaken-midnight-poetry.png
+  Source: assets/images/poems/41.png
+
+Poem 50: Petals Raining
+  ← beauty-if-not-free.png
+  Source: assets/images/poems/8.png
+
+Poem 69: Why Pretend
+  ← skies-and-flowers.png
+  Source: assets/images/poems/59.png
+
+Poem 71: Years of Stories
+  ← jupiter-shone-different.png
+  Source: assets/images/poems/32.png
+
+Poem 32: Bridges You Wait Upon
+  ← coffee.png
+  Source: assets/images/poems/13.png
+
+Poem 49: Mornings With No Clouds
+  ← your-rhythm-and-muse.png
+  Source: assets/images/poems/79.png
+
+Poem 43: Kogarashi
+  ← kogarashi.png
+  Source: assets/images/poems/33.png
+
+Poem 53: Red Clouds, Like Bloody Hell
+  ← flowers-under-streetlight.png
+  Source: assets/images/poems/22.png
+
+Poem 33: Cold Hallways
+  ← to-flowers-of-crimson-pink.png
+  Source: assets/images/poems/67.png
+
+Poem 36: Drops of Jupiter
+  ← plants-after-rain.png
+  Source: assets/images/poems/49.png
+
+Poem 56: Redness Like Blood
+  ← before-the-break-of-day.png
+  Source: assets/images/poems/9.png
+
+Poem 39: I Love Winters
+  ← bridges-you-wait-upon.png
+  Source: assets/images/poems/11.png
+
+Poem 58: Shades of Grey
+  ← social-sieves.png
+  Source: assets/images/poems/60.png
+
+Poem 27: A Sonnet too late
+  ← burden-of-your-skin.png
+  Source: assets/images/poems/12.png
+
+Poem 64: To White Flowers of Old
+  ← mornings-with-no-clouds.png
+  Source: assets/images/poems/44.png
+
+Poem 16: Maybe I should Quit Poetry
+  ← see-through-your-heart.png
+  Source: assets/images/poems/57.png
+
+Poem 17: Not gonna Rhyme but waste time
+  ← ode-to-a-true-love-of-mine.png
+  Source: assets/images/poems/46.png
+
+Poem 11: Hmm Bland
+  ← cold-hallways.png
+  Source: assets/images/poems/14.png
+
+Poem 13: If only if
+  ← hey-you.png
+  Source: assets/images/poems/25.png
+
+Poem 35: Distant Lights, I Stare
+  ← haikus.png
+  Source: assets/images/poems/24.png
+
+Poem 62: To Flowers' Glamour
+  ← secret-old-diary.png
+  Source: assets/images/poems/56.png
+
+Poem 30: A Part of the Crowd
+  ← light-streaks-at-night.png
+  Source: assets/images/poems/34.png
+
+Poem 8: Emotional Fool
+  ← purple-hyacinth.png
+  Source: assets/images/poems/50.png
+
+Poem 63: To Flowers of Crimson Pink
+  ← windows-of-dew.png
+  Source: assets/images/poems/76.png
+
+Poem 55: Redness Glowing Like Fate
+  ← distant-lights-i-stare.png
+  Source: assets/images/poems/17.png
+
+Poem 68: White in a Garden of Purple
+  ← i-say-you-say.png
+  Source: assets/images/poems/28.png
+
+Poem 12: I Say You Say
+  ← restless-heart.png
+  Source: assets/images/poems/54.png
+
+Poem 18: People are Books
+  ← a-part-of-the-crowd.png
+  Source: assets/images/poems/4.png
+
+Poem 51: Plants After Rain
+  ← lost-poet.png
+  Source: assets/images/poems/37.png
+
+Poem 23: Social Sieves
+  ← where-eyes-take-you.png
+  Source: assets/images/poems/71.png
+
+Poem 44: Light Streaks at Night
+  ← universe-glimpses-in-you.png
+  Source: assets/images/poems/69.png
+
+Poem 14: Listen to me
+  ← to-flowers-glamour.png
+  Source: assets/images/poems/66.png
+
+Poem 46: Magnificent Aren't They
+  ← a-leaf-in-a-sea-of-green.png
+  Source: assets/images/poems/2.png
+
+Poem 10: HEY YOU
+  ← what-is-red.png
+  Source: assets/images/poems/70.png
+
+Poem 59: Sirius in the Sky
+  ← emotional-fool.png
+  Source: assets/images/poems/19.png
+
+Poem 40: If You Go Deep in Thought
+  ← years-of-stories.png
+  Source: assets/images/poems/77.png
+
+Poem 72: Yellow Flowers on Asphalt
+  ← moons-alluring-scars.png
+  Source: assets/images/poems/43.png
+
+Poem 38: Gayish Bubbles
+  ← the-real-tragedy.png
+  Source: assets/images/poems/63.png
+
+Poem 57: See Through Your Heart
+  ← if-only-if.png
+  Source: assets/images/poems/29.png
+
+Poem 54: Red Spirals Odd
+  ← red-clouds-like-bloody-hell.png
+  Source: assets/images/poems/51.png
+
+Poem 65: What is Red?
+  ← white-hyacinths.png
+  Source: assets/images/poems/73.png
+
+Poem 60: Streaks of Light
+  ← redness-like-blood.png
+  Source: assets/images/poems/53.png
+
+Poem 41: It's the Last Day of Earth
+  ← love-the-ordinary.png
+  Source: assets/images/poems/38.png
+
+Poem 42: Jupiter Shone Different
+  ← timings-a-bitch.png
+  Source: assets/images/poems/65.png
+
+Poem 22: Skies and Flowers
+  ← why-pretend.png
+  Source: assets/images/poems/75.png
+
+Poem 74: hindi poem
+  ← if-you-go-deep-in-thought.png
+  Source: assets/images/poems/30.png
+
+Poem 26: Where eyes take you
+  ← colours-in-sky.png
+  Source: assets/images/poems/15.png
+
+Poem 21: SECRET OLD DIARY
+  ← a-light-that-never-goes-out.png
+  Source: assets/images/poems/3.png
+
+Poem 20: Run
+  ← through-tunnels-of-tricks.png
+  Source: assets/images/poems/64.png
+
+Poem 28: A Leaf in a Sea of Green
+  ← its-the-last-day-of-earth.png
+  Source: assets/images/poems/31.png
+
+Poem 24: Sparkle
+  ← gayish-bubbles.png
+  Source: assets/images/poems/23.png
+
+Poem 52: Purple Hyacinth
+  ← dark-side-of-my-moon.png
+  Source: assets/images/poems/16.png
+
+Poem 70: Windows of Dew
+  ← listen-to-me.png
+  Source: assets/images/poems/36.png
+
+Poem 19: Restless Heart
+  ← drops-of-jupiter.png
+  Source: assets/images/poems/18.png
+
+Poem 45: Lights in a Lecture Hall
+  ← red-spirals-odd.png
+  Source: assets/images/poems/52.png
+
+Poem 37: Flowers Under Streetlight
+  ← to-white-flowers-of-old.png
+  Source: assets/images/poems/68.png
+
+Poem 66: White Canvas, Empty Like Void
+  ← yellow-flowers-on-asphalt.png
+  Source: assets/images/poems/78.png
+

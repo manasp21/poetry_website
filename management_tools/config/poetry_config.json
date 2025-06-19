@@ -1,0 +1,39 @@
+{
+  "directories": {
+    "poetry_dirs": [
+      "Poetry/by_language/english/lengths/short/",
+      "Poetry/by_language/english/forms/free_verse/",
+      "Poetry/by_language/english/forms/sonnet/",
+      "Poetry/by_language/hindi/lengths/standard/"
+    ],
+    "image_dir": "assets/images/poems/",
+    "js_files": [
+      "js/content-loader.js",
+      "js/dynamic-poem-loader.js"
+    ]
+  },
+  "migration": {
+    "new_poetry_dir": "Poetry/",
+    "poem_id_format": "poem{:03d}",
+    "image_id_format": "image{:03d}",
+    "backup_dir_format": "backup_{timestamp}",
+    "create_backup_before_migration": true
+  },
+  "validation": {
+    "required_poem_fields": ["title", "author", "language", "form", "length"],
+    "min_poem_load_rate": 95,
+    "min_image_availability_rate": 90,
+    "similarity_threshold": 0.3
+  },
+  "website": {
+    "github_pages_prefix": "/poetry_website/",
+    "use_nojekyll": true,
+    "test_local_server": "python -m http.server 8000"
+  },
+  "advanced": {
+    "auto_assign_similar_images": false,
+    "preserve_original_paths": true,
+    "enable_debug_logging": false,
+    "max_backup_count": 10
+  }
+}

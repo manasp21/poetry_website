@@ -1,0 +1,1421 @@
+{
+  "poems": {
+    "poem001": {
+      "title": "A Leaf in a Sea of Green",
+      "author": "Manas Pandey",
+      "original_filename": "a-leaf-in-a-sea-of-green_a-leaf-in-a-sea-of_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "A leaf in a sea of green,\nBeing odd of all,\nIt's three petals can tell,\nWhat the nature yells.\n.\nGreen petals moving in trice,\nWeeding out in a field of rice.\nEven in the gray-est sand,\nYou can differentiate them from other land",
+      "original_path": "Poetry/by_language/english/lengths/short\\a-leaf-in-a-sea-of-green_a-leaf-in-a-sea-of_short_en.md",
+      "created_date": "2025-06-19T16:09:46.412135",
+      "last_modified": "2025-06-19T16:09:46.412135",
+      "image_id": "image001"
+    },
+    "poem002": {
+      "title": "A Light That Never Goes Out",
+      "author": "Manas Pandey",
+      "original_filename": "a-light-that-never-goes-out_there-is-a-light-that_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "There is a light that never goes out,\nEven when your loudest demons shout.",
+      "original_path": "Poetry/by_language/english/lengths/short\\a-light-that-never-goes-out_there-is-a-light-that_short_en.md",
+      "created_date": "2025-06-19T16:09:46.412135",
+      "last_modified": "2025-06-19T16:09:46.412135",
+      "image_id": "image002"
+    },
+    "poem003": {
+      "title": "A Part of the Crowd",
+      "author": "Manas Pandey",
+      "original_filename": "a-part-of-the-crowd_a-part-of-the-crowd_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "A part of the crowd,\nYou are still proud.\nYou have a lot to learn,\nAnd a Lot to burn.\nSo, Learn to let things go,\nAnd Curb your ego.\n\nPhoto from \"Where's Waldo?\"",
+      "original_path": "Poetry/by_language/english/lengths/short\\a-part-of-the-crowd_a-part-of-the-crowd_short_en.md",
+      "created_date": "2025-06-19T16:09:46.412135",
+      "last_modified": "2025-06-19T16:09:46.412135",
+      "image_id": "image003"
+    },
+    "poem004": {
+      "title": "Before the Break of Day",
+      "author": "Manas Pandey",
+      "original_filename": "before-the-break-of-day_before-the-break-of-day_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Before the break of day,\nClouds washing the sky sway,\nBirds waiting to chirp back to home,\nWaiting for breezy clouds to turn to night foam.",
+      "original_path": "Poetry/by_language/english/lengths/short\\before-the-break-of-day_before-the-break-of-day_short_en.md",
+      "created_date": "2025-06-19T16:09:46.412135",
+      "last_modified": "2025-06-19T16:09:46.412135",
+      "image_id": "image004"
+    },
+    "poem005": {
+      "title": "Bridges You Wait Upon",
+      "author": "Manas Pandey",
+      "original_filename": "bridges-you-wait-upon_bridges-you-wait-upon_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Bridges you wait upon,\nFor the dawn to sweep,\nJust like some times in life,\nThinking about one's own shit,\nWaiting for change to hit,\nAnd your thoughts to finally fit.",
+      "original_path": "Poetry/by_language/english/lengths/short\\bridges-you-wait-upon_bridges-you-wait-upon_short_en.md",
+      "created_date": "2025-06-19T16:09:46.412135",
+      "last_modified": "2025-06-19T16:09:46.412135",
+      "image_id": "image005"
+    },
+    "poem006": {
+      "title": "Cold Hallways",
+      "author": "Manas Pandey",
+      "original_filename": "cold-hallways_cold-hallways_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Cold hallways,\nFrosted Days,\nChilled nights,\nBlurred vision,\nFainted smiles.\n\nWinter has arrived.",
+      "original_path": "Poetry/by_language/english/lengths/short\\cold-hallways_cold-hallways_short_en.md",
+      "created_date": "2025-06-19T16:09:46.412135",
+      "last_modified": "2025-06-19T16:09:46.412135",
+      "image_id": "image006"
+    },
+    "poem007": {
+      "title": "Colours in Sky",
+      "author": "Manas Pandey",
+      "original_filename": "colours-in-sky_colours-in-sky_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Colours in Sky,\nMaybe Refracted by clouds,\nYou don't see them often,\nSo look at them with \"wow\"s.",
+      "original_path": "Poetry/by_language/english/lengths/short\\colours-in-sky_colours-in-sky_short_en.md",
+      "created_date": "2025-06-19T16:09:46.412135",
+      "last_modified": "2025-06-19T16:09:46.412135",
+      "image_id": "image007"
+    },
+    "poem008": {
+      "title": "Distant Lights, I Stare",
+      "author": "Manas Pandey",
+      "original_filename": "distant-lights-i-stare_distant-lights-i-stare_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Distant lights, I stare.\nGanges at night.",
+      "original_path": "Poetry/by_language/english/lengths/short\\distant-lights-i-stare_distant-lights-i-stare_short_en.md",
+      "created_date": "2025-06-19T16:09:46.412135",
+      "last_modified": "2025-06-19T16:09:46.412135",
+      "image_id": "image008"
+    },
+    "poem009": {
+      "title": "Drops of Jupiter",
+      "author": "Manas Pandey",
+      "original_filename": "drops-of-jupiter_i-dont-know-why-how_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "I don't know why, how,\nBut Jupiter has always been my favourite planet,\nIs it because it's the largest, or cause of it's scarry texture, or just because of the song \"Drops of Jupiter\" by Train.\n\nImage acquired via Wikimedia Commons",
+      "original_path": "Poetry/by_language/english/lengths/short\\drops-of-jupiter_i-dont-know-why-how_short_en.md",
+      "created_date": "2025-06-19T16:09:46.412135",
+      "last_modified": "2025-06-19T16:09:46.412135",
+      "image_id": "image009"
+    },
+    "poem010": {
+      "title": "Flowers Under Streetlight",
+      "author": "Manas Pandey",
+      "original_filename": "flowers-under-streetlight_flowers-under-streetlight_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Flowers under streetlight,\nReflecting their colours with delight,\nJust like Moon under sun,\nReflecting its glitter to Earth.",
+      "original_path": "Poetry/by_language/english/lengths/short\\flowers-under-streetlight_flowers-under-streetlight_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image010"
+    },
+    "poem011": {
+      "title": "Gayish Bubbles",
+      "author": "Manas Pandey",
+      "original_filename": "gayish-bubbles_gayish-bubbles_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Gayish bubbles,\nLike colours in rubbles,\nExploring dreams,\nLike colourful creams,\nOnly the the \"vivid\" understand,\nThe vision these sparkles embed.\n\nPhoto of bubbles at 250x magnification.\nWikipedia Picture of the day.",
+      "original_path": "Poetry/by_language/english/lengths/short\\gayish-bubbles_gayish-bubbles_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image011"
+    },
+    "poem012": {
+      "title": "I Love Winters",
+      "author": "Manas Pandey",
+      "original_filename": "i-love-winters_i-love-winters_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "I love winters,\nMy skin shivers,\nI can see my breath,\nI can feel a cold wind swaying around,\n.\nBirds on trees,\nwarm cosy nests,\n.\n.\n\"My tears are always frozen\nI can see the air I breathe\nGot my fingers painting pictures\nOn the glass in front of me\nLay me by the frozen river\nWhere the boats have passed me by\nAll I need is to remember\nHow it was to feel alive\"\n~ Aurora, Winter Bird.\n\nPhoto clicked be me on a winter walk I took once.\n\nP.S. That ain't snow.",
+      "original_path": "Poetry/by_language/english/lengths/short\\i-love-winters_i-love-winters_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image012"
+    },
+    "poem013": {
+      "title": "If You Go Deep in Thought",
+      "author": "Manas Pandey",
+      "original_filename": "if-you-go-deep-in-thought_if-you-go-deep-in-thought_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "If you go deep in thought,\nAnd stare at black for too long,\nYou'll find something in complete darkness.\nIt's not Empty, that's white.\nIt's actually quite full,\nJust that you can see none.",
+      "original_path": "Poetry/by_language/english/lengths/short\\if-you-go-deep-in-thought_if-you-go-deep-in-thought_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image013"
+    },
+    "poem014": {
+      "title": "It's the Last Day of Earth",
+      "author": "Manas Pandey",
+      "original_filename": "its-the-last-day-of-earth_its-the-last-day-of-earth_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "It's the last day of earth,\nSkies blazing with fiery wrath,\nEven how scorched the tears of love be,\nWhen hell calls, thou wait for nil.",
+      "original_path": "Poetry/by_language/english/lengths/short\\its-the-last-day-of-earth_its-the-last-day-of-earth_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image014"
+    },
+    "poem015": {
+      "title": "Jupiter Shone Different",
+      "author": "Manas Pandey",
+      "original_filename": "jupiter-shone-different_in-a-sky-filled-with_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "In a Sky filled with stars,\nJupiter Shone different than Mars,\nIts Bands evading eyes like a mellow cat,\nMeanwhile a lonely traveller moves on an unflat.",
+      "original_path": "Poetry/by_language/english/lengths/short\\jupiter-shone-different_in-a-sky-filled-with_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image015"
+    },
+    "poem016": {
+      "title": "Kogarashi",
+      "author": "Manas Pandey",
+      "original_filename": "kogarashi_kogarashi_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "“Kogarashi”\n\nWhen you feel the cold wind that signifies the arrival of winter.\n\n\nLeaves falling down after a windy chill",
+      "original_path": "Poetry/by_language/english/lengths/short\\kogarashi_kogarashi_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image016"
+    },
+    "poem017": {
+      "title": "Light Streaks at Night",
+      "author": "Manas Pandey",
+      "original_filename": "light-streaks-at-night_lights-streaks-at-night_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Lights streaks at night,\nLike Tears on a sad face,\nMoving shyly trying to be unnoticed,\nBut still be noticed by keen ones.",
+      "original_path": "Poetry/by_language/english/lengths/short\\light-streaks-at-night_lights-streaks-at-night_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image017"
+    },
+    "poem018": {
+      "title": "Lights in a Lecture Hall",
+      "author": "Manas Pandey",
+      "original_filename": "lights-in-a-lecture-hall_lights-in-a-lecture-hall_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Lights in a Lecture Hall,\nMore pleasing to eyes than slides,\nSee it blur when you...\nyou glance around at birds.",
+      "original_path": "Poetry/by_language/english/lengths/short\\lights-in-a-lecture-hall_lights-in-a-lecture-hall_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image018"
+    },
+    "poem019": {
+      "title": "Magnificent Aren't They",
+      "author": "Manas Pandey",
+      "original_filename": "magnificent-arent-they_magnificent-arent-they_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Magnificent aren't they,\nlook them when I see up,\nIf you see in the morning,\nyou won't find them a lot,\nThe harsh sun they wait for,\nCover it like blinds they want to.",
+      "original_path": "Poetry/by_language/english/lengths/short\\magnificent-arent-they_magnificent-arent-they_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image019"
+    },
+    "poem020": {
+      "title": "Moon Through Sky's Circular Frame",
+      "author": "Manas Pandey",
+      "original_filename": "moon-through-skys-circular-frame_moon-through-skys-circular-frame_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Moon through sky's circular frame,\nLike a lens of flirt's play.\nPeople say love is a game,\nA game you can't just win.\nIf their is a way ...",
+      "original_path": "Poetry/by_language/english/lengths/short\\moon-through-skys-circular-frame_moon-through-skys-circular-frame_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image020"
+    },
+    "poem021": {
+      "title": "Moon's Alluring Scars",
+      "author": "Manas Pandey",
+      "original_filename": "moons-alluring-scars_why-is-the-moon-so_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Why is the moon so alluring?\nIs it cause of it's moonlight,\nWhich is sun's reflection.\nNope,\nIt's cause of its scars,\nScars which attract the intensed.\n.\nSimilarly for people, To state Lex Fridman's Quote\n\"Imperfections are beautiful. They are the window into a person's complexity, depth, and character\".\n.\nMoon's photo taken by me in 2019,\nIgnore the exposure at right.\nI don't know why I added John Wayne as the music.",
+      "original_path": "Poetry/by_language/english/lengths/short\\moons-alluring-scars_why-is-the-moon-so_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image021"
+    },
+    "poem022": {
+      "title": "Mornings With No Clouds",
+      "author": "Manas Pandey",
+      "original_filename": "mornings-with-no-clouds_mornings-with-no-clouds_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Mornings with no clouds,\nSleeps with no dreams,\nThings I see,\nThings I see.",
+      "original_path": "Poetry/by_language/english/lengths/short\\mornings-with-no-clouds_mornings-with-no-clouds_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image022"
+    },
+    "poem023": {
+      "title": "Petals Raining",
+      "author": "Manas Pandey",
+      "original_filename": "petals-raining_petals-raining_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Petals raining,\nDrops of pink,\nSwiftly as time swaying,\nGlimpsing like a brink.",
+      "original_path": "Poetry/by_language/english/lengths/short\\petals-raining_petals-raining_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image023"
+    },
+    "poem024": {
+      "title": "Plants After Rain",
+      "author": "Manas Pandey",
+      "original_filename": "plants-after-rain_plants-after-rain_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Plants after rain,\nDust sliding like grain,\nWaiting for the drops to settle,\nAnd the stillness to belittle.",
+      "original_path": "Poetry/by_language/english/lengths/short\\plants-after-rain_plants-after-rain_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image024"
+    },
+    "poem025": {
+      "title": "Purple Hyacinth",
+      "author": "Manas Pandey",
+      "original_filename": "purple-hyacinth_purple-hyacinth_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "(1/3)\n\nPurple Hyacinth,\nFlowers of\nSorrow, Forgiveness.\nThings at end of life,\nwish you don't find.",
+      "original_path": "Poetry/by_language/english/lengths/short\\purple-hyacinth_purple-hyacinth_short_en.md",
+      "created_date": "2025-06-19T16:09:46.413135",
+      "last_modified": "2025-06-19T16:09:46.413135",
+      "image_id": "image025"
+    },
+    "poem026": {
+      "title": "Red Clouds, Like Bloody Hell",
+      "author": "Manas Pandey",
+      "original_filename": "red-clouds-like-bloody-hell_red-clouds_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Red Clouds,\nLike Bloody hell,\nAngelic Voices in the sky,\nYou see, You hear, You tell.\n\nClouds a bit more red in the evening cause of Lunar Eclipse.",
+      "original_path": "Poetry/by_language/english/lengths/short\\red-clouds-like-bloody-hell_red-clouds_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image026"
+    },
+    "poem027": {
+      "title": "Red Spirals Odd",
+      "author": "Manas Pandey",
+      "original_filename": "red-spirals-odd_red-spirals-odd_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Red Spirals Odd,\nLike life sometimes,\nYou stuck in a loop after tries,\nEven when you try to go out,\nYou are stuck in a even bigger one.",
+      "original_path": "Poetry/by_language/english/lengths/short\\red-spirals-odd_red-spirals-odd_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image027"
+    },
+    "poem028": {
+      "title": "Redness Glowing Like Fate",
+      "author": "Manas Pandey",
+      "original_filename": "redness-glowing-like-fate_redness-glowing-like-fate_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Redness glowing like fate,\nLike demons inside on every date,\nHope they never come out,\nCause they'll grow up and shout.",
+      "original_path": "Poetry/by_language/english/lengths/short\\redness-glowing-like-fate_redness-glowing-like-fate_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image028"
+    },
+    "poem029": {
+      "title": "Redness Like Blood",
+      "author": "Manas Pandey",
+      "original_filename": "redness-like-blood_redness-like-blood_short_en.en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Redness like Blood,\nPiercing eyes as Lasers,\nBut still I have to know them better,\nTo make my life a little simpler.",
+      "original_path": "Poetry/by_language/english/lengths/short\\redness-like-blood_redness-like-blood_short_en.en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image028"
+    },
+    "poem030": {
+      "title": "See Through Your Heart",
+      "author": "Manas Pandey",
+      "original_filename": "see-through-your-heart_see-through-your-heart_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "See through your heart,\nThe things your eyes disguise,\nJust by people's opinions,\nDon't change your life notions.",
+      "original_path": "Poetry/by_language/english/lengths/short\\see-through-your-heart_see-through-your-heart_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image029"
+    },
+    "poem031": {
+      "title": "Shades of Grey",
+      "author": "Manas Pandey",
+      "original_filename": "shades-of-grey_shades-of-grey_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Shades of Grey,\nOn leaves during day,\nHighlighting the contrast of life in their own way.",
+      "original_path": "Poetry/by_language/english/lengths/short\\shades-of-grey_shades-of-grey_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image030"
+    },
+    "poem032": {
+      "title": "Sirius in the Sky",
+      "author": "Manas Pandey",
+      "original_filename": "sirius-in-the-sky_sirius-in-the-sky_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Sirius in the sky,\nYou try to click it,\nBut hands shake,\nCause they have been broken,\nFor Another Love,\nFor Another Love.\n\n(I shaked my hand and made a light painting of Sirius in the sky)",
+      "original_path": "Poetry/by_language/english/lengths/short\\sirius-in-the-sky_sirius-in-the-sky_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image031"
+    },
+    "poem033": {
+      "title": "Streaks of Light",
+      "author": "Manas Pandey",
+      "original_filename": "streaks-of-light_streaks-of-light_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Streaks of light,\nLike a blinding sight.\nBlurry like depth of a well,\nSee closely or miss the story they tell.",
+      "original_path": "Poetry/by_language/english/lengths/short\\streaks-of-light_streaks-of-light_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image032"
+    },
+    "poem034": {
+      "title": "Through Tunnels of Tricks",
+      "author": "Manas Pandey",
+      "original_filename": "through-tunnels-of-tricks_through-tunnels-of-tricks_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Through tunnels of tricks,\nI see the world with mists,\nBlind by the rest,\nI try to focus on things best.",
+      "original_path": "Poetry/by_language/english/lengths/short\\through-tunnels-of-tricks_through-tunnels-of-tricks_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image033"
+    },
+    "poem035": {
+      "title": "To Flowers' Glamour",
+      "author": "Manas Pandey",
+      "original_filename": "to-flowers-glamour_to-flowers-glamour_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "To Flowers' glamour,\nTo the grandeur the show,\nTo the beauty the don't hide,\nTo Nature's art they display.",
+      "original_path": "Poetry/by_language/english/lengths/short\\to-flowers-glamour_to-flowers-glamour_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image034"
+    },
+    "poem036": {
+      "title": "To Flowers of Crimson Pink",
+      "author": "Manas Pandey",
+      "original_filename": "to-flowers-of-crimson-pink_to-flowers-of-crimson-pink_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "To Flowers of crimson pink,\nI due my bow and wink,\nHow thou take eyes of old masters you?\nThat can't compare to yellow and Blue.",
+      "original_path": "Poetry/by_language/english/lengths/short\\to-flowers-of-crimson-pink_to-flowers-of-crimson-pink_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image035"
+    },
+    "poem037": {
+      "title": "To White Flowers of Old",
+      "author": "Manas Pandey",
+      "original_filename": "to-white-flowers-of-old_to-white-flowers-of-old_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "To white flowers of old,\nYour petals sparkle like gold,\nYour beauty can only be told,\nBy those that can see in depths of every fold.",
+      "original_path": "Poetry/by_language/english/lengths/short\\to-white-flowers-of-old_to-white-flowers-of-old_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image036"
+    },
+    "poem038": {
+      "title": "What is Red?",
+      "author": "Manas Pandey",
+      "original_filename": "what-is-red_what-is-red_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "What is red?\nIs it the color of the dead? Blood?\nOr it's the color of love?\nBut I know this so,\nRed attracts like no other.",
+      "original_path": "Poetry/by_language/english/lengths/short\\what-is-red_what-is-red_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image037"
+    },
+    "poem039": {
+      "title": "White Canvas, Empty Like Void",
+      "author": "Manas Pandey",
+      "original_filename": "white-canvas-empty-like-void_white-canvas_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "White Canvas,\nEmpty like void,\nBut don't you notice the imperfections it holds,\nThe delicate scars, its small roughs.\nJust like boring people,\nIf you look deep enough,\nThey might be the most interesting ones.",
+      "original_path": "Poetry/by_language/english/lengths/short\\white-canvas-empty-like-void_white-canvas_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image038"
+    },
+    "poem040": {
+      "title": "White Hyacinths",
+      "author": "Manas Pandey",
+      "original_filename": "white-hyacinths_white-hyacinths_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "(2/3)\n\nWhite Hyacinths,\nFlowers of\nloveliness, prayers.\nIn life, you need,\n\nin the people you seek.",
+      "original_path": "Poetry/by_language/english/lengths/short\\white-hyacinths_white-hyacinths_short_en.md",
+      "created_date": "2025-06-19T16:09:46.414135",
+      "last_modified": "2025-06-19T16:09:46.414135",
+      "image_id": "image039"
+    },
+    "poem041": {
+      "title": "White in a Garden of Purple",
+      "author": "Manas Pandey",
+      "original_filename": "white-in-a-garden-of-purple_white-in-a-garden-of-purple_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "(3/3)\nWhite in a garden of Purple\nPraying for love,\nIn a field of sorrow.\nAs people in some stages of life,\nIn deep suffer,\nBut offering solicitude.",
+      "original_path": "Poetry/by_language/english/lengths/short\\white-in-a-garden-of-purple_white-in-a-garden-of-purple_short_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134",
+      "image_id": "image040"
+    },
+    "poem042": {
+      "title": "Why Pretend",
+      "author": "Manas Pandey",
+      "original_filename": "why-pretend_why-pretend_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Why pretend,\nWhy not end.\n\n\nWhy think,\nWhy Care,\nWhy love,\nWhy dare.\n\n\nWhy Lie,\nWhy share,\nWhy start,\nWhy stare.\n\n\nWhy win,\nWhy lose,\nWhy play.\n\n\nWhy Why.",
+      "original_path": "Poetry/by_language/english/lengths/short\\why-pretend_why-pretend_short_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134",
+      "image_id": "image041"
+    },
+    "poem043": {
+      "title": "Windows of Dew",
+      "author": "Manas Pandey",
+      "original_filename": "windows-of-dew_windows-of-dew_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Windows of dew,\nLike people few,\nMake your vision hazy,\nAnd your mind fuzzy.",
+      "original_path": "Poetry/by_language/english/lengths/short\\windows-of-dew_windows-of-dew_short_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134",
+      "image_id": "image042"
+    },
+    "poem044": {
+      "title": "Years of Stories",
+      "author": "Manas Pandey",
+      "original_filename": "years-of-stories_written-in-these-lines_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Written in these lines,\n\nAre years of stories,\n\nAges of men have passed and flew,\n\nBut this tree stood,\n\nNow it's time has come,\n\nStruck out its barks,\n\nBy nature's act.\n\n\nFound a broken tree while morning walk.\n\nWas Impressed by patterns in its barks.",
+      "original_path": "Poetry/by_language/english/lengths/short\\years-of-stories_written-in-these-lines_short_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134",
+      "image_id": "image043"
+    },
+    "poem045": {
+      "title": "Yellow Flowers on Asphalt",
+      "author": "Manas Pandey",
+      "original_filename": "yellow-flowers-on-asphalt_yellow-flowers-on-asphalt_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Yellow Flowers on asphalt,\nLike stars in sky,\nBut way too clear,\nAs not blurred by clouds they are.",
+      "original_path": "Poetry/by_language/english/lengths/short\\yellow-flowers-on-asphalt_yellow-flowers-on-asphalt_short_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134",
+      "image_id": "image044"
+    },
+    "poem046": {
+      "title": "Your Rhythm and Muse",
+      "author": "Manas Pandey",
+      "original_filename": "your-rhythm-and-muse_your-rhythm-and-muse_short_en.md",
+      "language": "en",
+      "form": "short",
+      "length": "short",
+      "category_path": "english/lengths/short",
+      "content": "Your Rhythm and Muse,\nOnly I can deduce,\nYour gait and every trait,\nI am the one to celebrate.\nYour heartbeat, your breath,\nI can listen from far.\nYou every move,\nI notice, I count.\nYour Deepest fantasies,\nI can Understand.\nThe complexities of your scars,\ninto I dive.\nThe lines you write, the words you speak,\nI appreciate.",
+      "original_path": "Poetry/by_language/english/lengths/short\\your-rhythm-and-muse_your-rhythm-and-muse_short_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134",
+      "image_id": "image045"
+    },
+    "poem047": {
+      "title": "2 winged heart",
+      "author": "Manas Pandey",
+      "original_filename": "2-winged-heart_a-heart-was-here_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "A heart was here\nit had two wings\n\na heavenly lover\nwho kissed it on the lips of the wind\nA small heart beating fast\nascending from the depths of the earth\nvisiting flowers and stars\n\nlike a charming lively guest\nbringing roses and jasmine to the garden\nwhispering to the nocturnal dreamers on its wings:\n‘Fly with me to the moon\nand embrace the sun and\nsoar to Paris and Rome’\nSometimes it sang joyfully at others\nsorrowfully It was a heart with two wings\n\na heavenly lover\nwho kissed it on the lips of the wind\nBut they clipped its wings\nso it fell down to the ground and died, slowly, of pain.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\2-winged-heart_a-heart-was-here_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem048": {
+      "title": "A Void of You",
+      "author": "Manas Pandey",
+      "original_filename": "a-void-of-you_look-at-me-once_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "Look at me once again,\nStill Locked in your first Glimpse,\nI am.\n\nAgain Hear my heart,\nThat stopped the day I felt you.\n\nStay close to me,\nEven when you're far.\n\nNever thought I'd say a goodbye,\nTo you.\nThe day I lost my heart.\n\nHave I felt this before,\nIn a past life.\nHow can I know?\n\nMy thoughts make me Cry,\nLike a pierced Butterfly.\nLost in the Field of your touch,\nWithout any way to out clutch.\n\nMaybe\nmy sadness drowned\nIn the fear of you,\nKnowing how much I love you,\nEveryday I do....\n\nHave had sleepless Nights,\nKnowing not what to do.\nBuy still lost in the Abyss,\nI am.\nAn Abyss created by,\nBy the Void of you.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\a-void-of-you_look-at-me-once_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem049": {
+      "title": "Back to poetry",
+      "author": "Manas Pandey",
+      "original_filename": "back-to-poetry_this-forest_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "This Forest,\nDrowns like Sadness.\nThese Green remind of my red heart,\nHard to see, or realise,\nMaybe easier to Understand.\nToday as I walk through the woods,\nWith this reviving smell.\nI do realise the dead in me,\nThe me lost I did forget.\n\nThe redness of my blood,\nThe veins of my leaves,\nNeed a sun to grow,\nNeed light to know,\nI want to show,\nI want to show,\nEvery day I grow,\nI want to show.\n\nor something like...\n\nWhy do you beat so fast?\nMy Calm heart.\nWhy do you hide in glass?\nMy stained love.\nMaybe I think to much\nAbout me and you.\nEvery freckel of my soul,\nFeels you somehow,\nEvery Glance of you,\nMakes me fall too.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\back-to-poetry_this-forest_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem050": {
+      "title": "beauty if not free",
+      "author": "Manas Pandey",
+      "original_filename": "beauty-if-not-free_i-know-a-beautiful_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "I know a beautiful bird,\nshe is in an ugly cage,\nnot free, neither enrage,\nI ask her,\n\"What's your allure,\nif not free for sure?,\nWhat's the point of being pure,\nwhen you have so much to endure?\".\n\nShe replies softly, her voice steady and clear,\n\"Beauty,\" she says, \"is not just to appear,\nIt's in every moment, far or near,\nIn the song of life, we all hold dear.\"\n\n\"Freedom,\" she continues, \"is the soul's right,\nTo dance in the sun and rest in the night.\nThough these bars may hold me tight,\nMy spirit still takes its flight.\"\n\nI ponder her words, so profound and true,\n\"Then beauty,\" I say, \"lives on in you,\nNot just in the open, under the sky so blue,\nBut in the strength and grace you show through.\"\n\n\"Yes,\" she sings, \"beauty is a light that glows,\nNot in perfection, but in the purpose it shows.\nIt's in the love that inside us flows,\nAnd in the resilience that in adversity grows.\"\n\nSo we speak, the bird and I, of things deep and wise,\nOf beauty and freedom, under the open skies.\nAnd though she's in a cage, her spirit defies,\nFor beauty is free, no matter where it lies.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\beauty-if-not-free_i-know-a-beautiful_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem051": {
+      "title": "Bittersweet Romance Mocha Kisses",
+      "author": "Manas Pandey",
+      "original_filename": "bittersweet-romance-mocha-kisses_in-moments-sweet-where_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "In moments sweet, where lips do meet,\nCoffee's warmth, a kiss complete.\n\nWith beans' embrace, a mellow grace,\nAwakened senses find their place.\n\nSmooth cocoa dream, lips interlace,\nPassion blooms, hearts find their space.\n\nChocolate's charm, a different scene,\nVelvet sweetness, love's routine.\n\nCoffee's dawn, a tender start,\nA sip of love, a throbbing heart.\n\nTwo worlds collide, in love's embrace,\nCoffee's comfort, a warm solace.\n\nChocolate's touch, a sugared spell,\nDesire's dance, a tale to tell.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\bittersweet-romance-mocha-kisses_in-moments-sweet-where_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem052": {
+      "title": "Burden of your Skin",
+      "author": "Manas Pandey",
+      "original_filename": "burden-of-your-skin_unrelatable-are-some-things_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "Unrelatable are some things to me,\nI need to understand,\ncause I can't feel,\nthe burden of your skin.\n\nDo you feel the wind like I do?\nDoes Cold also give shivers to you?\nDoes hell come on earth,\nFor you after every pain?\n\nDoes your skin bear the weight of the world?\nDo you feel the scars, the stories unfurled?\nIs your burden heavy, a silent scream?\nOr a whisper of pain in a distant dream?\n\nDo you carry the past in every pore?\nDoes each touch remind you of what's before?\nIs your skin a shield, a fragile veil?\nOr a canvas of tales, both bright and pale?\n\nWhen you walk, does the ground feel the same?\nDo you sense the whispers, calling your name?\nIs your burden a cloak, worn with pride?\nOr a shadow that follows, hard to hide?\n\nDo you find solace in the night’s embrace?\nOr does the darkness reveal every trace?\nIs your skin a map of battles fought?\nOr a testament to the strength you've sought?",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\burden-of-your-skin_unrelatable-are-some-things_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem053": {
+      "title": "Coffee",
+      "author": "Manas Pandey",
+      "original_filename": "coffee_coffee-stains-left-on_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "Coffee stains left on my heart,\nMakes me store my breath,\nTake me down somewhere,\nWhere I don't know what I know.\n\nMaybe a Poet's soul\nthat survived the age of caffeine,\nOr the lover's heart\nthat didn't.\n\nCaffeine makes me think,\nI am better drunk with it.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\coffee_coffee-stains-left-on_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem054": {
+      "title": "Emotional Fool",
+      "author": "Manas Pandey",
+      "original_filename": "emotional-fool_you-played-the-fool_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "You played the fool, and I was childish too\nWe chased our dreams, but fell and hurt ourselves\nYou never hid the truth that shone in you\nYour smile was false, your love was on the shelves\n\nYou never said the words I longed to hear\nYou always pulled away when I came near\nSo why did you not tell me why you left\nAnd broke my heart with one goodbye, bereft\n\nI'm lost and broken, I don't know what to do\nI love you still, I can't forget your face\nI try to drown my pain, but it's no use\nYour memories haunt me, I can't erase\n\nWe were a pair of fools, in love and blind\nBut now you're gone, and I'm the one who's left behind",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\emotional-fool_you-played-the-fool_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem055": {
+      "title": "Escape",
+      "author": "Manas Pandey",
+      "original_filename": "escape_i-left-my-home_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "I left my home\nTo chase my dreams\nTo find a place\nWhere I belong\n\nI thought I knew\nWhat I wanted\nTo study hard\nTo work well\n\nBut soon I found\nThat dreams are not\nWhat they seem to be\nWhen reality hits\n\nI felt the stress\nThe pressure\nThe loneliness\nThe emptiness\n\nI needed an escape\nFrom the hectic life\nFrom the false hopes\nFrom the broken promises\n\nI looked around\nAnd saw no place\nThat could give me peace\nThat could make me happy\n\nThen I remembered\nMy home\nThe place I left\nThe place I escaped\n\nI realized then\nThat home is not\nA prison or a burden\nBut a refuge and a blessing\n\nHome is where\nI can be myself\nI can be loved\nI can be free\n\nHome is where\nI find my joy\nI find my strength\nI find my purpose\n\nNow I long to go back\nTo my home\nTo see my family\nTo feel their warmth\n\nHome is not what I escaped from\nHome is what I escape to.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\escape_i-left-my-home_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem056": {
+      "title": "HEY YOU",
+      "author": "Manas Pandey",
+      "original_filename": "hey-you_hey-you_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "Hey you,\nI love your eyes.\nI get lost in it's sight,\nMore lost than a thousand starry night.\n\nShows me pain you hide,\nAlso secrets you confide.\nSometimes dreams that died,\nLost loves over which you cried.\n\nHey you,\nI love your smile.\nRadiant and never a disguise,\nEven when fake I like despise.\n\nTells me of the joy you hold,\nHappiness supposed.\nOr sadness in seal,\nYou try to conceal.\n\nHey You,\nI love you.\nMy heart's a mess,\nFor you it's restless.\n\nCan I ever tell you that,\nBeing Loner I am at.\nYou're this poem’s muse,\nOr Is it just my Excuse.\n\nPSO201A Class was boring.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\hey-you_hey-you_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem057": {
+      "title": "Hmm Bland",
+      "author": "Manas Pandey",
+      "original_filename": "hmm-bland_lost-amidst-the-sea_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "//Tried to rhyme but the thoughts flush,\n//Wanted to write before the feelings rush.//\n\nLost amidst the sea of faces,\nIn a crowd that's loud and wild,\nI am but a lonely figure,\nIn this boisterous music-filled world.\n\nThe beat is strong, the bass is deep,\nAnd I'm swaying to the sound,\nBut the emptiness I feel inside,\nIs nowhere to be drowned.\n\nI see people laughing, singing,\nAll around me they're alive,\nBut I'm just a ghost, a shadow,\nIn this music-filled hive.\n\nI try to scream, to shout out loud,\nBut my voice is lost in the crowd,\nNo one hears my silent cry,\nIn this sea of music and sound.\n\nI long for someone to reach out,\nTo break through this lonely spell,\nBut all I have is the music,\nAnd the loneliness that it can't dispel.\n\nSo I close my eyes and let it all in,\nThe sound, the beat, the pain,\nAnd I dance alone in this crowded place,\nWith my loneliness, my only refrain.\n\nHmm, Shit.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\hmm-bland_lost-amidst-the-sea_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem058": {
+      "title": "I Say You Say",
+      "author": "Manas Pandey",
+      "original_filename": "i-say-you-say_i-say_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "I say,\nTissue papers make great bookmarks, They wipe the tears that come after reading a sad part.\n\nYou say,\nTissue papers are just waste, They clutter the pages and ruin the taste.\n\nI say,\nCoffee mugs are my inspiration, They remind me of the morning sensation.\n\nYou say,\nCoffee mugs are too common, They don’t show any speciality.\n\nI say,\nBooks are my dreams, They take me to places I’ve never seen.\n\nYou say,\nBooks are too boring, They don’t make me feel anything.\n\nI say,\nFlowers are my hope, They show me that life is precious.\n\nYou say,\nFlowers are too fragile, They don’t survive the harsh weather.\n\nI say,\nMusic is my therapy, It heals me with its harmony.\n\nYou say,\nMusic is too noisy, It doesn’t let me think clearly.\n\nI say,\nTo love is to life.\n\nYou say,\nTo live is to survive.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\i-say-you-say_i-say_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem059": {
+      "title": "If only if",
+      "author": "Manas Pandey",
+      "original_filename": "if-only-if_if-my-heart-had_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "If my heart had wings\nIt would fly to you every day\nAnd whisper in your ear\nHow much I love you and need you\n\nIf my life was all bliss\nIt would be because of you\nAnd your sweet kisses\nThat fill me with warmth and delight\n\nIf my dreams came true\nIt would be to hold you forever\nAnd gaze into your eyes\nThat sparkle like diamonds in the night\n\nIf my words had power\nI would say only three\nAnd make you feel them deeply\nI love you, I love you, I love you",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\if-only-if_if-my-heart-had_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem060": {
+      "title": "Listen to me",
+      "author": "Manas Pandey",
+      "original_filename": "listen-to-me_in-the-stillness-of_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "In the stillness of night, we sway,\nTo the rhythm of whispered words we play,\nA symphony of secrets, a love profound,\nIn the realm of listening, our souls are bound.\n\nThe moon gazes upon our tender embrace,\nAs stars bear witness to our intimate space,\nTheir shimmering light, a celestial guide,\nAs our hearts intertwine, side by side.\n\nFor in the realm of listening hearts, love is born,\nWhere the spoken and unspoken, so beautifully adorn,\nWith each word, a new constellation we create,\nGuided by the celestial bodies, we navigate.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\listen-to-me_in-the-stillness-of_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem061": {
+      "title": "Lost Poet",
+      "author": "Manas Pandey",
+      "original_filename": "lost-poet_have-been-since-i_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "Have been since I wrote a verse,\nTell me, Have I turned worse?\n\nThey say,\nA poet in love is one to read indeed,\nOr the one who's after a sorrow deed?\n\nI say,\nPoems do come from the heart,\nA lot better when it is hurt.\n\nHmm,\nDoes sadness bother your imploud smile,\nOr the moment takes a bit more while.\n\nI try,\nTo express myself in words I only can understand,\nSo it doesn't touch other hearts unplanned.\n\nThat's why,\nI wrote this poem for myself or someone,\nWho knows? Maybe her I try to shun.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\lost-poet_have-been-since-i_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem062": {
+      "title": "Maybe I should Quit Poetry",
+      "author": "Manas Pandey",
+      "original_filename": "maybe-i-should-quit-poetry_maybe-i-should-quit_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "Maybe I should Quit Poetry,\nIt gives me a heart ache everytime,\nSmallest words can make my soul whine,\nMore than an overflowing Rhine.\n\nMaybe I should Quit Poetry,\nMeaningless it is, like love, like life,\nMy lyrics always tries to strife,\nEnd all it with the scratch of a knife.\n\nMaybe I should Quit Poetry,\nFor it mirrors my deepest fears,\nEach stanza, a cascade of tears,\nEchoing through the silent years.\n\nMaybe I should Quit Poetry,\nIts verses, a relentless tide,\nUnveiling the pain I hide,\nIn every metaphor, I confide.\n\nMaybe I should Quit Poetry,\nYet, it’s my solace in the night,\nA flicker of hope, a distant light,\nGuiding me through the darkest plight.\n\nMaybe I should Quit Poetry,\nBut in its embrace, I find my voice,\nA bittersweet, inevitable choice,\nTo let my heartache rejoice.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\maybe-i-should-quit-poetry_maybe-i-should-quit_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem063": {
+      "title": "Not gonna Rhyme but waste time",
+      "author": "Manas Pandey",
+      "original_filename": "not-gonna-rhyme-but-waste-time_what-are-we-if_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "What are we, if not lost souls in the sea of life.\nAimless broken imperfect beings swimming in it.\nTo just find a tide to hold, or maybe a land to reach.\nJust Keep Swimming.\nSwimming, hmm, I will.\n\nWhat are we, if not captive birds in a sky of dreams.\nDirectionless apteral imbecile beings flying in it.\nTo find a wind to gust in, or a cloud to mix in.\nJust Keep Flying\nFlying, hmm, I will.\n\nWhat are we, if not lone walkers in a void of emotions.\nSenseless futile hollow beings wandering in it.\nTo just find another to guide, or maybe a friend to make.\nJust keep wandering.\nWandering, hmm, I will.\n\nKeep Swimming till we reach the Shore.\nKeep Flying till we reach a stoa.\nKeep Wandering till we reach a dosser.\n\nWatching Philosophical animes with reading romantic novels makes my mind dwell at I place I can't even explain.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\not-gonna-rhyme-but-waste-time_what-are-we-if_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem064": {
+      "title": "People are Books",
+      "author": "Manas Pandey",
+      "original_filename": "people-are-books_people-are-books_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "People are books\nWe see them every day\nBut we don't know what they say\n\nSome have covers that catch our eye\nSome have covers that make us sigh\nSome have covers that we ignore\nSome have covers that we adore\n\nBut the cover is not the book\nIt is only a glimpse\nIt does not reveal the plot\nThe characters, the theme, the twist\n\nWe have to read the book to know\nWe have to dive into its flow\nWe have to feel its highs and lows\nWe have to see how it grows\n\nOnly then can we judge the book\nOnly then can we relate to its hook\nOnly then can we enjoy its look\n\nPeople are like books\nWe meet them every day\nBut we don't know what they feel\n\nSome have hearts that are open and warm\nSome have hearts that are closed and cold\nSome have hearts that are broken and torn\nSome have hearts that are whole and bold\n\nBut the heart is not the face\nIt is only a part\nIt does not show the soul\nThe depth, the passion, the grace\n\nWe have to know the person to see\nWe have to listen to their story\nWe have to understand their journey\nWe have to respect their glory\n\nOnly then can we love the person\nOnly then can we appreciate their reason\nOnly then can we share their vision",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\people-are-books_people-are-books_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem065": {
+      "title": "Restless Heart",
+      "author": "Manas Pandey",
+      "original_filename": "restless-heart_within-the-depths-of_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "Within the depths of my untamed soul,\nI am a boy, unpredictable and bold.\nImpulsive, I venture into the unknown,\nSeeking new experiences that I can call my own.\n\nIn the shadows of my restless heart,\nA yearning for love, a longing to impart.\nA hopeless romantic, dreaming of a connection,\nYet unrequited love is my heart's affliction.\n\nI dance through life with a fiery desire,\nChasing love's flames that flicker and inspire.\nBut fate plays its game, a cruel charade,\nLeaving my heart empty, unclaimed, betrayed.\n\nI whisper tender words to the moon above,\nHoping they'll carry my longing, my love.\nBut the night remains silent, my pleas unheard,\nAs love's sweet touch eludes like a fleeting bird.\n\nThrough the labyrinth of passion, I roam,\nWriting love letters to an imagined home.\nYet my words linger in the vast expanse,\nLost in the void of unrequited romance.\n\nDeep within my unpredictable ways,\nA truth resonates, lighting my days.\nI know, in the depths of my soul's decree,\nLove will find me, and together, we'll be free.\n\nSo I keep journeying through life's grand stage,\nEmbracing the unpredictability, turning each page.\nA heart ablaze with hope, a relentless fire,\nBurning for love's embrace, my ultimate desire.\n\nIn the tapestry of life, I'll paint my own art,\nKnowing that love will come, stitching hearts.\nAnd when that moment arrives, like destiny's dove,\nWe'll fall in love together, guided by true love.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\restless-heart_within-the-depths-of_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem066": {
+      "title": "Run",
+      "author": "Manas Pandey",
+      "original_filename": "run_fast-fast_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "Fast fast,\nBefore it lasts,\nWho knows what's chasing you?\n\nMaybe it's a secret,\nThat you wish you never knew,\nMaybe it's a person,\nWho's not who you thought they were.\n\nMaybe it's a feeling,\nThat you can't bear to face,\nMaybe it's a memory,\nThat you can't erase.\n\nWhatever it is,\nDon't look back,\nJust run away,\nAnd don't lose track.\n\nMaybe it's a shadow,\nThat lurks behind the light,\nMaybe it's a nightmare,\nThat haunts you every night.\n\nMaybe it's a voice,\nThat whispers in your ear,\nMaybe it's a doubt,\nThat fills you with fear.\n\nWhatever it is,\nDon't slow down,\nJust keep going,\nAnd don't turn around.\n\nMaybe it's a trap,\nThat waits for you to fall,\nMaybe it's a lie,\nThat makes you doubt it all.\n\nMaybe it's a choice,\nThat you can't decide,\nMaybe it's a fate,\nThat you can't avoid.\n\nWhatever it is,\nDon't give up,\nJust fight back,\nAnd don't give in.\n\nFast fast,\nBefore it lasts,\nWho knows what's chasing you?",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\run_fast-fast_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem067": {
+      "title": "SECRET OLD DIARY",
+      "author": "Manas Pandey",
+      "original_filename": "secret-old-diary_as-i-move-swipe_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "As I move swipe my hands\nthrough the words I wrote,\nThere is a gentle breeze\nin my heart that flows,\nTrying to feel the emotions,\nI had\nWhen I put you to paper.\n\nSeeing that glimpse I had of you,\nReminds me now of nothing more,\nCause I moved on from love,\nLike I moved on from truth.\n\nMy Honesty lying in the sun,\nWhile I wait in shade for others.\nThough the Dusk never comes.\n\nSigh, Heart skips a beat,\nWords Guide a new tone.\n\nAs I trace the letters of your name,\nI feel a spark ignite my soul,\nBurning with a secret flame,\nThat only you can control.\n\nYou are the moon that guides my night,\nThe star that brightens my sky,\nThe dream that fills my sight,\nThe reason why I try.\n\nBut you are also far away,\nBeyond my reach and touch,\nA memory that fades by day,\nA pain that hurts too much.\n\nSo I write these words to you,\nHoping you will see,\nThe love that I still have for you,\nThe love that sets me free.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\secret-old-diary_as-i-move-swipe_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem068": {
+      "title": "Skies and Flowers",
+      "author": "Manas Pandey",
+      "original_filename": "skies-and-flowers_the-vast-expanse-of_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "The vast expanse of skies above,\nSo deep and blue and filled with love,\nA canvas for the clouds to play,\nAs they dance and drift and gently sway.\n\nBut gazing up, I can't help but see,\nThe memories of love that used to be,\nLost like stars that fade from sight,\nLeaving only the darkness of the night.\n\nYet in the fields of flowers below,\nThere's a hope that starts to grow,\nA promise of a new love's bloom,\nLike petals opening to the sun's warm room.\n\nThe delicate beauty of each bloom,\nBrings a promise of a love that's soon,\nTo fill the heart with joy and light,\nAnd chase away the lonely night.\n\nSo though the skies may bring a tear,\nThe flowers remind me not to fear,\nFor love is always waiting near,\nJust like the petals of a new frontier.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\skies-and-flowers_the-vast-expanse-of_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem069": {
+      "title": "Social Sieves",
+      "author": "Manas Pandey",
+      "original_filename": "social-sieves_in-a-world-where_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "In a world where shadows dance and play,\nA woman stands, radiant as the day.\nShe's like the sun, a celestial blaze,\nHer brilliance piercing through life's haze.\n\nLike sunlight streaming through trees so tall,\nHer radiance cascades, breaking down walls.\nThrough every obstacle, she finds her way,\nUnyielding, unstoppable, come what may.\n\nThey try to cover her, hide her light,\nBut she defies their darkness, shining bright.\nJust like the sun, she cannot be contained,\nHer brilliance surging, cannot be restrained.\n\nThrough nets and sieves, her glow does pass,\nDefying boundaries, like tempered glass.\nHer spirit soars, a phoenix in flight,\nDispelling shadows, igniting the night.\n\nNo prejudice can dim her inner flame,\nFor she is fierce, a force to reclaim.\nShe rises above, with grace and might,\nBreaking chains, embracing her own light.\n\nIn a society that seeks to confine,\nShe emerges, a symbol so divine.\nA woman shining, against all odds,\nGuiding others, like a beacon of gods.\n\nSo let her shine, in her own unique way,\nEmbracing her power, day after day.\nFor just like the sun, she'll never cease,\nHer radiance everlasting, bringing peace.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\social-sieves_in-a-world-where_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem070": {
+      "title": "Sparkle",
+      "author": "Manas Pandey",
+      "original_filename": "sparkle_sparkles-in-distance_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "\"Sparkles in Distance\",\nI tell I see.\n\"Emptiness in light\",\nI seem to believe.\n\"Dim lonely nights\",\nI think I enjoy.\n\"Pleasant mornings with cotton clouds\",\nI feel I dream.\n\"Nature's Beauty\",\nI show I adore.\n\"Simplicity of life\",\nI care I miss.\n\"Dreamer's mind\",\nI pride I wish.\n\"Depths in people\",\nI try to find.\n\"Meaning of Everything\"\nI wonder it exists.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\sparkle_sparkles-in-distance_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem071": {
+      "title": "Timings a bitch",
+      "author": "Manas Pandey",
+      "original_filename": "timings-a-bitch_time-is-a-cruel_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "Time is a cruel mistress, she never waits\nFor the brave souls who dare to love\nShe ticks and tocks, she steals the fates\nOf those who seek the stars above\n\nYou long for someone's warmth and light\nYou yearn for their presence in your life\nYou reach out to them with all your might\nEven if they don't, you face the strife\n\nBut time is a cruel mistress, she never stops\nShe mocks the hearts that beat as one\nShe runs and laughs, she breaks the bonds\nOf those who dream of the rising sun\n\nYou crave for someone's friendship and support\nYou hope for their loyalty by your side\nYou share with them your deepest thoughts\nEven if they don't, you open wide\n\nBut time is a cruel mistress, she never stays\nShe shatters the hopes that glow so bright\nShe hides and flees, she dims the rays\nOf those who wish for the moonlight\n\nYou fall for someone's charm and grace\nYou ache for their love in your heart\nYou show them your true self and face\nEven if they don't, you play your part\n\nBut time is a cruel mistress, she never returns\nShe buries the memories that linger on\nShe flies and dies, she leaves you to burn\nOf those who sing for the dawn\n\nSo don't wait for the perfect moment\nCause even if the clock is wrong, the chance is right\nDon't let time be a cruel mistress to you\nCause in life, times matter few.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\timings-a-bitch_time-is-a-cruel_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem072": {
+      "title": "Where eyes take you",
+      "author": "Manas Pandey",
+      "original_filename": "where-eyes-take-you_where-the-eyes-take_standard_en.md",
+      "language": "en",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "english/forms/free_verse",
+      "content": "Where the eyes take you.\n.\nAt a place,\nwhere sparkles blind your eyes.\n\nAt a time,\nWhen dust seems like glitter.\n\nIn a crowd,\nPeople but only oblivion.\n\nIn constant struggle,\nBut with no future to see.\n\nTrying to figure out stuff,\nJust for more to come.\n\nFinding meaning of it all,\nJust to find emptiness crawl.\n\nTo know what to do.\nBut \"Why?\" is what to ask,\nPointless it seems.\n\nBusy with day-lives we get,\nJust to live better in our night dreams.\n\nDiscovering new things to love,\nForgetting the ones who did us.\n\nSimplicity of life we try to find,\nBut the more we dive the more complex it gets.\n\nBut I know,\nBlank verses do shine,\nSometimes grammar needed not,\nNot even words to rhyme.",
+      "original_path": "Poetry/by_language/english/forms/free_verse\\where-eyes-take-you_where-the-eyes-take_standard_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem073": {
+      "title": "A Sonnet too late",
+      "author": "Manas Pandey",
+      "original_filename": "a-sonnet-too-late_he-loved-her-from_sonnet_en.md",
+      "language": "en",
+      "form": "Sonnet",
+      "length": "Standard",
+      "category_path": "english/forms/sonnet",
+      "content": "He loved her from the day he saw her face\nShe was his friend, but never knew his heart\nHe did for her all things with gentle grace\nBut never dared to tell her his true part\n\nShe loved another, who was not her match\nHe watched her suffer, and he gave her aid\nHe hoped that someday she would see his catch\nBut never spoke his feelings, he was afraid\n\nHe died before he could confess his love\nShe mourned for him, and found his letter late\nShe realized then, he was her turtle dove\nBut could not tell him, for she met her fate\n\nThey met again, in fields of reeds, beyond\nThey kissed and held, and found their love so fond",
+      "original_path": "Poetry/by_language/english/forms/sonnet\\a-sonnet-too-late_he-loved-her-from_sonnet_en.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    },
+    "poem074": {
+      "title": "hindi poem",
+      "author": "Manas Pandey",
+      "original_filename": "hindi-poem_kitni-barishen-aa-gain_standard_hi.md",
+      "language": "hi",
+      "form": "Free Verse",
+      "length": "Standard",
+      "category_path": "hindi/lengths/standard",
+      "content": "कितनी बारिशें आ गईं,\nतेरे इंतज़ार में।\nअब तो मेरी रूह भी परेशान है,\nपूछ रही है यह मेरी परछाई से,\nक्या हुआ उसका,\nजिसका ज़िक्र किया करता था मुझसे,\n\nजिसकी एक झलक पर डूब गया था तू उस समुंदर में,\nजिसमें तू तैर भी नहीं पाया,\nन की कोशिश।\n\nअब तू बता,\nक्या हुआ उन राज़ों का जो किया तूने छुपा,\nउन बातों का जो किया नहीं तुमने बयां,\nउन रातों का जो सोया नहीं तू उसकी राह में,\nक्या हुआ?\nचुप क्यों हो फिलहाल तुम,\nक्यों बोल नहीं पा रहे,\nबैठ क्यों गए तुम सोच में,\nराह क्यों नहीं बता पा रहे।\n\nबहुत दूर निकल आया हूँ,\nतेरी यादों के सहारे में।\nखोज रहा हूँ उसे हर जगह,\nजिसके बिना अधूरा है मेरा जीना,\nजिसके लिए बहा चुका हूँ आँसू,\nउसी की तलाश में।\n\nजिसके लिए बदल दी मैंने अपनी दुनिया,\nजिसके लिए छोड़ दिया सब कुछ पीछे,\nजिसके लिए जी रहा हूँ अब भी,\nउसी की आस में।\n\nअब तू सुन,\nवो राज़ अब भी हैं छुपे,\nउन बातों को अब भी है इंतज़ार,\nउन रातों की यादें अब भी हैं बाकी,\nउसी की राह में।\nचुप इसलिए हूँ क्योंकि शब्द नहीं हैं,\nबोल नहीं पा रहा क्योंकि जज्बात नहीं हैं,\nबैठा हूँ सोच में क्योंकि रास्ता नहीं है,\nराह नहीं बता पा रहा क्योंकि तू नहीं है।",
+      "original_path": "Poetry/by_language/hindi/lengths/standard\\hindi-poem_kitni-barishen-aa-gain_standard_hi.md",
+      "created_date": "2025-06-19T16:09:46.415134",
+      "last_modified": "2025-06-19T16:09:46.415134"
+    }
+  },
+  "images": {
+    "image001": {
+      "original_filename": "a-leaf-in-a-sea-of-green.png",
+      "file_extension": ".png",
+      "linked_poem": "poem001"
+    },
+    "image002": {
+      "original_filename": "a-light-that-never-goes-out.png",
+      "file_extension": ".png",
+      "linked_poem": "poem002"
+    },
+    "image003": {
+      "original_filename": "a-part-of-the-crowd.png",
+      "file_extension": ".png",
+      "linked_poem": "poem003"
+    },
+    "image004": {
+      "original_filename": "before-the-break-of-day.png",
+      "file_extension": ".png",
+      "linked_poem": "poem004"
+    },
+    "image005": {
+      "original_filename": "bridges-you-wait-upon.png",
+      "file_extension": ".png",
+      "linked_poem": "poem005"
+    },
+    "image006": {
+      "original_filename": "cold-hallways.png",
+      "file_extension": ".png",
+      "linked_poem": "poem006"
+    },
+    "image007": {
+      "original_filename": "colours-in-sky.png",
+      "file_extension": ".png",
+      "linked_poem": "poem007"
+    },
+    "image008": {
+      "original_filename": "distant-lights-i-stare.png",
+      "file_extension": ".png",
+      "linked_poem": "poem008"
+    },
+    "image009": {
+      "original_filename": "drops-of-jupiter.png",
+      "file_extension": ".png",
+      "linked_poem": "poem009"
+    },
+    "image010": {
+      "original_filename": "flowers-under-streetlight.png",
+      "file_extension": ".png",
+      "linked_poem": "poem010"
+    },
+    "image011": {
+      "original_filename": "gayish-bubbles.png",
+      "file_extension": ".png",
+      "linked_poem": "poem011"
+    },
+    "image012": {
+      "original_filename": "i-love-winters.png",
+      "file_extension": ".png",
+      "linked_poem": "poem012"
+    },
+    "image013": {
+      "original_filename": "if-you-go-deep-in-thought.png",
+      "file_extension": ".png",
+      "linked_poem": "poem013"
+    },
+    "image014": {
+      "original_filename": "its-the-last-day-of-earth.png",
+      "file_extension": ".png",
+      "linked_poem": "poem014"
+    },
+    "image015": {
+      "original_filename": "jupiter-shone-different.png",
+      "file_extension": ".png",
+      "linked_poem": "poem015"
+    },
+    "image016": {
+      "original_filename": "kogarashi.png",
+      "file_extension": ".png",
+      "linked_poem": "poem016"
+    },
+    "image017": {
+      "original_filename": "light-streaks-at-night.png",
+      "file_extension": ".png",
+      "linked_poem": "poem017"
+    },
+    "image018": {
+      "original_filename": "lights-in-a-lecture-hall.png",
+      "file_extension": ".png",
+      "linked_poem": "poem018"
+    },
+    "image019": {
+      "original_filename": "magnificent-arent-they.png",
+      "file_extension": ".png",
+      "linked_poem": "poem019"
+    },
+    "image020": {
+      "original_filename": "moon-through-skys-circular-frame.png",
+      "file_extension": ".png",
+      "linked_poem": "poem020"
+    },
+    "image021": {
+      "original_filename": "moons-alluring-scars.png",
+      "file_extension": ".png",
+      "linked_poem": "poem021"
+    },
+    "image022": {
+      "original_filename": "mornings-with-no-clouds.png",
+      "file_extension": ".png",
+      "linked_poem": "poem022"
+    },
+    "image023": {
+      "original_filename": "petals-raining.png",
+      "file_extension": ".png",
+      "linked_poem": "poem023"
+    },
+    "image024": {
+      "original_filename": "plants-after-rain.png",
+      "file_extension": ".png",
+      "linked_poem": "poem024"
+    },
+    "image025": {
+      "original_filename": "purple-hyacinth.png",
+      "file_extension": ".png",
+      "linked_poem": "poem025"
+    },
+    "image026": {
+      "original_filename": "red-clouds-like-bloody-hell.png",
+      "file_extension": ".png",
+      "linked_poem": "poem026"
+    },
+    "image027": {
+      "original_filename": "red-spirals-odd.png",
+      "file_extension": ".png",
+      "linked_poem": "poem027"
+    },
+    "image028": {
+      "original_filename": "redness-like-blood.png",
+      "file_extension": ".png",
+      "linked_poem": "poem029"
+    },
+    "image029": {
+      "original_filename": "see-through-your-heart.png",
+      "file_extension": ".png",
+      "linked_poem": "poem030"
+    },
+    "image030": {
+      "original_filename": "shades-of-grey.png",
+      "file_extension": ".png",
+      "linked_poem": "poem031"
+    },
+    "image031": {
+      "original_filename": "sirius-in-the-sky.png",
+      "file_extension": ".png",
+      "linked_poem": "poem032"
+    },
+    "image032": {
+      "original_filename": "streaks-of-light.png",
+      "file_extension": ".png",
+      "linked_poem": "poem033"
+    },
+    "image033": {
+      "original_filename": "through-tunnels-of-tricks.png",
+      "file_extension": ".png",
+      "linked_poem": "poem034"
+    },
+    "image034": {
+      "original_filename": "to-flowers-glamour.png",
+      "file_extension": ".png",
+      "linked_poem": "poem035"
+    },
+    "image035": {
+      "original_filename": "to-flowers-of-crimson-pink.png",
+      "file_extension": ".png",
+      "linked_poem": "poem036"
+    },
+    "image036": {
+      "original_filename": "to-white-flowers-of-old.png",
+      "file_extension": ".png",
+      "linked_poem": "poem037"
+    },
+    "image037": {
+      "original_filename": "what-is-red.png",
+      "file_extension": ".png",
+      "linked_poem": "poem038"
+    },
+    "image038": {
+      "original_filename": "white-canvas-empty-like-void.png",
+      "file_extension": ".png",
+      "linked_poem": "poem039"
+    },
+    "image039": {
+      "original_filename": "white-hyacinths.png",
+      "file_extension": ".png",
+      "linked_poem": "poem040"
+    },
+    "image040": {
+      "original_filename": "white-in-a-garden-of-purple.png",
+      "file_extension": ".png",
+      "linked_poem": "poem041"
+    },
+    "image041": {
+      "original_filename": "why-pretend.png",
+      "file_extension": ".png",
+      "linked_poem": "poem042"
+    },
+    "image042": {
+      "original_filename": "windows-of-dew.png",
+      "file_extension": ".png",
+      "linked_poem": "poem043"
+    },
+    "image043": {
+      "original_filename": "years-of-stories.png",
+      "file_extension": ".png",
+      "linked_poem": "poem044"
+    },
+    "image044": {
+      "original_filename": "yellow-flowers-on-asphalt.png",
+      "file_extension": ".png",
+      "linked_poem": "poem045"
+    },
+    "image045": {
+      "original_filename": "your-rhythm-and-muse.png",
+      "file_extension": ".png",
+      "linked_poem": "poem046"
+    },
+    "image046": {
+      "original_filename": "2-winged-heart.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image047": {
+      "original_filename": "a-sonnet-too-late.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image048": {
+      "original_filename": "a-void-of-you.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image049": {
+      "original_filename": "back-to-poetry.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image050": {
+      "original_filename": "beauty-if-not-free.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image051": {
+      "original_filename": "bittersweet-romance-mocha-kisses.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image052": {
+      "original_filename": "burden-of-your-skin.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image053": {
+      "original_filename": "coffee.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image054": {
+      "original_filename": "dark-side-of-my-moon.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image055": {
+      "original_filename": "emotional-fool.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image056": {
+      "original_filename": "escape.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image057": {
+      "original_filename": "first-try-at-an-hindi-poem.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image058": {
+      "original_filename": "haikus.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image059": {
+      "original_filename": "hey-you.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image060": {
+      "original_filename": "hmm-bland.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image061": {
+      "original_filename": "i-say-you-say.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image062": {
+      "original_filename": "if-only-if.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image063": {
+      "original_filename": "listen-to-me.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image064": {
+      "original_filename": "lost-poet.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image065": {
+      "original_filename": "love-the-ordinary.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image066": {
+      "original_filename": "maybe-i-should-quit-poetry.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image067": {
+      "original_filename": "mistaken-midnight-poetry.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image068": {
+      "original_filename": "not-gonna-rhyme-but-waste-time.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image069": {
+      "original_filename": "ode-to-a-true-love-of-mine.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image070": {
+      "original_filename": "people-are-books.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image071": {
+      "original_filename": "restless-heart.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image072": {
+      "original_filename": "run.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image073": {
+      "original_filename": "secret-old-diary.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image074": {
+      "original_filename": "skies-and-flowers.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image075": {
+      "original_filename": "social-sieves.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image076": {
+      "original_filename": "sparkle.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image077": {
+      "original_filename": "the-real-tragedy.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image078": {
+      "original_filename": "timings-a-bitch.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image079": {
+      "original_filename": "universe-glimpses-in-you.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    },
+    "image080": {
+      "original_filename": "where-eyes-take-you.png",
+      "file_extension": ".png",
+      "linked_poem": null
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-06-19T16:09:30.395516",
+    "last_updated": "2025-06-19T16:11:23.432997",
+    "total_poems": 74,
+    "total_images": 80
+  }
+}

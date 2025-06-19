@@ -1,0 +1,668 @@
+{
+  "1": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/2-winged-heart_a-heart-was-here_standard_en.md",
+    "original_name": "2-winged-heart_a-heart-was-here_standard_en.md",
+    "title": "2 winged heart",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "2": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/a-void-of-you_look-at-me-once_standard_en.md",
+    "original_name": "a-void-of-you_look-at-me-once_standard_en.md",
+    "title": "A Void of You",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "3": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/back-to-poetry_this-forest_standard_en.md",
+    "original_name": "back-to-poetry_this-forest_standard_en.md",
+    "title": "Back to poetry",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "4": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/beauty-if-not-free_i-know-a-beautiful_standard_en.md",
+    "original_name": "beauty-if-not-free_i-know-a-beautiful_standard_en.md",
+    "title": "beauty if not free",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "5": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/bittersweet-romance-mocha-kisses_in-moments-sweet-where_standard_en.md",
+    "original_name": "bittersweet-romance-mocha-kisses_in-moments-sweet-where_standard_en.md",
+    "title": "Bittersweet Romance Mocha Kisses",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "6": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/burden-of-your-skin_unrelatable-are-some-things_standard_en.md",
+    "original_name": "burden-of-your-skin_unrelatable-are-some-things_standard_en.md",
+    "title": "Burden of your Skin",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "7": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/coffee_coffee-stains-left-on_standard_en.md",
+    "original_name": "coffee_coffee-stains-left-on_standard_en.md",
+    "title": "Coffee",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "8": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/emotional-fool_you-played-the-fool_standard_en.md",
+    "original_name": "emotional-fool_you-played-the-fool_standard_en.md",
+    "title": "Emotional Fool",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "9": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/escape_i-left-my-home_standard_en.md",
+    "original_name": "escape_i-left-my-home_standard_en.md",
+    "title": "Escape",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "10": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/hey-you_hey-you_standard_en.md",
+    "original_name": "hey-you_hey-you_standard_en.md",
+    "title": "HEY YOU",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "11": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/hmm-bland_lost-amidst-the-sea_standard_en.md",
+    "original_name": "hmm-bland_lost-amidst-the-sea_standard_en.md",
+    "title": "Hmm Bland",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "12": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/i-say-you-say_i-say_standard_en.md",
+    "original_name": "i-say-you-say_i-say_standard_en.md",
+    "title": "I Say You Say",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "13": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/if-only-if_if-my-heart-had_standard_en.md",
+    "original_name": "if-only-if_if-my-heart-had_standard_en.md",
+    "title": "If only if",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "14": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/listen-to-me_in-the-stillness-of_standard_en.md",
+    "original_name": "listen-to-me_in-the-stillness-of_standard_en.md",
+    "title": "Listen to me",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "15": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/lost-poet_have-been-since-i_standard_en.md",
+    "original_name": "lost-poet_have-been-since-i_standard_en.md",
+    "title": "Lost Poet",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "16": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/maybe-i-should-quit-poetry_maybe-i-should-quit_standard_en.md",
+    "original_name": "maybe-i-should-quit-poetry_maybe-i-should-quit_standard_en.md",
+    "title": "Maybe I should Quit Poetry",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "17": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/not-gonna-rhyme-but-waste-time_what-are-we-if_standard_en.md",
+    "original_name": "not-gonna-rhyme-but-waste-time_what-are-we-if_standard_en.md",
+    "title": "Not gonna Rhyme but waste time",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "18": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/people-are-books_people-are-books_standard_en.md",
+    "original_name": "people-are-books_people-are-books_standard_en.md",
+    "title": "People are Books",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "19": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/restless-heart_within-the-depths-of_standard_en.md",
+    "original_name": "restless-heart_within-the-depths-of_standard_en.md",
+    "title": "Restless Heart",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "20": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/run_fast-fast_standard_en.md",
+    "original_name": "run_fast-fast_standard_en.md",
+    "title": "Run",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "21": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/secret-old-diary_as-i-move-swipe_standard_en.md",
+    "original_name": "secret-old-diary_as-i-move-swipe_standard_en.md",
+    "title": "SECRET OLD DIARY",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "22": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/skies-and-flowers_the-vast-expanse-of_standard_en.md",
+    "original_name": "skies-and-flowers_the-vast-expanse-of_standard_en.md",
+    "title": "Skies and Flowers",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "23": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/social-sieves_in-a-world-where_standard_en.md",
+    "original_name": "social-sieves_in-a-world-where_standard_en.md",
+    "title": "Social Sieves",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "24": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/sparkle_sparkles-in-distance_standard_en.md",
+    "original_name": "sparkle_sparkles-in-distance_standard_en.md",
+    "title": "Sparkle",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "25": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/timings-a-bitch_time-is-a-cruel_standard_en.md",
+    "original_name": "timings-a-bitch_time-is-a-cruel_standard_en.md",
+    "title": "Timings a bitch",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "26": {
+    "original_file": "Poetry/by_language/english/forms/free_verse/where-eyes-take-you_where-the-eyes-take_standard_en.md",
+    "original_name": "where-eyes-take-you_where-the-eyes-take_standard_en.md",
+    "title": "Where eyes take you",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Free Verse",
+    "length": "Standard"
+  },
+  "27": {
+    "original_file": "Poetry/by_language/english/forms/sonnet/a-sonnet-too-late_he-loved-her-from_sonnet_en.md",
+    "original_name": "a-sonnet-too-late_he-loved-her-from_sonnet_en.md",
+    "title": "A Sonnet too late",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "Sonnet",
+    "length": "Standard"
+  },
+  "28": {
+    "original_file": "Poetry/by_language/english/lengths/short/a-leaf-in-a-sea-of-green_a-leaf-in-a-sea-of_short_en.md",
+    "original_name": "a-leaf-in-a-sea-of-green_a-leaf-in-a-sea-of_short_en.md",
+    "title": "A Leaf in a Sea of Green",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "29": {
+    "original_file": "Poetry/by_language/english/lengths/short/a-light-that-never-goes-out_there-is-a-light-that_short_en.md",
+    "original_name": "a-light-that-never-goes-out_there-is-a-light-that_short_en.md",
+    "title": "A Light That Never Goes Out",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "30": {
+    "original_file": "Poetry/by_language/english/lengths/short/a-part-of-the-crowd_a-part-of-the-crowd_short_en.md",
+    "original_name": "a-part-of-the-crowd_a-part-of-the-crowd_short_en.md",
+    "title": "A Part of the Crowd",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "31": {
+    "original_file": "Poetry/by_language/english/lengths/short/before-the-break-of-day_before-the-break-of-day_short_en.md",
+    "original_name": "before-the-break-of-day_before-the-break-of-day_short_en.md",
+    "title": "Before the Break of Day",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "32": {
+    "original_file": "Poetry/by_language/english/lengths/short/bridges-you-wait-upon_bridges-you-wait-upon_short_en.md",
+    "original_name": "bridges-you-wait-upon_bridges-you-wait-upon_short_en.md",
+    "title": "Bridges You Wait Upon",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "33": {
+    "original_file": "Poetry/by_language/english/lengths/short/cold-hallways_cold-hallways_short_en.md",
+    "original_name": "cold-hallways_cold-hallways_short_en.md",
+    "title": "Cold Hallways",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "34": {
+    "original_file": "Poetry/by_language/english/lengths/short/colours-in-sky_colours-in-sky_short_en.md",
+    "original_name": "colours-in-sky_colours-in-sky_short_en.md",
+    "title": "Colours in Sky",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "35": {
+    "original_file": "Poetry/by_language/english/lengths/short/distant-lights-i-stare_distant-lights-i-stare_short_en.md",
+    "original_name": "distant-lights-i-stare_distant-lights-i-stare_short_en.md",
+    "title": "Distant Lights, I Stare",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "36": {
+    "original_file": "Poetry/by_language/english/lengths/short/drops-of-jupiter_i-dont-know-why-how_short_en.md",
+    "original_name": "drops-of-jupiter_i-dont-know-why-how_short_en.md",
+    "title": "Drops of Jupiter",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "37": {
+    "original_file": "Poetry/by_language/english/lengths/short/flowers-under-streetlight_flowers-under-streetlight_short_en.md",
+    "original_name": "flowers-under-streetlight_flowers-under-streetlight_short_en.md",
+    "title": "Flowers Under Streetlight",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "38": {
+    "original_file": "Poetry/by_language/english/lengths/short/gayish-bubbles_gayish-bubbles_short_en.md",
+    "original_name": "gayish-bubbles_gayish-bubbles_short_en.md",
+    "title": "Gayish Bubbles",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "39": {
+    "original_file": "Poetry/by_language/english/lengths/short/i-love-winters_i-love-winters_short_en.md",
+    "original_name": "i-love-winters_i-love-winters_short_en.md",
+    "title": "I Love Winters",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "40": {
+    "original_file": "Poetry/by_language/english/lengths/short/if-you-go-deep-in-thought_if-you-go-deep-in-thought_short_en.md",
+    "original_name": "if-you-go-deep-in-thought_if-you-go-deep-in-thought_short_en.md",
+    "title": "If You Go Deep in Thought",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "41": {
+    "original_file": "Poetry/by_language/english/lengths/short/its-the-last-day-of-earth_its-the-last-day-of-earth_short_en.md",
+    "original_name": "its-the-last-day-of-earth_its-the-last-day-of-earth_short_en.md",
+    "title": "It's the Last Day of Earth",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "42": {
+    "original_file": "Poetry/by_language/english/lengths/short/jupiter-shone-different_in-a-sky-filled-with_short_en.md",
+    "original_name": "jupiter-shone-different_in-a-sky-filled-with_short_en.md",
+    "title": "Jupiter Shone Different",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "43": {
+    "original_file": "Poetry/by_language/english/lengths/short/kogarashi_kogarashi_short_en.md",
+    "original_name": "kogarashi_kogarashi_short_en.md",
+    "title": "Kogarashi",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "44": {
+    "original_file": "Poetry/by_language/english/lengths/short/light-streaks-at-night_lights-streaks-at-night_short_en.md",
+    "original_name": "light-streaks-at-night_lights-streaks-at-night_short_en.md",
+    "title": "Light Streaks at Night",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "45": {
+    "original_file": "Poetry/by_language/english/lengths/short/lights-in-a-lecture-hall_lights-in-a-lecture-hall_short_en.md",
+    "original_name": "lights-in-a-lecture-hall_lights-in-a-lecture-hall_short_en.md",
+    "title": "Lights in a Lecture Hall",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "46": {
+    "original_file": "Poetry/by_language/english/lengths/short/magnificent-arent-they_magnificent-arent-they_short_en.md",
+    "original_name": "magnificent-arent-they_magnificent-arent-they_short_en.md",
+    "title": "Magnificent Aren't They",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "47": {
+    "original_file": "Poetry/by_language/english/lengths/short/moon-through-skys-circular-frame_moon-through-skys-circular-frame_short_en.md",
+    "original_name": "moon-through-skys-circular-frame_moon-through-skys-circular-frame_short_en.md",
+    "title": "Moon Through Sky's Circular Frame",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "48": {
+    "original_file": "Poetry/by_language/english/lengths/short/moons-alluring-scars_why-is-the-moon-so_short_en.md",
+    "original_name": "moons-alluring-scars_why-is-the-moon-so_short_en.md",
+    "title": "Moon's Alluring Scars",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "49": {
+    "original_file": "Poetry/by_language/english/lengths/short/mornings-with-no-clouds_mornings-with-no-clouds_short_en.md",
+    "original_name": "mornings-with-no-clouds_mornings-with-no-clouds_short_en.md",
+    "title": "Mornings With No Clouds",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "50": {
+    "original_file": "Poetry/by_language/english/lengths/short/petals-raining_petals-raining_short_en.md",
+    "original_name": "petals-raining_petals-raining_short_en.md",
+    "title": "Petals Raining",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "51": {
+    "original_file": "Poetry/by_language/english/lengths/short/plants-after-rain_plants-after-rain_short_en.md",
+    "original_name": "plants-after-rain_plants-after-rain_short_en.md",
+    "title": "Plants After Rain",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "52": {
+    "original_file": "Poetry/by_language/english/lengths/short/purple-hyacinth_purple-hyacinth_short_en.md",
+    "original_name": "purple-hyacinth_purple-hyacinth_short_en.md",
+    "title": "Purple Hyacinth",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "53": {
+    "original_file": "Poetry/by_language/english/lengths/short/red-clouds-like-bloody-hell_red-clouds_short_en.md",
+    "original_name": "red-clouds-like-bloody-hell_red-clouds_short_en.md",
+    "title": "Red Clouds, Like Bloody Hell",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "54": {
+    "original_file": "Poetry/by_language/english/lengths/short/red-spirals-odd_red-spirals-odd_short_en.md",
+    "original_name": "red-spirals-odd_red-spirals-odd_short_en.md",
+    "title": "Red Spirals Odd",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "55": {
+    "original_file": "Poetry/by_language/english/lengths/short/redness-glowing-like-fate_redness-glowing-like-fate_short_en.md",
+    "original_name": "redness-glowing-like-fate_redness-glowing-like-fate_short_en.md",
+    "title": "Redness Glowing Like Fate",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "56": {
+    "original_file": "Poetry/by_language/english/lengths/short/redness-like-blood_redness-like-blood_short_en.en.md",
+    "original_name": "redness-like-blood_redness-like-blood_short_en.en.md",
+    "title": "Redness Like Blood",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "57": {
+    "original_file": "Poetry/by_language/english/lengths/short/see-through-your-heart_see-through-your-heart_short_en.md",
+    "original_name": "see-through-your-heart_see-through-your-heart_short_en.md",
+    "title": "See Through Your Heart",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "58": {
+    "original_file": "Poetry/by_language/english/lengths/short/shades-of-grey_shades-of-grey_short_en.md",
+    "original_name": "shades-of-grey_shades-of-grey_short_en.md",
+    "title": "Shades of Grey",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "59": {
+    "original_file": "Poetry/by_language/english/lengths/short/sirius-in-the-sky_sirius-in-the-sky_short_en.md",
+    "original_name": "sirius-in-the-sky_sirius-in-the-sky_short_en.md",
+    "title": "Sirius in the Sky",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "60": {
+    "original_file": "Poetry/by_language/english/lengths/short/streaks-of-light_streaks-of-light_short_en.md",
+    "original_name": "streaks-of-light_streaks-of-light_short_en.md",
+    "title": "Streaks of Light",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "61": {
+    "original_file": "Poetry/by_language/english/lengths/short/through-tunnels-of-tricks_through-tunnels-of-tricks_short_en.md",
+    "original_name": "through-tunnels-of-tricks_through-tunnels-of-tricks_short_en.md",
+    "title": "Through Tunnels of Tricks",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "62": {
+    "original_file": "Poetry/by_language/english/lengths/short/to-flowers-glamour_to-flowers-glamour_short_en.md",
+    "original_name": "to-flowers-glamour_to-flowers-glamour_short_en.md",
+    "title": "To Flowers' Glamour",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "63": {
+    "original_file": "Poetry/by_language/english/lengths/short/to-flowers-of-crimson-pink_to-flowers-of-crimson-pink_short_en.md",
+    "original_name": "to-flowers-of-crimson-pink_to-flowers-of-crimson-pink_short_en.md",
+    "title": "To Flowers of Crimson Pink",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "64": {
+    "original_file": "Poetry/by_language/english/lengths/short/to-white-flowers-of-old_to-white-flowers-of-old_short_en.md",
+    "original_name": "to-white-flowers-of-old_to-white-flowers-of-old_short_en.md",
+    "title": "To White Flowers of Old",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "65": {
+    "original_file": "Poetry/by_language/english/lengths/short/what-is-red_what-is-red_short_en.md",
+    "original_name": "what-is-red_what-is-red_short_en.md",
+    "title": "What is Red?",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "66": {
+    "original_file": "Poetry/by_language/english/lengths/short/white-canvas-empty-like-void_white-canvas_short_en.md",
+    "original_name": "white-canvas-empty-like-void_white-canvas_short_en.md",
+    "title": "White Canvas, Empty Like Void",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "67": {
+    "original_file": "Poetry/by_language/english/lengths/short/white-hyacinths_white-hyacinths_short_en.md",
+    "original_name": "white-hyacinths_white-hyacinths_short_en.md",
+    "title": "White Hyacinths",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "68": {
+    "original_file": "Poetry/by_language/english/lengths/short/white-in-a-garden-of-purple_white-in-a-garden-of-purple_short_en.md",
+    "original_name": "white-in-a-garden-of-purple_white-in-a-garden-of-purple_short_en.md",
+    "title": "White in a Garden of Purple",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "69": {
+    "original_file": "Poetry/by_language/english/lengths/short/why-pretend_why-pretend_short_en.md",
+    "original_name": "why-pretend_why-pretend_short_en.md",
+    "title": "Why Pretend",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "70": {
+    "original_file": "Poetry/by_language/english/lengths/short/windows-of-dew_windows-of-dew_short_en.md",
+    "original_name": "windows-of-dew_windows-of-dew_short_en.md",
+    "title": "Windows of Dew",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "71": {
+    "original_file": "Poetry/by_language/english/lengths/short/years-of-stories_written-in-these-lines_short_en.md",
+    "original_name": "years-of-stories_written-in-these-lines_short_en.md",
+    "title": "Years of Stories",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "72": {
+    "original_file": "Poetry/by_language/english/lengths/short/yellow-flowers-on-asphalt_yellow-flowers-on-asphalt_short_en.md",
+    "original_name": "yellow-flowers-on-asphalt_yellow-flowers-on-asphalt_short_en.md",
+    "title": "Yellow Flowers on Asphalt",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "73": {
+    "original_file": "Poetry/by_language/english/lengths/short/your-rhythm-and-muse_your-rhythm-and-muse_short_en.md",
+    "original_name": "your-rhythm-and-muse_your-rhythm-and-muse_short_en.md",
+    "title": "Your Rhythm and Muse",
+    "author": "Manas Pandey",
+    "language": "en",
+    "form": "short",
+    "length": "short"
+  },
+  "74": {
+    "original_file": "Poetry/by_language/hindi/lengths/standard/hindi-poem_kitni-barishen-aa-gain_standard_hi.md",
+    "original_name": "hindi-poem_kitni-barishen-aa-gain_standard_hi.md",
+    "title": "hindi poem",
+    "author": "Manas Pandey",
+    "language": "hi",
+    "form": "Free Verse",
+    "length": "Standard"
+  }
+}

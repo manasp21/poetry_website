@@ -1,0 +1,15 @@
+# Poetry Management System Requirements
+# Run: pip install -r requirements.txt
+
+# Core dependencies
+PyYAML>=6.0
+pathlib2>=2.3.7
+
+# Optional: For enhanced functionality
+# Pillow>=8.0.0  # For image processing (future features)
+# click>=8.0.0   # For enhanced CLI (future features)
+# rich>=10.0.0   # For better terminal output (future features)
+
+# Development dependencies (optional)
+# pytest>=6.0.0 # For testing
+# black>=21.0.0  # For code formatting

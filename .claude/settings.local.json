@@ -13,7 +13,9 @@
       "Bash(python:*)",
       "Bash(git restore:*)",
       "Bash(rg:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(pip install:*)",
+      "Bash(cp:*)"
     ],
     "deny": []
   }
