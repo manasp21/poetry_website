@@ -1,58 +1,19 @@
 // js/dynamic-poem-loader.js
 // Dynamic poem discovery system that automatically finds and loads poems
 
+// Automatic image detection for folder structure
+function getImagePathForPoem(poemPath) {
+    // Convert Poetry/X/poem.md to Poetry/X/image.png
+    const folderPath = poemPath.substring(0, poemPath.lastIndexOf('/'));
+    return folderPath + '/image.png';
+}
+
 // Function to discover all poem files dynamically
 async function discoverAllPoems() {
-    const poems = [];
-    
-    // Define the directory structure to scan
-    const directoriesToScan = [
-        'Poetry/by_language/english/lengths/short/',
-        'Poetry/by_language/english/forms/free_verse/',
-        'Poetry/by_language/english/forms/sonnet/',
-        'Poetry/by_language/hindi/lengths/standard/'
-    ];
-    
-    // GitHub API to get repository contents
-    const repoOwner = 'manasp21';
-    const repoName = 'poetry_website';
-    const branch = 'main';
-    
-    try {
-        for (const directory of directoriesToScan) {
-            try {
-                const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${directory}?ref=${branch}`;
-                const response = await fetch(apiUrl);
-                
-                if (response.ok) {
-                    const files = await response.json();
-                    
-                    // Filter for markdown files
-                    const markdownFiles = files.filter(file => 
-                        file.name.endsWith('.md') && file.type === 'file'
-                    );
-                    
-                    // Add file paths to poems array
-                    markdownFiles.forEach(file => {
-                        poems.push({
-                            path: `${directory}${file.name}`,
-                            name: file.name,
-                            directory: directory
-                        });
-                    });
-                }
-            } catch (error) {
-                console.warn(`Could not scan directory ${directory}:`, error);
-                // Continue with other directories
-            }
-        }
-    } catch (error) {
-        console.error('Error discovering poems via GitHub API:', error);
-        // Fallback to static list if API fails
-        return getFallbackPoemPaths();
-    }
-    
-    return poems;
+    console.log('Using static poem paths (new folder structure)');
+    // Since we now use numbered folders (Poetry/1/, Poetry/2/, etc.),
+    // we'll skip dynamic discovery and use the static fallback directly
+    return getFallbackPoemPaths();
 }
 
 // Fallback function with current static paths
@@ -182,7 +143,7 @@ async function fetchAllPoemsEnhanced(limit = null) {
                 language: frontMatter.language || 'unknown',
                 form: frontMatter.form || 'unknown',
                 length: frontMatter.length || 'unknown',
-                image: frontMatter.image || '',
+                image: getImagePathForPoem(filePath), // Automatic image detection
                 filePath: filePath // Store original file path for admin operations
             };
             poemsData.push(poemEntry);

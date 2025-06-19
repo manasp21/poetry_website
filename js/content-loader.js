@@ -157,7 +157,7 @@ async function fetchAllPoems(limit = null) {
                 language: frontMatter.language || 'unknown',
                 form: frontMatter.form || 'unknown',
                 length: frontMatter.length || 'unknown',
-                image: getImagePathForPoem(filePath).replace('/poetry_website/', '').replace('Poetry/', ''), // Add image field
+                image: getImagePathForPoem(filePath), // Automatic image detection
             };
             poemsData.push(poemEntry);
 
