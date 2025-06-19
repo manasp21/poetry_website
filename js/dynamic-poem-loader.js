@@ -92,7 +92,8 @@ function getFallbackPoemPaths() {
         "Poetry/71/poem.md",
         "Poetry/72/poem.md",
         "Poetry/73/poem.md",
-        "Poetry/74/poem.md"
+        "Poetry/74/poem.md",
+        "Poetry/75/poem.md"
     ];
     
     return staticPaths.map(path => ({

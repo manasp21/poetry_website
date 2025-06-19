@@ -15,7 +15,8 @@
       "Bash(rg:*)",
       "Bash(pkill:*)",
       "Bash(pip install:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(timeout 5 python3:*)"
     ],
     "deny": []
   }
