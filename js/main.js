@@ -66,13 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return excerpt + '...';
     }
 
-    // Helper function to get poem image path - much simpler approach
+    // Helper function to get poem image path - updated for folder structure
     function getPoemImagePath(poem) {
         const basePath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '' : '/poetry_website';
         
-        // Use the image field directly from poem data
+        // Use the image field directly from poem data (already contains correct path)
         if (poem.image && poem.image.trim() !== '') {
-            const imagePath = `${basePath}/assets/images/poems/${poem.image}`;
+            const imagePath = `${basePath}/${poem.image}`;
             return imagePath;
         }
         
