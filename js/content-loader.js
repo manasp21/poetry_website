@@ -138,7 +138,9 @@ async function fetchAllPoems(limit = null) {
 
     for (const filePath of pathsToProcess) {
         try {
-            const response = await fetch(`/poetry_website/${filePath}`);
+            // Fix: Use proper base path detection like image functions
+            const basePath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? '' : '/poetry_website';
+            const response = await fetch(`${basePath}/${filePath}`);
             if (!response.ok) {
                 console.error(`Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
                 continue;
@@ -146,10 +148,13 @@ async function fetchAllPoems(limit = null) {
             const markdownContent = await response.text();
             const { frontMatter, poemText } = parsePoemFileContent(markdownContent);
             
+            // Fix: Use folder number as ID instead of filename (all are "poem.md")
+            const pathParts = filePath.split('/');
+            const folderNumber = pathParts[pathParts.length - 2]; // Get "1", "2", etc. from "Poetry/1/poem.md"
             const fileName = filePath.split('/').pop().replace('.md', '');
 
             const poemEntry = {
-                id: fileName,
+                id: folderNumber,
                 ...frontMatter,
                 content: poemText,
                 title: frontMatter.title || 'Untitled',
