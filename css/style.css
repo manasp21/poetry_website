@@ -429,80 +429,103 @@ body.dark-mode .poem-main-image-placeholder {
 
 .poem-title-full {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-h1); /* Use new variable */
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
-    margin-bottom: 0.75rem; /* Increased margin */
-    line-height: var(--line-height-heading); /* Adjusted line height for large font */
+    margin-bottom: 1rem;
+    line-height: 1.1;
     color: var(--text-color);
-    letter-spacing: -0.5px; /* Subtle letter spacing for headings */
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    position: relative;
 }
 
 .poem-author-full {
-    font-size: 1.2rem; /* Slightly larger author */
+    font-size: 1.1rem;
     color: var(--secondary-text-color);
-    margin-bottom: 2.5rem; /* Increased margin */
+    margin-bottom: 3rem;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 .poem-content-full .stanza {
-    font-family: var(--font-family-body); /* Ensure body font is applied */
-    font-size: 1.15rem; /* Slightly larger stanza text */
-    line-height: var(--line-height-body); /* More generous line height for poem */
-    margin-bottom: 2rem; /* Increased stanza spacing */
+    font-family: var(--font-family-body);
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
     color: var(--text-color);
-    padding: 0.6rem 0.85rem; /* Slightly more padding */
-    border-radius: 6px; /* Slightly more rounded corners for background effect */
-    transition: background-color var(--transition-speed-fast) ease, transform var(--transition-speed-fast) ease;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    transition: all var(--transition-speed-medium) ease;
+    position: relative;
+    border-left: 3px solid transparent;
 }
 
 .poem-content-full .stanza:first-of-type::first-letter {
     font-family: var(--font-family-heading);
-    font-size: 4.5rem; /* Large initial cap size */
-    line-height: 1;
+    font-size: clamp(3.5rem, 8vw, 5rem);
+    line-height: 0.8;
     float: left;
-    margin-right: 0.15em;
+    margin: 0.1em 0.15em 0 0;
     color: var(--accent-color);
     font-weight: 700;
-    /* Optional: text-shadow for subtle depth */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 8px rgba(var(--accent-color-rgb, 0, 245, 212), 0.3);
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-accent-color-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .poem-content-full .stanza:hover {
-    background-color: rgba(128, 128, 128, 0.08); /* Slightly more visible hover */
-    transform: translateY(-2px); /* Subtle lift effect */
+    background-color: rgba(var(--accent-color-rgb, 0, 245, 212), 0.05);
+    border-left-color: var(--accent-color);
+    transform: translateX(8px);
+    box-shadow: 0 4px 20px rgba(var(--accent-color-rgb, 0, 245, 212), 0.1);
 }
+
 body.dark-mode .poem-content-full .stanza:hover {
-    background-color: rgba(200, 200, 200, 0.1); /* Slightly more visible hover for dark mode */
-    transform: translateY(-2px); /* Subtle lift effect */
+    background-color: rgba(var(--accent-color-rgb, 0, 245, 212), 0.08);
+    border-left-color: var(--accent-color);
+    transform: translateX(8px);
+    box-shadow: 0 4px 20px rgba(var(--accent-color-rgb, 0, 245, 212), 0.15);
 }
 
 
 .poem-controls-bar {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    margin-top: 1.5rem;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
     border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: none;
+    justify-content: flex-start;
 }
 
 .control-button {
     background-color: transparent;
-    border: 1px solid transparent; /* For focus */
+    border: 1px solid var(--border-color);
     color: var(--secondary-text-color);
     cursor: pointer;
-    padding: 0.6rem;
+    padding: 0.75rem 1.25rem;
     border-radius: var(--global-border-radius);
     display: flex;
     align-items: center;
+    gap: 0.5rem;
     justify-content: center;
-    transition: color var(--transition-speed-fast) ease, transform var(--transition-speed-fast) ease, background-color var(--transition-speed-fast) ease;
+    transition: all var(--transition-speed-fast) ease;
+    font-family: var(--font-family-ui);
+    font-size: 0.9rem;
+    font-weight: 500;
+    min-width: 120px;
 }
 
 .control-button:hover {
     color: var(--accent-color);
-    background-color: rgba(var(--accent-color-rgb, 0, 245, 212), 0.15); /* More visible hover */
-    transform: translateY(-2px) scale(1.02); /* Subtle lift and scale */
+    background-color: rgba(var(--accent-color-rgb, 0, 245, 212), 0.1);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--accent-color-rgb, 0, 245, 212), 0.2);
 }
 .control-button:focus {
     outline: none;
@@ -514,10 +537,16 @@ body.dark-mode .poem-content-full .stanza:hover {
 /* Extraneous closing brace removed from here */
 
 .control-button svg {
-    width: 22px;
-    height: 22px;
-    fill: currentColor; /* For single-color SVGs */
-    stroke: currentColor; /* For SVGs using stroke */
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    stroke: currentColor;
+    flex-shrink: 0;
+}
+
+.control-text {
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 #favorite-poem.favorited svg {
@@ -546,14 +575,63 @@ body.dark-mode .poem-content-full .stanza:hover {
 }
 
 
-.social-sharing-placeholder {
+/* Breadcrumb Navigation */
+.breadcrumb-nav {
     display: flex;
+    align-items: center;
     gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    font-family: var(--font-family-ui);
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
 }
 
-.share-icon svg {
-    width: 20px;
-    height: 20px;
+.breadcrumb-link {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    transition: color var(--transition-speed-fast) ease;
+}
+
+.breadcrumb-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    color: var(--border-color);
+    font-weight: 300;
+}
+
+.breadcrumb-current {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Poem Metadata Section */
+.poem-metadata {
+    margin: 1.5rem 0 2rem 0;
+    padding: 1.2rem;
+    background-color: rgba(var(--accent-color-rgb, 0, 245, 212), 0.05);
+    border-radius: var(--global-border-radius);
+    border-left: 4px solid var(--accent-color);
+}
+
+.poem-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-family: var(--font-family-ui);
+    font-size: 0.9rem;
+}
+
+.poem-details span {
+    color: var(--secondary-text-color);
+}
+
+.poem-details span span {
+    color: var(--text-color);
+    font-weight: 500;
 }
 
 /* Keyframe animation for gradient shift */
@@ -1399,26 +1477,50 @@ body.dark-mode .poem-list-item-image-placeholder {
         font-size: 1.3rem;
     }
 
-    .poem-title-full {
-        font-size: 2rem;
+    /* Poem page responsive adjustments */
+    .poem-full-view {
+        flex-direction: column;
+        gap: 2rem;
     }
-    .poem-author-full {
-        font-size: 1rem;
+    
+    .poem-image-section {
+        flex: none;
+        max-width: none;
+        position: static;
+        height: auto;
+        max-height: 300px;
     }
-    .poem-content-full .stanza {
-        font-size: 1rem;
+    
+    .poem-text-section {
+        padding-left: 0;
     }
+    
+    .poem-metadata {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+    
+    .poem-details {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .breadcrumb-nav {
+        font-size: 0.8rem;
+        gap: 0.25rem;
+        flex-wrap: wrap;
+    }
+    
     .poem-controls-bar {
-        gap: 0.5rem;
-        flex-wrap: wrap; /* Allow controls to wrap */
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    .control-button svg {
-        width: 20px;
-        height: 20px;
-    }
-    .share-icon svg {
-        width: 18px;
-        height: 18px;
+    
+    .control-button {
+        flex: 1;
+        min-width: 140px;
+        justify-content: center;
     }
 }
 
@@ -1437,14 +1539,31 @@ body.dark-mode .poem-list-item-image-placeholder {
         font-size: 1.5rem;
     }
 
-    .poem-title-full {
-        font-size: 1.8rem;
+    /* Extra small devices poem adjustments */
+    .breadcrumb-nav {
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
     }
+    
+    .poem-metadata {
+        margin: 0.75rem 0;
+        padding: 0.75rem;
+    }
+    
+    .poem-details {
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
     .poem-controls-bar {
-        padding: 0.75rem 0;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem 0;
     }
-    .audio-progress-placeholder {
-        margin: 0.5rem 0; /* Add some space if it wraps */
+    
+    .control-button {
+        width: 100%;
+        min-width: auto;
     }
 }
 

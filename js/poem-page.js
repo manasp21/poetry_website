@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const poemAuthorElement = document.querySelector('.poem-author-full');
     const poemContentElement = document.querySelector('.poem-content-full');
     const poemImagePlaceholder = document.querySelector('.poem-main-image-placeholder');
-    const pageTitle = document.querySelector('title'); // To update browser tab title
+    const pageTitle = document.querySelector('title');
+    const breadcrumbTitle = document.getElementById('breadcrumb-poem-title');
+    const poemFormElement = document.getElementById('poem-form');
+    const poemLengthElement = document.getElementById('poem-length');
+    const poemLanguageElement = document.getElementById('poem-language');
     
     // Helper function to get poem image path - updated for folder structure
     function getPoemImagePath(poem) {
@@ -60,9 +64,24 @@ document.addEventListener('DOMContentLoaded', async () => {
             const poem = allPoems.find(p => p.id === poemId);
 
             if (poem) {
-                if (pageTitle) pageTitle.textContent = `${poem.title || 'Untitled Poem'} - PoetryScape`;
-                if (poemTitleElement) poemTitleElement.textContent = poem.title || 'Untitled Poem';
+                const poemTitle = poem.title || 'Untitled Poem';
+                if (pageTitle) pageTitle.textContent = `${poemTitle} - PoetryScape`;
+                if (poemTitleElement) poemTitleElement.textContent = poemTitle;
                 if (poemAuthorElement) poemAuthorElement.textContent = `By ${poem.author || 'Unknown Author'}`;
+                if (breadcrumbTitle) breadcrumbTitle.textContent = poemTitle;
+                
+                // Update metadata
+                if (poemFormElement) poemFormElement.textContent = poem.form || 'Free Verse';
+                if (poemLengthElement) poemLengthElement.textContent = poem.length || 'Standard';
+                if (poemLanguageElement) {
+                    const languageMap = {
+                        'en': 'English',
+                        'hi': 'Hindi',
+                        'english': 'English',
+                        'hindi': 'Hindi'
+                    };
+                    poemLanguageElement.textContent = languageMap[poem.language?.toLowerCase()] || poem.language || 'English';
+                }
                 
                 if (poemContentElement) {
                     poemContentElement.innerHTML = ''; // Clear existing
@@ -133,11 +152,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
 
-    // Social Sharing Placeholders (remains the same)
-    const shareButtons = document.querySelectorAll('.share-icon');
-    shareButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const platform = button.getAttribute('aria-label').replace('Share on ', '');
+    // Back to Archive Button
+    const backToArchiveButton = document.getElementById('back-to-archive');
+    if (backToArchiveButton) {
+        backToArchiveButton.addEventListener('click', () => {
+            window.location.href = 'archive.html';
         });
+    }
+    
+    // Add smooth scrolling for better UX
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        const imageSection = document.querySelector('.poem-image-section');
+        if (imageSection && window.innerWidth > 768) {
+            imageSection.style.transform = `translateY(${rate}px)`;
+        }
     });
 });
