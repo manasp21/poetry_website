@@ -40,36 +40,25 @@
             <span class="breadcrumb-current" id="breadcrumb-poem-title">Poem</span>
         </nav>
         
-        <article class="poem-full-view">
+        <!-- Loading state shown while poem loads -->
+        <div class="poem-loading-state" id="poem-loading">
+            <div class="loading-spinner"></div>
+            <p>Loading poem...</p>
+        </div>
+
+        <article class="poem-full-view poem-loading" id="poem-article">
             <div class="poem-image-section">
                 <div class="poem-main-image-placeholder" style="background-color: #ccc;">
-                    <!-- Large, creative square image placeholder -->
+                    <!-- Image will be loaded dynamically -->
                 </div>
             </div>
 
             <div class="poem-text-section">
-                <h1 class="poem-title-full">Whispers of the Wind</h1>
-                <p class="poem-author-full">By Elara Sands</p>
+                <h1 class="poem-title-full"></h1>
+                <p class="poem-author-full"></p>
 
                 <div class="poem-content-full">
-                    <p class="stanza">
-                        A gentle breeze through ancient trees,
-                        Carrying tales untold, on whispered ease.
-                        It rustles leaves in verdant seas,
-                        Secrets of the earth, it starts to seize.
-                    </p>
-                    <p class="stanza">
-                        Sunlight dapples, shadows play,
-                        As nature's breath begins to sway.
-                        The forest listens, come what may,
-                        To stories carried from far away.
-                    </p>
-                    <p class="stanza">
-                        Each sigh a note, a soft refrain,
-                        Washing over hill and plain.
-                        A timeless song, again, again,
-                        The wind's soft whisper, easing pain.
-                    </p>
+                    <!-- Poem stanzas will be loaded dynamically -->
                 </div>
 
                 <div class="poem-metadata">

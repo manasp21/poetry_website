@@ -3,43 +3,92 @@
 /* Global Resets and Base Styles */
 :root {
     /* Color Palette */
-    --primary-text-color-light: #222222; /* Dark Grey */
-    --secondary-text-color-light: #777777; /* Medium Grey */
-    --background-color-light: #F8F8F8; /* Off-white for softness */
-    --bg-color-rgb: 248, 248, 248; /* RGB for background-color-light */
-    --card-background-light: #ffffff; /* Pure white cards for contrast */
-    --accent-color-light: #00F5D4; /* Vibrant Teal */
-    --accent-color-light-rgb: 0, 245, 212; /* RGB for Vibrant Teal */
-    --secondary-accent-color-light: #FFC857; /* Warm Amber */
-    --border-color-light: #dee2e6; /* Lighter border */
+    --primary-text-color-light: #222222;
+    /* Dark Grey */
+    --secondary-text-color-light: #777777;
+    /* Medium Grey */
+    --background-color-light: #F8F8F8;
+    /* Off-white for softness */
+    --bg-color-rgb: 248, 248, 248;
+    /* RGB for background-color-light */
+    --card-background-light: #ffffff;
+    /* Pure white cards for contrast */
+    --accent-color-light: #00F5D4;
+    /* Vibrant Teal */
+    --accent-color-light-rgb: 0, 245, 212;
+    /* RGB for Vibrant Teal */
+    --secondary-accent-color-light: #FFC857;
+    /* Warm Amber */
+    --border-color-light: #dee2e6;
+    /* Lighter border */
 
-    --primary-text-color-dark: #E0E0E0; /* Light Grey */
-    --secondary-text-color-dark: #888888; /* Mid-Dark Grey */
-    --background-color-dark: #1A1A1A; /* Very Dark Grey/Charcoal */
-    --bg-color-rgb-dark: 26, 26, 26; /* RGB for background-color-dark */
-    --card-background-dark: #1e1e1e; /* Slightly lighter cards in dark mode */
-    --accent-color-dark: #00F5D4; /* Vibrant Teal */
-    --accent-color-dark-rgb: 0, 245, 212; /* RGB for Vibrant Teal */
-    --secondary-accent-color-dark: #FFC857; /* Warm Amber */
-    --border-color-dark: #343a40; /* Darker, subtle border */
+    --primary-text-color-dark: #E0E0E0;
+    /* Light Grey */
+    --secondary-text-color-dark: #888888;
+    /* Mid-Dark Grey */
+    --background-color-dark: #1A1A1A;
+    /* Very Dark Grey/Charcoal */
+    --bg-color-rgb-dark: 26, 26, 26;
+    /* RGB for background-color-dark */
+    --card-background-dark: #1e1e1e;
+    /* Slightly lighter cards in dark mode */
+    --accent-color-dark: #00F5D4;
+    /* Vibrant Teal */
+    --accent-color-dark-rgb: 0, 245, 212;
+    /* RGB for Vibrant Teal */
+    --secondary-accent-color-dark: #FFC857;
+    /* Warm Amber */
+    --border-color-dark: #343a40;
+    /* Darker, subtle border */
+
+    /* ===== LIQUID GLASS DESIGN SYSTEM ===== */
+    /* Glass Effect Properties */
+    --glass-blur: 20px;
+    --glass-blur-strong: 30px;
+    --glass-opacity: 0.75;
+    --glass-opacity-light: 0.85;
+    --glass-saturation: 180%;
+
+    /* Glow Effect Colors */
+    --glow-primary: rgba(0, 245, 212, 0.4);
+    --glow-secondary: rgba(255, 200, 87, 0.3);
+    --glow-ambient: rgba(0, 245, 212, 0.15);
+
+    /* Glass Border Properties */
+    --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+    --glass-border-light: 1px solid rgba(255, 255, 255, 0.25);
+    --glass-border-glow: 0 0 20px var(--glow-ambient);
+
+    /* Animation Timing */
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-glass: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     /* Typography */
     --font-family-heading: 'Playfair Display', serif;
     --font-family-body: 'Inter', 'Lora', serif;
     --font-family-ui: 'Inter', sans-serif;
 
-    --font-size-base: 1rem; /* 16px */
-    --font-size-h1: 3.5rem; /* 56px */
-    --font-size-h2: 2.5rem; /* 40px */
-    --font-size-h3: 1.75rem; /* 28px */
-    --font-size-h4: 1.25rem; /* 20px */
-    --font-size-small: 0.875rem; /* 14px */
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-h1: 3.5rem;
+    /* 56px */
+    --font-size-h2: 2.5rem;
+    /* 40px */
+    --font-size-h3: 1.75rem;
+    /* 28px */
+    --font-size-h4: 1.25rem;
+    /* 20px */
+    --font-size-small: 0.875rem;
+    /* 14px */
 
     --line-height-body: 1.7;
     --line-height-heading: 1.2;
 
-    --font-primary: var(--font-family-body); /* Updated to use new typography variables */
-    --font-headings: var(--font-family-heading); /* Updated to use new typography variables */
+    --font-primary: var(--font-family-body);
+    /* Updated to use new typography variables */
+    --font-headings: var(--font-family-heading);
+    /* Updated to use new typography variables */
 
     --text-color: var(--primary-text-color-light);
     --bg-color: var(--background-color-light);
@@ -48,9 +97,12 @@
     --border-color: var(--border-color-light);
     --secondary-text-color: var(--secondary-text-color-light);
 
-    --header-height: 75px; /* Slightly taller header */
-    --footer-height: 65px; /* Slightly taller footer */
-    --global-border-radius: 12px; /* Consistent border radius */
+    --header-height: 75px;
+    /* Slightly taller header */
+    --footer-height: 65px;
+    /* Slightly taller footer */
+    --global-border-radius: 16px;
+    /* Increased for softer look */
     --transition-speed-fast: 0.2s;
     --transition-speed-medium: 0.3s;
     --transition-speed-slow: 0.5s;
@@ -64,6 +116,112 @@ body.dark-mode {
     --accent-color: var(--accent-color-dark);
     --border-color: var(--border-color-dark);
     --secondary-text-color: var(--secondary-text-color-dark);
+
+    /* Dark mode glass adjustments */
+    --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+    --glass-border-light: 1px solid rgba(255, 255, 255, 0.12);
+    --glow-ambient: rgba(0, 245, 212, 0.2);
+}
+
+/* ===== LIQUID GLASS UTILITY CLASSES ===== */
+.liquid-glass {
+    background: rgba(var(--bg-color-rgb), var(--glass-opacity));
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+    border: var(--glass-border);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .liquid-glass {
+    background: rgba(var(--bg-color-rgb-dark), var(--glass-opacity));
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-glow {
+    position: relative;
+}
+
+.glass-glow::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: linear-gradient(135deg,
+            var(--glow-primary),
+            transparent 40%,
+            transparent 60%,
+            var(--glow-secondary));
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s var(--ease-glass);
+}
+
+.glass-glow:hover::before {
+    opacity: 1;
+}
+
+/* Animated glow border */
+.glass-glow-animated::before {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Entrance animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.animate-in {
+    animation: slideUp 0.6s var(--ease-smooth) forwards;
+}
+
+.animate-fade-scale {
+    animation: fadeInScale 0.4s var(--ease-smooth) forwards;
 }
 
 *,
@@ -78,18 +236,22 @@ body {
     font-family: var(--font-family-body);
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: var(--line-height-body); /* Use new variable */
+    line-height: var(--line-height-body);
+    /* Use new variable */
     transition: background-color var(--transition-speed-medium) ease, color var(--transition-speed-medium) ease;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: var(--font-size-base); /* Use new variable */
-    -webkit-font-smoothing: antialiased; /* Smoother fonts */
+    font-size: var(--font-size-base);
+    /* Use new variable */
+    -webkit-font-smoothing: antialiased;
+    /* Smoother fonts */
     -moz-osx-font-smoothing: grayscale;
 }
 
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -116,35 +278,62 @@ img {
     display: block;
 }
 
-/* Header Styles */
+/* Header Styles - Liquid Glass Enhanced */
 header {
-    /* Use calculated RGB values for background-color to support rgba */
-    background-color: rgba(var(--bg-color-rgb, 248, 248, 248), 0.85); /* Semi-transparent for glassmorphism */
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    background: rgba(var(--bg-color-rgb, 248, 248, 248), var(--glass-opacity-light));
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
     color: var(--text-color);
-    padding: 0 2rem;
+    padding: 0 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: var(--header-height);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: var(--glass-border);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background-color var(--transition-speed-medium) ease, border-color var(--transition-speed-medium) ease, box-shadow var(--transition-speed-medium) ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Slightly more defined shadow for glass effect */
+    transition: all 0.4s var(--ease-glass);
+    box-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Animated gradient border effect at bottom */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            var(--accent-color) 20%,
+            var(--secondary-accent-color-light) 50%,
+            var(--accent-color) 80%,
+            transparent);
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+header:hover::after {
+    opacity: 0.8;
 }
 
 body.dark-mode header {
-    background-color: rgba(var(--bg-color-rgb-dark, 26, 26, 26), 0.75); /* Dark mode glassmorphism */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    background: rgba(var(--bg-color-rgb-dark, 26, 26, 26), 0.8);
+    box-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 header .logo a {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-h3); /* Use new variable */
-    font-weight: 700; /* Bolder logo */
+    font-size: var(--font-size-h3);
+    /* Use new variable */
+    font-weight: 700;
+    /* Bolder logo */
     color: var(--text-color);
     text-decoration: none;
     letter-spacing: 0.5px;
@@ -157,7 +346,8 @@ header nav ul {
 }
 
 header nav ul li a {
-    font-size: 1.1rem; /* Slightly larger nav links */
+    font-size: 1.1rem;
+    /* Slightly larger nav links */
     font-weight: 500;
     color: var(--secondary-text-color);
     letter-spacing: 0.3px;
@@ -169,12 +359,56 @@ header nav ul li a.active {
     text-decoration: none;
 }
 
+/* Header Search */
+.header-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.header-search input {
+    width: 200px;
+    padding: 0.6rem 1rem;
+    padding-left: 2.5rem;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    transition: width 0.3s var(--ease-glass), box-shadow 0.3s var(--ease-glass);
+}
+
+.header-search input:focus {
+    width: 280px;
+}
+
+.header-search .search-icon {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-text-color);
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.header-search input:focus+.search-icon {
+    color: var(--accent-color);
+}
+
+/* Responsive: hide on small screens */
+@media (max-width: 768px) {
+    .header-search {
+        display: none;
+    }
+}
+
 #theme-toggle {
     background-color: transparent;
-    border: 1px solid transparent; /* Prepare for focus */
+    border: 1px solid transparent;
+    /* Prepare for focus */
     color: var(--text-color);
     cursor: pointer;
-    padding: 0.6rem; /* Slightly more padding */
+    padding: 0.6rem;
+    /* Slightly more padding */
     border-radius: var(--global-border-radius);
     display: flex;
     align-items: center;
@@ -183,7 +417,8 @@ header nav ul li a.active {
 }
 
 #theme-toggle:hover {
-    background-color: rgba(var(--accent-color-rgb, 0, 245, 212), 0.1); /* Use accent color for hover */
+    background-color: rgba(var(--accent-color-rgb, 0, 245, 212), 0.1);
+    /* Use accent color for hover */
 }
 
 #theme-toggle:focus {
@@ -197,51 +432,138 @@ header nav ul li a.active {
     fill: currentColor;
 }
 
-.sun-icon { display: block; }
-.moon-icon { display: none; }
+.sun-icon {
+    display: block;
+}
 
-body.dark-mode .sun-icon { display: none; }
-body.dark-mode .moon-icon { display: block; }
+.moon-icon {
+    display: none;
+}
+
+body.dark-mode .sun-icon {
+    display: none;
+}
+
+body.dark-mode .moon-icon {
+    display: block;
+}
 
 
 /* Main Content Styles */
 main {
     flex-grow: 1;
-    padding: 2.5rem 2rem; /* Increased top/bottom padding */
+    padding: 2.5rem 2rem;
+    /* Increased top/bottom padding */
     width: 100%;
-    max-width: 1400px; /* Increased max-width for more expansive layouts */
-    margin: 0 auto; /* Center content */
+    max-width: 1400px;
+    /* Increased max-width for more expansive layouts */
+    margin: 0 auto;
+    /* Center content */
 }
 
 .homepage-main {
-    padding-top: 1rem; /* Adjust if header is fixed and overlaps */
+    padding-top: 1rem;
+    /* Adjust if header is fixed and overlaps */
 }
 
 /* Poem Grid Styles (Homepage & Archive) */
 .poem-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Flexible grid columns */
-    gap: 2.5rem; /* Increased gap */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* Flexible grid columns */
+    gap: 2.5rem;
+    /* Increased gap */
     padding-bottom: 2.5rem;
-    align-items: start; /* Align items to the start for varied heights */
+    align-items: start;
+    /* Align items to the start for varied heights */
 }
 
 .poem-card {
-    background-color: var(--card-bg);
+    background: var(--card-bg);
     border-radius: var(--global-border-radius);
     overflow: hidden;
-    border: 1px solid var(--border-color); /* Add subtle border to cards */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Refined shadow */
-    transition: transform var(--transition-speed-medium) ease, box-shadow var(--transition-speed-medium) ease, background-color var(--transition-speed-medium) ease;
+    border: var(--glass-border);
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.06),
+        0 1px 3px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s var(--ease-glass);
     display: flex;
     flex-direction: column;
-    /* Broken grid elements - example for specific cards */
-    /* For example, you might target .poem-card:nth-child(3n+1) { grid-column: span 2; } in a more specific layout */
+    position: relative;
+    /* Entrance animation */
+    opacity: 0;
+    animation: slideUp 0.6s var(--ease-smooth) forwards;
+}
+
+/* Staggered entrance for grid items */
+.poem-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.poem-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.poem-card:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.poem-card:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.poem-card:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.poem-card:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+.poem-card:nth-child(n+7) {
+    animation-delay: 0.35s;
+}
+
+/* Glass glow effect on hover */
+.poem-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg,
+            var(--glow-primary) 0%,
+            transparent 30%,
+            transparent 70%,
+            var(--glow-secondary) 100%);
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.4s var(--ease-glass);
+    pointer-events: none;
+}
+
+.poem-card:hover::before {
+    opacity: 1;
 }
 
 .poem-card:hover {
-    transform: translateY(-10px) scale(1.02); /* More pronounced lift and slight scale */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Stronger, more defined shadow */
+    transform: translateY(-12px) scale(1.02);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.12),
+        0 8px 16px rgba(0, 0, 0, 0.06),
+        var(--glass-border-glow);
+}
+
+body.dark-mode .poem-card {
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.15),
+        0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .poem-card:hover {
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 8px 16px rgba(0, 0, 0, 0.15),
+        var(--glass-border-glow);
 }
 
 
@@ -255,18 +577,25 @@ main {
 
 .poem-card-image-placeholder {
     width: 100%;
-    height: 220px; /* Increased placeholder height */
+    height: 220px;
+    /* Increased placeholder height */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
-    color: var(--secondary-text-color); /* Use secondary text color for placeholder text */
-    background: linear-gradient(45deg, var(--accent-color-light), var(--secondary-accent-color-light)); /* Dynamic gradient for placeholder */
-    background-size: 200% 200%; /* For animation */
-    animation: gradientShift 10s ease infinite; /* Subtle animation */
+    color: var(--secondary-text-color);
+    /* Use secondary text color for placeholder text */
+    background: linear-gradient(45deg, var(--accent-color-light), var(--secondary-accent-color-light));
+    /* Dynamic gradient for placeholder */
+    background-size: 200% 200%;
+    /* For animation */
+    animation: gradientShift 10s ease infinite;
+    /* Subtle animation */
     transition: background-color var(--transition-speed-medium) ease;
-    overflow: hidden; /* Ensure zoomed image doesn't overflow placeholder */
-    position: relative; /* For potential pseudo-elements or overlays */
+    overflow: hidden;
+    /* Ensure zoomed image doesn't overflow placeholder */
+    position: relative;
+    /* For potential pseudo-elements or overlays */
 }
 
 .poem-card-image-placeholder img {
@@ -276,6 +605,7 @@ main {
     object-position: center;
     border-radius: inherit;
 }
+
 body.dark-mode .poem-card-image-placeholder {
     background: linear-gradient(45deg, var(--accent-color-dark), var(--secondary-accent-color-dark));
     background-size: 200% 200%;
@@ -296,23 +626,30 @@ body.dark-mode .poem-card-image-placeholder {
 
 .poem-card-title {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-h4); /* Use new variable */
-    font-weight: 700; /* Bolder card title */
-    margin-bottom: 0.75rem; /* Increased margin */
+    font-size: var(--font-size-h4);
+    /* Use new variable */
+    font-weight: 700;
+    /* Bolder card title */
+    margin-bottom: 0.75rem;
+    /* Increased margin */
     color: var(--text-color);
     line-height: var(--line-height-heading);
 }
 
 .poem-card-author {
-    font-size: 0.95rem; /* Slightly larger author text */
+    font-size: 0.95rem;
+    /* Slightly larger author text */
     color: var(--secondary-text-color);
-    margin-bottom: 1.25rem; /* Increased margin */
+    margin-bottom: 1.25rem;
+    /* Increased margin */
 }
 
 .poem-card-excerpt {
-    font-size: 1rem; /* Slightly larger excerpt text */
+    font-size: 1rem;
+    /* Slightly larger excerpt text */
     color: var(--secondary-text-color);
-    line-height: 1.6; /* Improved line height for excerpt */
+    line-height: 1.6;
+    /* Improved line height for excerpt */
     /* For multi-line ellipsis if desired:
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -330,7 +667,8 @@ footer {
     text-align: center;
     padding: 1.5rem 2rem;
     border-top: 1px solid var(--border-color);
-    height: auto; /* Adjust based on content */
+    height: auto;
+    /* Adjust based on content */
     transition: background-color var(--transition-speed-medium) ease, border-color var(--transition-speed-medium) ease, color var(--transition-speed-medium) ease;
 }
 
@@ -351,38 +689,53 @@ footer a:hover {
 
 /* Poem Display Page Specific Styles */
 .poem-display-main {
-    padding-top: 1rem; /* Adjust if header is fixed and overlaps */
+    padding-top: 1rem;
+    /* Adjust if header is fixed and overlaps */
 }
 
 .poem-full-view {
     display: flex;
-    flex-direction: row; /* Default for wider screens */
-    gap: 4rem; /* Increased gap for more breathing room */
-    margin-bottom: 4rem; /* Increased bottom margin */
-    align-items: flex-start; /* Align items to the top */
+    flex-direction: row;
+    /* Default for wider screens */
+    gap: 4rem;
+    /* Increased gap for more breathing room */
+    margin-bottom: 4rem;
+    /* Increased bottom margin */
+    align-items: flex-start;
+    /* Align items to the top */
 }
 
 .poem-image-section {
-    flex: 1 1 40%; /* Takes up 40% of the space, can shrink/grow */
-    max-width: 450px; /* Max width for the image container */
-    position: sticky; /* Make image sticky on scroll */
-    top: calc(var(--header-height) + 2rem); /* Position below header + padding */
-    height: calc(100vh - var(--header-height) - 4rem); /* Attempt to make it viewport height responsive */
-    overflow: hidden; /* In case image is larger */
+    flex: 1 1 40%;
+    /* Takes up 40% of the space, can shrink/grow */
+    max-width: 450px;
+    /* Max width for the image container */
+    position: sticky;
+    /* Make image sticky on scroll */
+    top: calc(var(--header-height) + 2rem);
+    /* Position below header + padding */
+    height: calc(100vh - var(--header-height) - 4rem);
+    /* Attempt to make it viewport height responsive */
+    overflow: hidden;
+    /* In case image is larger */
 }
 
 .poem-main-image-placeholder {
     width: 100%;
-    height: 100%; /* Fill the sticky container */
-    min-height: 300px; /* Minimum height */
-    background-color: #ccc; /* Placeholder color */
+    height: 100%;
+    /* Fill the sticky container */
+    min-height: 300px;
+    /* Minimum height */
+    background-color: #ccc;
+    /* Placeholder color */
     border-radius: var(--global-border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1rem;
     color: #666;
-    background: linear-gradient(60deg, var(--accent-color-light), var(--secondary-accent-color-light)); /* Dynamic gradient */
+    background: linear-gradient(60deg, var(--accent-color-light), var(--secondary-accent-color-light));
+    /* Dynamic gradient */
     background-size: 200% 200%;
     animation: gradientShift 10s ease infinite;
     transition: background-color var(--transition-speed-medium) ease, transform var(--transition-speed-slow) ease;
@@ -406,6 +759,73 @@ footer a:hover {
     font-family: var(--font-family-ui);
 }
 
+/* Poem page loading state */
+.poem-loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    color: var(--secondary-text-color);
+    font-family: var(--font-family-ui);
+    gap: 1.5rem;
+}
+
+.poem-loading-state p {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.loading-spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--border-color);
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hide poem content while loading */
+.poem-full-view.poem-loading {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* Show poem content when loaded */
+.poem-full-view.poem-loaded {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    pointer-events: auto;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hide loading state when poem is loaded */
+.poem-loading-state.hidden {
+    display: none;
+}
+
 .loading-message p {
     margin: 0.5rem 0;
     font-size: 1.1rem;
@@ -415,16 +835,20 @@ footer a:hover {
     color: var(--accent-color);
     font-weight: 600;
 }
+
 body.dark-mode .poem-main-image-placeholder {
     background: linear-gradient(60deg, var(--accent-color-dark), var(--secondary-accent-color-dark));
     background-size: 200% 200%;
     animation: gradientShift 10s ease infinite;
-    color: #aaa; /* Ensure text color is still set if any text is in placeholder */
+    color: #aaa;
+    /* Ensure text color is still set if any text is in placeholder */
 }
 
 .poem-text-section {
-    flex: 1 1 60%; /* Takes up 60% of the space */
-    padding-left: 1rem; /* Spacing from image */
+    flex: 1 1 60%;
+    /* Takes up 60% of the space */
+    padding-left: 1rem;
+    /* Spacing from image */
 }
 
 .poem-title-full {
@@ -527,6 +951,7 @@ body.dark-mode .poem-content-full .stanza:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(var(--accent-color-rgb, 0, 245, 212), 0.2);
 }
+
 .control-button:focus {
     outline: none;
     border-color: var(--accent-color);
@@ -550,7 +975,8 @@ body.dark-mode .poem-content-full .stanza:hover {
 }
 
 #favorite-poem.favorited svg {
-    fill: var(--accent-color); /* Or a specific favorite color e.g. red */
+    fill: var(--accent-color);
+    /* Or a specific favorite color e.g. red */
     stroke: var(--accent-color);
 }
 
@@ -563,6 +989,7 @@ body.dark-mode .poem-content-full .stanza:hover {
     position: relative;
     overflow: hidden;
 }
+
 /* Placeholder for actual progress */
 .audio-progress-placeholder::after {
     content: '';
@@ -570,7 +997,8 @@ body.dark-mode .poem-content-full .stanza:hover {
     left: 0;
     top: 0;
     height: 100%;
-    width: 30%; /* Example progress */
+    width: 30%;
+    /* Example progress */
     background-color: var(--accent-color);
 }
 
@@ -636,9 +1064,17 @@ body.dark-mode .poem-content-full .stanza:hover {
 
 /* Keyframe animation for gradient shift */
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Related Poems Section */
@@ -650,15 +1086,19 @@ body.dark-mode .poem-content-full .stanza:hover {
 
 .section-title {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-h2); /* Use new variable */
+    font-size: var(--font-size-h2);
+    /* Use new variable */
     font-weight: 600;
-    margin-bottom: 2rem; /* Increased margin */
+    margin-bottom: 2rem;
+    /* Increased margin */
     color: var(--text-color);
 }
 
 .related-poems-grid {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Slightly larger small cards */
-    gap: 2rem; /* Consistent gap */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    /* Slightly larger small cards */
+    gap: 2rem;
+    /* Consistent gap */
 }
 
 .poem-card-small .poem-card-image-placeholder {
@@ -666,7 +1106,8 @@ body.dark-mode .poem-content-full .stanza:hover {
 }
 
 .poem-card-small .poem-card-title {
-    font-size: 1.3rem; /* Larger title for small cards */
+    font-size: 1.3rem;
+    /* Larger title for small cards */
     font-weight: 600;
 }
 
@@ -711,39 +1152,61 @@ body.dark-mode .poem-content-full .stanza:hover {
 }
 
 .filtering-sorting-bar {
-    background-color: rgba(var(--card-bg-rgb, 255, 255, 255), 0.8); /* Semi-transparent for glassmorphism */
-    backdrop-filter: blur(8px) saturate(150%);
-    -webkit-backdrop-filter: blur(8px) saturate(150%);
-    padding: 2rem; /* More padding in filter bar */
+    background: rgba(var(--bg-color-rgb), var(--glass-opacity-light));
+    backdrop-filter: blur(var(--glass-blur-strong)) saturate(var(--glass-saturation));
+    -webkit-backdrop-filter: blur(var(--glass-blur-strong)) saturate(var(--glass-saturation));
+    padding: 2rem;
     border-radius: var(--global-border-radius);
-    margin-bottom: 2.5rem; /* Increased margin */
-    border: 1px solid var(--border-color); /* Add subtle border */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.06); /* Refined shadow for glass */
-    transition: background-color var(--transition-speed-medium) ease, box-shadow var(--transition-speed-medium) ease;
+    margin-bottom: 2.5rem;
+    border: var(--glass-border);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    transition: all 0.4s var(--ease-glass);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle shimmer overlay */
+.filtering-sorting-bar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.03),
+            transparent);
+    background-size: 200% 100%;
+    animation: shimmer 8s ease-in-out infinite;
+    pointer-events: none;
 }
 
 body.dark-mode .filtering-sorting-bar {
-    background-color: rgba(var(--card-bg-rgb-dark, 30, 30, 30), 0.7); /* Dark mode glassmorphism */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.12); /* Refined dark mode shadow */
-}
-body.dark-mode .filtering-sorting-bar {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Refined dark mode shadow */
+    background: rgba(var(--bg-color-rgb-dark), 0.75);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 
 .filters-toolbar {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem; /* Gap between all items */
-    align-items: flex-end; /* Align items to bottom for mixed heights */
+    gap: 1.5rem;
+    /* Gap between all items */
+    align-items: flex-end;
+    /* Align items to bottom for mixed heights */
 }
 
 .filter-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* Gap between label and select */
-    flex-grow: 1; /* Allow groups to grow */
-    min-width: 150px; /* Minimum width for filter groups */
+    gap: 0.5rem;
+    /* Gap between label and select */
+    flex-grow: 1;
+    /* Allow groups to grow */
+    min-width: 150px;
+    /* Minimum width for filter groups */
 }
 
 .filter-group label {
@@ -761,36 +1224,46 @@ body.dark-mode .filtering-sorting-bar {
     font-family: var(--font-primary);
     font-size: 0.95rem;
     transition: border-color var(--transition-speed-fast) ease, background-color var(--transition-speed-medium) ease, box-shadow var(--transition-speed-fast) ease;
-    width: 100%; /* Make select take full width of its group */
-    appearance: none; /* Remove default system appearance */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23495057'%3E%3Cpath fill-rule='evenodd' d='M8 11.646l-4.854-4.853.708-.708L8 10.232l4.146-4.147.708.708L8 11.646z'/%3E%3C/svg%3E"); /* Default arrow for light mode */
+    width: 100%;
+    /* Make select take full width of its group */
+    appearance: none;
+    /* Remove default system appearance */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23495057'%3E%3Cpath fill-rule='evenodd' d='M8 11.646l-4.854-4.853.708-.708L8 10.232l4.146-4.147.708.708L8 11.646z'/%3E%3C/svg%3E");
+    /* Default arrow for light mode */
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     background-size: 16px 12px;
-    padding-right: 2.5rem; /* Make space for custom arrow */
+    padding-right: 2.5rem;
+    /* Make space for custom arrow */
 }
 
 body.dark-mode .filter-group select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23adb5bd'%3E%3Cpath fill-rule='evenodd' d='M8 11.646l-4.854-4.853.708-.708L8 10.232l4.146-4.147.708.708L8 11.646z'/%3E%3C/svg%3E"); /* Arrow for dark mode */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23adb5bd'%3E%3Cpath fill-rule='evenodd' d='M8 11.646l-4.854-4.853.708-.708L8 10.232l4.146-4.147.708.708L8 11.646z'/%3E%3C/svg%3E");
+    /* Arrow for dark mode */
 }
 
 .filter-group select:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Standard blue focus ring, adjust as needed */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    /* Standard blue focus ring, adjust as needed */
 }
 
 body.dark-mode .filter-group select:focus {
     border-color: var(--accent-color-dark);
-    box-shadow: 0 0 0 2px rgba(107, 183, 255, 0.25); /* Lighter blue focus ring for dark mode */
+    box-shadow: 0 0 0 2px rgba(107, 183, 255, 0.25);
+    /* Lighter blue focus ring for dark mode */
 }
 
 
 .view-toggle {
     display: flex;
-    align-items: center; /* Align with bottom of select boxes */
-    margin-left: auto; /* Pushes it to the right if space allows */
-    padding-top: 1.4rem; /* Align with selects that have labels */
+    align-items: center;
+    /* Align with bottom of select boxes */
+    margin-left: auto;
+    /* Pushes it to the right if space allows */
+    padding-top: 1.4rem;
+    /* Align with selects that have labels */
 }
 
 .view-btn {
@@ -818,9 +1291,11 @@ body.dark-mode .filter-group select:focus {
 
 .view-btn.active {
     background-color: var(--accent-color);
-    color: var(--background-color-light); /* Text color on active button */
+    color: var(--background-color-light);
+    /* Text color on active button */
     border-color: var(--accent-color);
 }
+
 body.dark-mode .view-btn.active {
     color: var(--background-color-dark);
 }
@@ -845,20 +1320,22 @@ body.dark-mode .view-btn.active {
     background-color: var(--card-bg);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
 }
+
 body.dark-mode .poem-list-item {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 
 .poem-list-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
+
 body.dark-mode .poem-list-item:hover {
-     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .poem-list-item-image-placeholder {
@@ -866,9 +1343,11 @@ body.dark-mode .poem-list-item:hover {
     height: 100px;
     background-color: #e0e0e0;
     border-radius: 4px;
-    flex-shrink: 0; /* Prevent shrinking */
+    flex-shrink: 0;
+    /* Prevent shrinking */
     transition: background-color 0.3s ease;
 }
+
 body.dark-mode .poem-list-item-image-placeholder {
     background-color: #3a3a3a;
 }
@@ -883,10 +1362,12 @@ body.dark-mode .poem-list-item-image-placeholder {
     font-size: 1.4rem;
     margin-bottom: 0.3rem;
 }
+
 .poem-list-item-title a {
     color: var(--text-color);
     text-decoration: none;
 }
+
 .poem-list-item-title a:hover {
     color: var(--accent-color);
     text-decoration: underline;
@@ -915,22 +1396,46 @@ body.dark-mode .poem-list-item-image-placeholder {
     margin: 0 auto;
 }
 
-#search-input {
+#search-input,
+.header-search input {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.85rem 1.25rem;
     padding-right: 2.5rem;
-    border: 2px solid var(--border-color);
-    border-radius: 25px;
+    border: var(--glass-border);
+    border-radius: 50px;
     font-size: 1rem;
-    background-color: var(--card-bg);
+    background: rgba(var(--bg-color-rgb), var(--glass-opacity));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     color: var(--text-color);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s var(--ease-glass);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-#search-input:focus {
+#search-input::placeholder,
+.header-search input::placeholder {
+    color: var(--secondary-text-color);
+    opacity: 0.7;
+}
+
+#search-input:focus,
+.header-search input:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(var(--accent-color-light-rgb), 0.1);
+    box-shadow:
+        0 0 0 4px rgba(var(--accent-color-light-rgb), 0.15),
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode #search-input,
+body.dark-mode .header-search input {
+    background: rgba(var(--bg-color-rgb-dark), 0.6);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 .search-clear {
@@ -1297,68 +1802,87 @@ body.dark-mode .poem-list-item-image-placeholder {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
-@media (max-width: 992px) { /* Medium devices (tablets, less than 992px) */
+@media (max-width: 992px) {
+
+    /* Medium devices (tablets, less than 992px) */
     .filters-toolbar {
-        gap: 1rem; /* Reduce gap for medium screens */
+        gap: 1rem;
+        /* Reduce gap for medium screens */
     }
+
     .filter-group {
-        min-width: 120px; /* Adjust min-width */
+        min-width: 120px;
+        /* Adjust min-width */
     }
+
     .archive-title {
         font-size: 2.2rem;
     }
-    
+
     .archive-header {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 0.5rem;
     }
-    
+
     .filters-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 1rem;
     }
-    
+
     .results-info {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
     }
-    
+
     .poem-compact-item {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .poem-compact-image {
         width: 80px;
         height: 80px;
     }
 
     .poem-full-view {
-        flex-direction: column; /* Stack image and text */
-        align-items: center; /* Center items when stacked */
+        flex-direction: column;
+        /* Stack image and text */
+        align-items: center;
+        /* Center items when stacked */
     }
 
     .poem-image-section {
-        position: static; /* Remove sticky positioning */
-        height: auto; /* Let content define height */
-        max-width: 100%; /* Allow full width */
-        width:100%;
+        position: static;
+        /* Remove sticky positioning */
+        height: auto;
+        /* Let content define height */
+        max-width: 100%;
+        /* Allow full width */
+        width: 100%;
         margin-bottom: 2rem;
     }
-    .poem-main-image-placeholder{
-        max-height: 400px; /* Max height for image on smaller screens */
+
+    .poem-main-image-placeholder {
+        max-height: 400px;
+        /* Max height for image on smaller screens */
     }
 
     .poem-text-section {
-        padding-left: 0; /* Remove padding when stacked */
+        padding-left: 0;
+        /* Remove padding when stacked */
         width: 100%;
     }
 
@@ -1368,65 +1892,80 @@ body.dark-mode .poem-list-item-image-placeholder {
 }
 
 
-@media (max-width: 768px) { /* Small devices (landscape phones, 768px and down) */
+@media (max-width: 768px) {
+
+    /* Small devices (landscape phones, 768px and down) */
     .filtering-sorting-bar {
         padding: 1rem;
     }
+
     .filters-toolbar {
-        flex-direction: column; /* Stack filters vertically */
-        align-items: stretch; /* Make filter groups full width */
+        flex-direction: column;
+        /* Stack filters vertically */
+        align-items: stretch;
+        /* Make filter groups full width */
         gap: 1rem;
     }
+
     .filter-group {
-        width: 100%; /* Full width for stacked filter groups */
+        width: 100%;
+        /* Full width for stacked filter groups */
     }
+
     .view-toggle {
-        margin-left: 0; /* Reset margin */
-        align-self: flex-end; /* Align to the right of the stacked column */
-        padding-top: 0.5rem; /* Adjust padding */
+        margin-left: 0;
+        /* Reset margin */
+        align-self: flex-end;
+        /* Align to the right of the stacked column */
+        padding-top: 0.5rem;
+        /* Adjust padding */
     }
+
     .archive-title {
         font-size: 2rem;
     }
-    
+
     .search-container {
         max-width: 100%;
     }
-    
+
     .filter-controls {
         flex-direction: column;
         gap: 1rem;
         align-items: stretch;
     }
-    
+
     .filters-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-    
+
     .view-controls .view-toggle {
         justify-content: center;
     }
-    
+
     .results-info {
         padding: 0.75rem;
     }
-    
+
     .quick-actions {
         flex-direction: column;
         width: 100%;
     }
-    
+
     .action-btn {
         justify-content: center;
     }
+
     .poem-list-item {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
     .poem-list-item-image-placeholder {
-        width: 120px; /* Adjust size for stacked layout */
+        width: 120px;
+        /* Adjust size for stacked layout */
         height: 120px;
         margin-bottom: 1rem;
     }
@@ -1449,7 +1988,7 @@ body.dark-mode .poem-list-item-image-placeholder {
         justify-content: center;
         flex-wrap: wrap;
     }
-    
+
     #theme-toggle {
         position: absolute;
         top: 15px;
@@ -1464,6 +2003,7 @@ body.dark-mode .poem-list-item-image-placeholder {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 1rem;
     }
+
     .related-poems-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
@@ -1482,7 +2022,7 @@ body.dark-mode .poem-list-item-image-placeholder {
         flex-direction: column;
         gap: 2rem;
     }
-    
+
     .poem-image-section {
         flex: none;
         max-width: none;
@@ -1490,33 +2030,33 @@ body.dark-mode .poem-list-item-image-placeholder {
         height: auto;
         max-height: 300px;
     }
-    
+
     .poem-text-section {
         padding-left: 0;
     }
-    
+
     .poem-metadata {
         margin: 1rem 0;
         padding: 1rem;
     }
-    
+
     .poem-details {
         flex-direction: column;
         gap: 0.75rem;
     }
-    
+
     .breadcrumb-nav {
         font-size: 0.8rem;
         gap: 0.25rem;
         flex-wrap: wrap;
     }
-    
+
     .poem-controls-bar {
         gap: 1rem;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .control-button {
         flex: 1;
         min-width: 140px;
@@ -1524,17 +2064,22 @@ body.dark-mode .poem-list-item-image-placeholder {
     }
 }
 
-@media (max-width: 480px) { /* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+
+    /* Extra small devices (phones, 480px and down) */
     .poem-grid {
-        grid-template-columns: 1fr; /* Single column on very small screens */
+        grid-template-columns: 1fr;
+        /* Single column on very small screens */
     }
+
     .related-poems-grid {
         grid-template-columns: 1fr;
     }
 
-     header nav ul li a {
+    header nav ul li a {
         font-size: 0.9rem;
     }
+
     header .logo a {
         font-size: 1.5rem;
     }
@@ -1544,23 +2089,23 @@ body.dark-mode .poem-list-item-image-placeholder {
         font-size: 0.75rem;
         margin-bottom: 1rem;
     }
-    
+
     .poem-metadata {
         margin: 0.75rem 0;
         padding: 0.75rem;
     }
-    
+
     .poem-details {
         gap: 0.5rem;
         font-size: 0.8rem;
     }
-    
+
     .poem-controls-bar {
         flex-direction: column;
         gap: 0.75rem;
         padding: 1rem 0;
     }
-    
+
     .control-button {
         width: 100%;
         min-width: auto;
@@ -1568,28 +2113,29 @@ body.dark-mode .poem-list-item-image-placeholder {
 }
 
 /* Accessibility */
-.sr-only { /* Screen-reader only */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+.sr-only {
+    /* Screen-reader only */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 /* Focus visible styling for keyboard navigation */
 *:focus-visible {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 4px var(--bg-color), 0 0 0 6px var(--accent-color);
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 0 6px var(--accent-color);
 }
 
 /* Remove default outline for non-keyboard focus if desired, but ensure focus-visible is robust */
 *:focus:not(:focus-visible) {
-  outline: none;
+    outline: none;
 }
 
 /* Import fonts (example using Google Fonts - ensure self-hosting for production if preferred) */

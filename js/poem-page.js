@@ -137,6 +137,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     await loadPoem();
+    
+    // Hide loading state and show poem content with smooth transition
+    const loadingState = document.getElementById('poem-loading');
+    const poemArticle = document.getElementById('poem-article');
+    
+    if (loadingState && poemArticle) {
+        loadingState.classList.add('hidden');
+        poemArticle.classList.remove('poem-loading');
+        poemArticle.classList.add('poem-loaded');
+    }
 
     // Favorite Button Interaction (remains mostly the same)
     const favoriteButton = document.getElementById('favorite-poem');
